@@ -18,6 +18,7 @@ protocol Coordinable {
     func present(_ screen: Screen)
     
     
+    
 }
 
 
@@ -35,18 +36,39 @@ class Coordinator: Coordinable {
     
     var currentController: UIViewController?
     
+    
     func present(_ screen: Screen) {
         
         switch screen {
         case .entity:
             self.presentEntityViewController()
-        default:break
+        default:
+            self.presentMapViewController()
         }
         
     }
     
     //MARK: - Methods Helper
     
+    ///Method responsible for presenter MapViewController
+    fileprivate func presentMapViewController() {
+        if(!(self.rootViewController is MapViewController)){
+            let _mapStoryboard = UIStoryboard(name: "Map", bundle: nil)
+            let _controller = _mapStoryboard.instantiateViewController(withIdentifier: "Map")
+            guard let _mapController = _controller as? MapViewController else {
+                assertionFailure("Fail when try find view controller")
+                return
+            }
+            let _coordinator = Coordinator()
+            _mapController.coordinator = _coordinator
+            _mapController.coordinator?.rootViewController = self.rootViewController
+            self.rootViewController?.present(_mapController, animated: true, completion: nil)
+        }else{
+            self.currentController?.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    ///Method responsible for presenter EntityViewController
     fileprivate func presentEntityViewController(){
         let _entityStoryboard = UIStoryboard(name: "Entity", bundle: nil)
         let _controller = _entityStoryboard.instantiateViewController(withIdentifier: "Entity")
