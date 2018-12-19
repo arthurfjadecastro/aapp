@@ -9,7 +9,12 @@
 import Foundation
 
 ///Enum responsible for enumerated the disposition of screens
-enum Screen {
-    case map
-    case entity
+struct Screen {
+    
+    let storyboard: String
+    let controller: String
+    
+    static let map = Screen(storyboard: "Map", controller: "Map")
+    static let entity = Screen(storyboard: "Entity", controller: "Entity")
+    
 }

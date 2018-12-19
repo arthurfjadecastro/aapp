@@ -15,15 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        
-        guard let initialController = window?.rootViewController as? MapViewController else {
-            assertionFailure("Fail when try find view controller")
-            return true
-        }
-        
-        initialController.coordinator = Coordinator()
-        initialController.coordinator?.rootViewController = initialController
+        AppCoordinator.installCoordinatorOnInitialController()
         
         return true
     }

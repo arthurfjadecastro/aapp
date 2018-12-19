@@ -9,13 +9,14 @@
 import Foundation
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, Coordinable {
     
     
     //MARK: - Properties
     
     ///Property responsible for the flow management of the screen
     var coordinator: Coordinator?
+    
     
     
     

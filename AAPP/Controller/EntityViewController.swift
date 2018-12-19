@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
-class EntityViewController: UIViewController {
+class EntityViewController: UIViewController, Coordinable {
+    
     
     //MARK: - Properties
     
     ///Property responsible for the flow management of the screen
     var coordinator: Coordinator?
+    
     
     
     
@@ -33,7 +35,7 @@ class EntityViewController: UIViewController {
     //MARK: - IBA
     
     @IBAction func goToMap(_ sender: Any) {
-        self.coordinator?.present(.map)
+        self.coordinator?.dismiss()
     }
     
     
