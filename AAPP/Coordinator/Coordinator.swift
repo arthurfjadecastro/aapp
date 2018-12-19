@@ -10,16 +10,18 @@ import Foundation
 import UIKit
 
 protocol Coordinable {
+    ///Property responsible for storage root controller
     var rootViewController: UIViewController? {get set}
+    ///Property responsible for storage current controller
     var currentController: UIViewController? {get set}
-    
+    ///Method responsible for presentation Screen in flow.
     func present(_ screen: Screen)
     
     
 }
 
 
-
+///Class responsible for the logical flow of application navigation
 class Coordinator: Coordinable {
     
     

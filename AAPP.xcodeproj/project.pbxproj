@@ -62,9 +62,9 @@
 		3D72A88F21CABE1D0041C1D8 /* AAPP */ = {
 			isa = PBXGroup;
 			children = (
-				3D72A8AD21CAC8460041C1D8 /* Coordinator */,
 				3D72A89021CABE1D0041C1D8 /* AppDelegate.swift */,
 				3D72A89C21CABE1E0041C1D8 /* Info.plist */,
+				3D72A8AD21CAC8460041C1D8 /* Coordinator */,
 				3D72A8A821CABEE50041C1D8 /* Model */,
 				3D72A8A521CABE9C0041C1D8 /* Controller */,
 				3D72A8A221CABE3D0041C1D8 /* View */,

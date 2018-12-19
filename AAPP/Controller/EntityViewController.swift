@@ -9,4 +9,35 @@
 import Foundation
 import UIKit
 
-class EntityViewController: UIViewController {}
+class EntityViewController: UIViewController {
+    
+    //MARK: - Properties
+    
+    ///Property responsible for the flow management of the screen
+    var coordinator: Coordinator?
+    
+    
+    
+    //MARK: - IBO
+    
+    
+    //MARK: - Lifecycle
+    override func viewDidLoad() {
+        
+    }
+    
+    
+    
+    
+    
+    //MARK: - IBA
+    
+    @IBAction func goToMap(_ sender: Any) {
+        self.coordinator?.present(.map)
+    }
+    
+    
+    //MARK: - Methods Helper
+    
+    
+}

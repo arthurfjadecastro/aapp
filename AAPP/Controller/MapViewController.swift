@@ -14,6 +14,10 @@ class MapViewController: UIViewController {
     
     //MARK: - Properties
     
+    ///Property responsible for the flow management of the screen
+    var coordinator: Coordinator?
+    
+    
     
     //MARK: - IBO
     
@@ -30,7 +34,7 @@ class MapViewController: UIViewController {
     //MARK: - IBA
     
     @IBAction func goToEntity(_ sender: Any) {
-        print("btn ok")
+        self.coordinator?.present(.entity)
     }
     
     

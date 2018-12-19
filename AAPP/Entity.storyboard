@@ -17,7 +17,23 @@
                     <view key="view" contentMode="scaleToFill" id="hjE-ph-4h6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hap-Q2-FFb">
+                                <rect key="frame" x="20" y="40" width="231" height="205"/>
+                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="COMEBACK IS REAL"/>
+                                <connections>
+                                    <action selector="goToMap:" destination="skt-In-n8z" eventType="touchUpInside" id="L3v-7e-FyW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bsE-gZ-EJp" firstAttribute="bottom" secondItem="hap-Q2-FFb" secondAttribute="bottom" constant="422" id="BN5-Z3-wy6"/>
+                            <constraint firstItem="bsE-gZ-EJp" firstAttribute="trailing" secondItem="hap-Q2-FFb" secondAttribute="trailing" constant="124" id="cbK-Uf-pZC"/>
+                            <constraint firstItem="hap-Q2-FFb" firstAttribute="top" secondItem="bsE-gZ-EJp" secondAttribute="top" constant="20" id="fWs-pW-ZKn"/>
+                            <constraint firstItem="hap-Q2-FFb" firstAttribute="leading" secondItem="bsE-gZ-EJp" secondAttribute="leading" constant="20" id="uOE-Cf-mpN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bsE-gZ-EJp"/>
                     </view>
                 </viewController>
