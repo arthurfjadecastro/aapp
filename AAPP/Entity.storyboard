@@ -13,7 +13,7 @@
         <!--Entity View Controller-->
         <scene sceneID="92l-sU-1aT">
             <objects>
-                <viewController id="skt-In-n8z" customClass="EntityViewController" customModule="AAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Entity" useStoryboardIdentifierAsRestorationIdentifier="YES" id="skt-In-n8z" customClass="EntityViewController" customModule="AAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hjE-ph-4h6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

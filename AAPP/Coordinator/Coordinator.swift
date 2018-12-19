@@ -37,7 +37,29 @@ class Coordinator: Coordinable {
     
     func present(_ screen: Screen) {
         
+        switch screen {
+        case .entity:
+            self.presentEntityViewController()
+        default:break
+        }
+        
     }
+    
+    //MARK: - Methods Helper
+    
+    fileprivate func presentEntityViewController(){
+        let _entityStoryboard = UIStoryboard(name: "Entity", bundle: nil)
+        let _controller = _entityStoryboard.instantiateViewController(withIdentifier: "Entity")
+        guard let _entityController = _controller as? EntityViewController else {
+            assertionFailure("Fail when try find view controller")
+            return
+        }
+        let _coordinator = Coordinator()
+        _entityController.coordinator = _coordinator
+        _entityController.coordinator?.rootViewController = self.rootViewController
+        self.rootViewController?.present(_entityController, animated: true, completion: nil)
+    }
+    
     
     
 }
