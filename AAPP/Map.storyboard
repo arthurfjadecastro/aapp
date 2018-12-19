@@ -17,13 +17,31 @@
                     <view key="view" contentMode="scaleToFill" id="RXk-Fi-qET">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZR-Yo-m5e">
+                                <rect key="frame" x="100" y="219" width="175" height="147"/>
+                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.60392156860000001" green="0.63921568630000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToEntity:" destination="iHu-2U-X6s" eventType="touchUpInside" id="QK1-Cs-hcH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iZR-Yo-m5e" firstAttribute="top" secondItem="hsE-MH-VbG" secondAttribute="top" constant="199" id="5Fj-ia-O8Z"/>
+                            <constraint firstItem="iZR-Yo-m5e" firstAttribute="leading" secondItem="hsE-MH-VbG" secondAttribute="leading" constant="100" id="9Ml-K5-OCZ"/>
+                            <constraint firstItem="hsE-MH-VbG" firstAttribute="trailing" secondItem="iZR-Yo-m5e" secondAttribute="trailing" constant="100" id="LRH-wF-FBN"/>
+                            <constraint firstItem="hsE-MH-VbG" firstAttribute="bottom" secondItem="iZR-Yo-m5e" secondAttribute="bottom" constant="301" id="fLx-zR-9J2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hsE-MH-VbG"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEV-Jq-0ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="-64"/>
+            <point key="canvasLocation" x="124" y="-64.31784107946028"/>
         </scene>
     </scenes>
 </document>

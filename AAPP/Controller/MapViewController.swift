@@ -9,4 +9,36 @@
 import Foundation
 import UIKit
 
-class MapViewController: UIViewController {}
+class MapViewController: UIViewController {
+    
+    
+    //MARK: - Properties
+    
+    
+    //MARK: - IBO
+    
+    
+    //MARK: - Lifecycle
+    override func viewDidLoad() {
+        
+    }
+    
+    
+    
+    
+    
+    //MARK: - IBA
+    
+    @IBAction func goToEntity(_ sender: Any) {
+        print("btn ok")
+    }
+    
+    
+    
+    //MARK: - Methods Helper
+    
+    
+    
+    
+    
+}
