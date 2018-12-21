@@ -39,7 +39,7 @@ class EntityViewController: UIViewController, Coordinable {
     }
     
     
-    //MARK: - Methods Helper
+    //MARK: - Helper Methods
     
     
 }
