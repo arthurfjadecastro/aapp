@@ -16,6 +16,7 @@
 		3D72A8AC21CABF720041C1D8 /* EntityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AB21CABF720041C1D8 /* EntityViewController.swift */; };
 		3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AE21CAC8780041C1D8 /* Screen.swift */; };
 		3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */; };
+		3DB84C4E21D0E9CB00D3681D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C4D21D0E9CB00D3681D /* MapView.swift */; };
 		3DC6759B21CD9E9A008719B4 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DC6759A21CD9E9A008719B4 /* MapStyle.json */; };
 		3DC6759D21CDA11C008719B4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6759C21CDA11C008719B4 /* File.swift */; };
 		3DC6759F21CDA204008719B4 /* Bundle+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6759E21CDA204008719B4 /* Bundle+File.swift */; };
@@ -35,6 +36,7 @@
 		3D72A8AB21CABF720041C1D8 /* EntityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityViewController.swift; sourceTree = "<group>"; };
 		3D72A8AE21CAC8780041C1D8 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		3DB84C4D21D0E9CB00D3681D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3DC6759A21CD9E9A008719B4 /* MapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
 		3DC6759C21CDA11C008719B4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3DC6759E21CDA204008719B4 /* Bundle+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+File.swift"; sourceTree = "<group>"; };
@@ -83,6 +85,8 @@
 		3D72A88F21CABE1D0041C1D8 /* AAPP */ = {
 			isa = PBXGroup;
 			children = (
+				3DB84C4C21D0E95C00D3681D /* Extensions */,
+				3DB84C4B21D0E94000D3681D /* Utils */,
 				3DC6759821CD9B95008719B4 /* Resources */,
 				3D72A89021CABE1D0041C1D8 /* AppDelegate.swift */,
 				3D72A89C21CABE1E0041C1D8 /* Info.plist */,
@@ -101,6 +105,7 @@
 				3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */,
 				3D72A8A321CABE8A0041C1D8 /* Map.storyboard */,
 				3D72A8A921CABF650041C1D8 /* Entity.storyboard */,
+				3DB84C4D21D0E9CB00D3681D /* MapView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -130,12 +135,26 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		3DB84C4B21D0E94000D3681D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3DC6759C21CDA11C008719B4 /* File.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3DB84C4C21D0E95C00D3681D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3DC6759E21CDA204008719B4 /* Bundle+File.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		3DC6759821CD9B95008719B4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				3DC6759A21CD9E9A008719B4 /* MapStyle.json */,
-				3DC6759C21CDA11C008719B4 /* File.swift */,
-				3DC6759E21CDA204008719B4 /* Bundle+File.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -266,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D72A89121CABE1D0041C1D8 /* AppDelegate.swift in Sources */,
+				3DB84C4E21D0E9CB00D3681D /* MapView.swift in Sources */,
 				3DC6759D21CDA11C008719B4 /* File.swift in Sources */,
 				3D72A8A721CABEB20041C1D8 /* MapViewController.swift in Sources */,
 				3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */,

@@ -11,8 +11,6 @@ import UIKit
 import GoogleMaps
 
 
-fileprivate let mapStyleFile = File(name: "MapStyle", extension: "json")
-
 class MapViewController: UIViewController, Coordinable {
     
     
@@ -62,18 +60,8 @@ class MapViewController: UIViewController, Coordinable {
         self.mapView = _mapView
         self.mapView = GMSMapView.map(withFrame: self.view.frame, camera: _camera)
         self.view.addSubview(_mapView)
-        self.mapView?.mapStyle = self.createMapStyle()
     }
     
-    ///
-    private func createMapStyle() -> GMSMapStyle? {
-        guard let _url = Bundle.main.url(mapStyleFile) else {
-            assertionFailure("Fail when try find file")
-            return nil
-        }
-        return try? GMSMapStyle(contentsOfFileURL: _url)
-
-    }
     
     
     
