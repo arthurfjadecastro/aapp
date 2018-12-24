@@ -15,6 +15,16 @@ import GoogleMaps
 struct Pin {
     let name: String
     let location: Location
+    
+    init(name: String, location: Location) {
+        self.name = name
+        self.location = location
+    }
+    
+    init(name: String, latitude: Double, longitude: Double) {
+        let location = Location(latitude: latitude, longitude: longitude)
+        self.init(name: name, location: location)
+    }
 }
 
 
