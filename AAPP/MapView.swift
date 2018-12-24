@@ -36,11 +36,6 @@ class MapView: GMSMapView {
             return
         }
         self.mapStyle = _styleMap
-        
-        
-        
-        
-        
     }
     
     

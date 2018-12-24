@@ -35,8 +35,8 @@ class MapViewController: UIViewController, Coordinable {
         self.setupMap()
         
         
+        
     }
-    
     
     
     
@@ -54,7 +54,7 @@ class MapViewController: UIViewController, Coordinable {
     
     ///
     private func setupMap(){
-        let _camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        let _camera = GMSCameraPosition.camera(withLatitude: -15.7825543, longitude: -47.8825263, zoom: 4.0)
         self.camera = _camera
         let _mapView = GMSMapView.map(withFrame: self.view.frame, camera: _camera)
         self.mapView = _mapView
