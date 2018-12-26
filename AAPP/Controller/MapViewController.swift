@@ -38,16 +38,11 @@ class MapViewController: UIViewController, Coordinable {
     override func viewDidLoad() {
         self.setupMap()
         self.setupGPS()
-        
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.gps.captureLocation()
-        
-        
     }
     
     
@@ -60,10 +55,11 @@ class MapViewController: UIViewController, Coordinable {
     
     
     //MARK: - Helper Methods
+
     
-    
+    ///
     private func setupGPS(){
-        self.gps.delegate = self
+        self.gps.delegate = GPSUpdatesHandler()
     }
     
     
@@ -79,7 +75,7 @@ class MapViewController: UIViewController, Coordinable {
         self.fetchPins()
         self.view.addSubview(_mapView)
     }
-    
+    ///
     func fetchPins(){
         guard let _mapView = self.mapView else {
             assertionFailure("There's no map to fetch pins")

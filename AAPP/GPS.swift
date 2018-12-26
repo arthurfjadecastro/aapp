@@ -7,17 +7,52 @@
 //
 
 import Foundation
+import CoreLocation
+import UIKit
 
-
-class GPS {
+class GPS: NSObject {
+    //MARK: - Properties
+    ///
+    internal var delegate: GPSDelegate?
+    ///
+    private let locationManager = CLLocationManager()
+    ///
+    private lazy var authorizationManager = GPSAuthorizationHandler(gps: self)
     
-    var delegate: GPSDelegate?
-    
-    
-    
-    
+    //MARK: - API
+    ///
+    func requestLocation(){
+        self.locationManager.startUpdatingLocation()
+    }
+    ///
+    func notifyLocationDenied() {
+        guard let notificationsEnablingUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+        if UIApplication.shared.canOpenURL(notificationsEnablingUrl) {
+            //alert msg for user - quando clicar no "botao" - verificar e revisar telas.
+            UIApplication.shared.open(notificationsEnablingUrl, options: [:], completionHandler: nil)
+        }
+    }
+    ///
     func captureLocation(){
-        self.delegate?.gps(self, didUpdate: pin3.location)
+        self.requestAuthorization()
     }
     
+    //MARK: - Helper Methods
+    private func requestAuthorization(){
+        self.locationManager.delegate = self.authorizationManager
+        self.locationManager.requestWhenInUseAuthorization()
+    }
+}
+
+
+extension GPS: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let firstLocation = locations.first?.coordinate else {
+            assertionFailure("Fail when try to get first location")
+            return
+        }
+        let _locationUser = Location(location:firstLocation)
+        self.delegate?.gps(self, didUpdate: _locationUser)
+    }
 }
