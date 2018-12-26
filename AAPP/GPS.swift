@@ -22,6 +22,7 @@ class GPS: NSObject {
     //MARK: - API
     ///
     func requestLocation(){
+        
         self.locationManager.startUpdatingLocation()
     }
     ///

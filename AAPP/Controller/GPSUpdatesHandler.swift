@@ -7,13 +7,22 @@
 //
 
 import Foundation
-
+import GoogleMaps
 
 
 
 struct GPSUpdatesHandler: GPSDelegate {
+    
+    private weak var mapViewController: MapViewController?
+    
+    init(mapViewController: MapViewController) {
+        self.mapViewController = mapViewController
+    }
+    
     func gps(_ gps: GPS, didUpdate location: Location) {
-        
+        let _location = CLLocationCoordinate2D(location: location)
+        let _camera = GMSCameraPosition.camera(withTarget: _location , zoom: 15)
+        self.mapViewController?.mapView?.camera = _camera
     }
     
     

@@ -19,7 +19,7 @@ class MapViewController: UIViewController, Coordinable {
     ///
     var gps = GPS()
     ///
-    private var mapView: GMSMapView?
+    var mapView: GMSMapView?
     ///
     private var camera: GMSCameraPosition?
     ///
@@ -59,7 +59,7 @@ class MapViewController: UIViewController, Coordinable {
     
     ///
     private func setupGPS(){
-        self.gps.delegate = GPSUpdatesHandler()
+        self.gps.delegate = GPSUpdatesHandler(mapViewController: self)
     }
     
     
@@ -71,6 +71,7 @@ class MapViewController: UIViewController, Coordinable {
         let _mapView = GMSMapView.map(withFrame: self.view.frame, camera: _camera)
         
         self.mapView = _mapView
+        self.mapView?.isMyLocationEnabled = true
         self.setupMapStyle()
         self.fetchPins()
         self.view.addSubview(_mapView)
