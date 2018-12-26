@@ -16,12 +16,13 @@ class MapViewController: UIViewController, Coordinable {
     
     
     //MARK: - Properties
-    
-    
+    ///
+    var gps = GPS()
     ///
     private var mapView: GMSMapView?
     ///
     private var camera: GMSCameraPosition?
+    ///
     private let pinDataSource = PinDataSource()
     
     ///Property responsible for the flow management of the screen
@@ -36,12 +37,18 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         self.setupMap()
+        self.setupGPS()
         
         
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.gps.captureLocation()
+        
+        
+    }
     
     
     //MARK: - IBA
@@ -53,6 +60,11 @@ class MapViewController: UIViewController, Coordinable {
     
     
     //MARK: - Helper Methods
+    
+    
+    private func setupGPS(){
+        self.gps.delegate = self
+    }
     
     
     ///
