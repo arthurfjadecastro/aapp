@@ -8,9 +8,10 @@
 
 import Foundation
 import GoogleMaps
-
+///array extension that looks for Pin-like elements
 extension Array where Element == Pin {
     
+    ///Method responsible for convert Pin to Mark
     func asMarkers() -> [GMSMarker] {
         return self.map({ GMSMarker(pin: $0) })
     }

@@ -11,6 +11,7 @@ import Foundation
 
 
 extension Bundle {
+    ///Method responsible for 
     func url(_ file: File) -> URL? {
         
         return self.url(forResource: file.name, withExtension: file.extension)

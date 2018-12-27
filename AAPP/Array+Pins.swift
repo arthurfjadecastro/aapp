@@ -9,9 +9,9 @@
 import Foundation
 import GoogleMaps
 
-
+///array extension that looks for GMSMakers elements
 extension Array where Element == GMSMarker {
-    
+    ///Method responsible for convert Pin to Mark
     func asPins() -> [Pin] {
         return self.map({Pin(marker: $0)})
     }

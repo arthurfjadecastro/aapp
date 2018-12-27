@@ -17,7 +17,7 @@ class MapViewController: UIViewController, Coordinable {
     
     //MARK: - Properties
     ///
-   // var gps = GPS()
+    var gps = GPS()
     ///
     var mapView: GMSMapView?
     ///
@@ -42,14 +42,14 @@ class MapViewController: UIViewController, Coordinable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       // self.gps.captureLocation()
+        self.gps.captureLocation()
     }
     
     
     //MARK: - IBA
     
     @IBAction func goToEntity(_ sender: Any) {
-        self.coordinator?.present(.entity)
+        self.coordinator?.present(.BrotherHood)
     }
     
     
@@ -59,7 +59,7 @@ class MapViewController: UIViewController, Coordinable {
     
     ///
     private func setupGPS(){
-    //    self.gps.delegate = GPSUpdatesHandler(mapViewController: self)
+        self.gps.delegate = GPSUpdatesHandler(mapViewController: self)
     }
     
     
@@ -68,10 +68,17 @@ class MapViewController: UIViewController, Coordinable {
         let _camera = GMSCameraPosition.camera(withLatitude: -15.83616738, longitude: -48.05389939, zoom: 15.0)
         self.camera = _camera
         
+        
         let _mapView = GMSMapView.map(withFrame: self.view.frame, camera: _camera)
         
         self.mapView = _mapView
         self.mapView?.isMyLocationEnabled = true
+//        guard let mylocation = self.mapView?.myLocation else {
+//            assertionFailure("fail when try find my location")
+//            return
+//        }
+//        let _mya = mylocation.altitude
+//        print(_mya)
         self.setupMapStyle()
         self.fetchPins()
         self.view.addSubview(_mapView)
@@ -92,7 +99,7 @@ class MapViewController: UIViewController, Coordinable {
             }
         }
     }
-    
+    ///
     func setupMapStyle() {
         guard let _url = Bundle.main.url(mapStyleFile) else {
             assertionFailure("Fail when try find file")

@@ -26,9 +26,9 @@ class GPSAuthorizationHandler: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
         switch status {
-        case .authorizedAlways,.authorizedWhenInUse:
+        case .authorizedAlways,.authorizedWhenInUse: 
             self.gps?.requestLocation()
-        case .denied,.notDetermined,.restricted:
+        case .denied,.notDetermined,.restricted: 
             self.gps?.notifyLocationDenied()
         default:break
         }

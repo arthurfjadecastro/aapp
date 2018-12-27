@@ -14,7 +14,7 @@ import GoogleMaps
 struct GPSUpdatesHandler: GPSDelegate {
     
     private weak var mapViewController: MapViewController?
-    
+
     init(mapViewController: MapViewController) {
         self.mapViewController = mapViewController
     }
@@ -23,6 +23,8 @@ struct GPSUpdatesHandler: GPSDelegate {
         let _location = CLLocationCoordinate2D(location: location)
         let _camera = GMSCameraPosition.camera(withTarget: _location , zoom: 15)
         self.mapViewController?.mapView?.camera = _camera
+        //print(self.mapViewController?.mapView?.myLocation?.coordinate)
+        //print("aeae\(_location)")
     }
     
     

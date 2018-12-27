@@ -9,11 +9,12 @@
 import Foundation
 import CoreLocation
 
+///Struct Location
 struct Location {
     let latitude: Double
     let longitude: Double
     
-    
+    ///Initializer Location with latitude and longitude
     init(latitude: Double, longitude: Double) {
         self.latitude = latitude
         self.longitude = longitude
@@ -22,22 +23,12 @@ struct Location {
 
 
 extension Location {
-    
+    ///Initializer location of type Coordinate2D
     init(location: CLLocationCoordinate2D ) {
         self.latitude = location.latitude
         self.longitude = location.longitude
     }
     
 
-    
-}
-
-
-extension CLLocationCoordinate2D {
-    
-    init(location: Location) {
-        self.init(latitude: location.latitude, longitude: location.longitude)
-    }
-    
     
 }

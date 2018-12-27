@@ -22,9 +22,9 @@ class GPS: NSObject {
     //MARK: - API
     ///
     func requestLocation(){
-        
         self.locationManager.startUpdatingLocation()
     }
+    
     ///
     func notifyLocationDenied() {
         guard let notificationsEnablingUrl = URL(string: UIApplication.openSettingsURLString) else { return }
@@ -39,11 +39,17 @@ class GPS: NSObject {
     }
     
     //MARK: - Helper Methods
+    ///
+    private func pauseUpdateLocation(){
+        self.locationManager.stopUpdatingLocation()
+    }
     private func requestAuthorization(){
         self.locationManager.delegate = self.authorizationManager
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
     }
+    
+    
 }
 
 
@@ -55,6 +61,13 @@ extension GPS: CLLocationManagerDelegate {
             return
         }
         let _locationUser = Location(location:firstLocation)
+        //self.pauseUpdateLocation()
         self.delegate?.gps(self, didUpdate: _locationUser)
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+       // self.pauseUpdateLocation()
+        print("Error \(error)")
     }
 }
