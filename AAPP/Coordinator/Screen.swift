@@ -15,6 +15,6 @@ struct Screen {
     let controller: String
     
     static let map = Screen(storyboard: "Map", controller: "Map")
-    static let entity = Screen(storyboard: "Entity", controller: "Entity")
+    static let entity = Screen(storyboard: "BrotherHood", controller: "BrotherHood")
     
 }

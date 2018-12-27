@@ -16,8 +16,8 @@
 		3D72A89B21CABE1E0041C1D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */; };
 		3D72A8A421CABE8A0041C1D8 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D72A8A321CABE8A0041C1D8 /* Map.storyboard */; };
 		3D72A8A721CABEB20041C1D8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8A621CABEB20041C1D8 /* MapViewController.swift */; };
-		3D72A8AA21CABF650041C1D8 /* Entity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D72A8A921CABF650041C1D8 /* Entity.storyboard */; };
-		3D72A8AC21CABF720041C1D8 /* EntityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AB21CABF720041C1D8 /* EntityViewController.swift */; };
+		3D72A8AA21CABF650041C1D8 /* BrotherHood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D72A8A921CABF650041C1D8 /* BrotherHood.storyboard */; };
+		3D72A8AC21CABF720041C1D8 /* BrotherHoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */; };
 		3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AE21CAC8780041C1D8 /* Screen.swift */; };
 		3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */; };
 		3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5121D0F0BC00D3681D /* PinDataSource.swift */; };
@@ -45,8 +45,8 @@
 		3D72A89C21CABE1E0041C1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D72A8A321CABE8A0041C1D8 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		3D72A8A621CABEB20041C1D8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		3D72A8A921CABF650041C1D8 /* Entity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entity.storyboard; sourceTree = "<group>"; };
-		3D72A8AB21CABF720041C1D8 /* EntityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityViewController.swift; sourceTree = "<group>"; };
+		3D72A8A921CABF650041C1D8 /* BrotherHood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BrotherHood.storyboard; sourceTree = "<group>"; };
+		3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotherHoodViewController.swift; sourceTree = "<group>"; };
 		3D72A8AE21CAC8780041C1D8 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3DB84C5121D0F0BC00D3681D /* PinDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataSource.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				3D72A89721CABE1E0041C1D8 /* Assets.xcassets */,
 				3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */,
 				3D72A8A321CABE8A0041C1D8 /* Map.storyboard */,
-				3D72A8A921CABF650041C1D8 /* Entity.storyboard */,
+				3D72A8A921CABF650041C1D8 /* BrotherHood.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 			children = (
 				3D72A8A621CABEB20041C1D8 /* MapViewController.swift */,
 				3D18983421D38F8F0036C85F /* GPSUpdatesHandler.swift */,
-				3D72A8AB21CABF720041C1D8 /* EntityViewController.swift */,
+				3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */,
 				3D12462921D2474D00D40404 /* GPSDelegate.swift */,
 			);
 			path = Controller;
@@ -273,7 +273,7 @@
 			files = (
 				3D72A89B21CABE1E0041C1D8 /* LaunchScreen.storyboard in Resources */,
 				3DC6759B21CD9E9A008719B4 /* MapStyle.json in Resources */,
-				3D72A8AA21CABF650041C1D8 /* Entity.storyboard in Resources */,
+				3D72A8AA21CABF650041C1D8 /* BrotherHood.storyboard in Resources */,
 				3D72A89821CABE1E0041C1D8 /* Assets.xcassets in Resources */,
 				3D72A8A421CABE8A0041C1D8 /* Map.storyboard in Resources */,
 			);
@@ -338,7 +338,7 @@
 				3DB84C5C21D10C7900D3681D /* Array+Pins.swift in Sources */,
 				3D18983721D395790036C85F /* GPSAuthorizationHandler.swift in Sources */,
 				3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */,
-				3D72A8AC21CABF720041C1D8 /* EntityViewController.swift in Sources */,
+				3D72A8AC21CABF720041C1D8 /* BrotherHoodViewController.swift in Sources */,
 				3DB84C5421D0F2A100D3681D /* Result.swift in Sources */,
 				3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */,
 				3D18983521D38F8F0036C85F /* GPSUpdatesHandler.swift in Sources */,

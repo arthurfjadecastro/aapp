@@ -41,6 +41,7 @@ class GPS: NSObject {
     //MARK: - Helper Methods
     private func requestAuthorization(){
         self.locationManager.delegate = self.authorizationManager
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
     }
 }

@@ -34,6 +34,8 @@ class GPSAuthorizationHandler: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    
+    
 }
 
 

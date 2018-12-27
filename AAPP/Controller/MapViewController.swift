@@ -17,7 +17,7 @@ class MapViewController: UIViewController, Coordinable {
     
     //MARK: - Properties
     ///
-    var gps = GPS()
+   // var gps = GPS()
     ///
     var mapView: GMSMapView?
     ///
@@ -42,7 +42,7 @@ class MapViewController: UIViewController, Coordinable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.gps.captureLocation()
+       // self.gps.captureLocation()
     }
     
     
@@ -59,7 +59,7 @@ class MapViewController: UIViewController, Coordinable {
     
     ///
     private func setupGPS(){
-        self.gps.delegate = GPSUpdatesHandler(mapViewController: self)
+    //    self.gps.delegate = GPSUpdatesHandler(mapViewController: self)
     }
     
     
