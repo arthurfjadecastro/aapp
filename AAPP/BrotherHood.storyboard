@@ -20,7 +20,30 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pde-G6-Tuk">
                                 <rect key="frame" x="7" y="306" width="361" height="270"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowup" translatesAutoresizingMaskIntoConstraints="NO" id="I6V-rB-5jw">
+                                        <rect key="frame" x="175.5" y="17" width="10" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="Pkz-EN-Dln"/>
+                                            <constraint firstAttribute="height" constant="5" id="Vmg-In-gl9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQM-X9-h7Q">
+                                        <rect key="frame" x="20" y="0.0" width="321" height="17"/>
+                                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="321" id="Ier-WK-NGs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vQM-X9-h7Q" firstAttribute="top" secondItem="pde-G6-Tuk" secondAttribute="top" id="4lk-Kf-E5A"/>
+                                    <constraint firstItem="vQM-X9-h7Q" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="17 / 270" id="EM4-Ng-PFx"/>
+                                    <constraint firstItem="I6V-rB-5jw" firstAttribute="top" secondItem="vQM-X9-h7Q" secondAttribute="bottom" id="HnK-Co-UZj"/>
+                                    <constraint firstItem="vQM-X9-h7Q" firstAttribute="centerX" secondItem="pde-G6-Tuk" secondAttribute="centerX" id="QTd-sj-2r7"/>
+                                    <constraint firstItem="I6V-rB-5jw" firstAttribute="centerX" secondItem="pde-G6-Tuk" secondAttribute="centerX" id="mlw-6J-Vt0"/>
+                                </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-lc-JIN">
                                 <rect key="frame" x="16" y="576" width="343" height="91"/>
@@ -48,4 +71,7 @@
             <point key="canvasLocation" x="-692" y="24.7376311844078"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowup" width="10" height="5"/>
+    </resources>
 </document>
