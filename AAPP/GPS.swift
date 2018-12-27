@@ -45,7 +45,6 @@ class GPS: NSObject {
     }
     private func requestAuthorization(){
         self.locationManager.delegate = self.authorizationManager
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
     }
     
@@ -60,14 +59,14 @@ extension GPS: CLLocationManagerDelegate {
             assertionFailure("Fail when try to get first location")
             return
         }
-        let _locationUser = Location(location:firstLocation)
+        let _locationUser = Coordinate(clCoordinate:firstLocation)
         //self.pauseUpdateLocation()
         self.delegate?.gps(self, didUpdate: _locationUser)
     }
     
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-       // self.pauseUpdateLocation()
+        self.pauseUpdateLocation()
         print("Error \(error)")
     }
 }

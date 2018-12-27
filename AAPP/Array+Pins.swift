@@ -13,8 +13,6 @@ import GoogleMaps
 extension Array where Element == GMSMarker {
     ///Method responsible for convert Pin to Mark
     func asPins() -> [Pin] {
-        return self.map({Pin(marker: $0)})
+        return self.map({ $0.asPin()})
     }
-
-    
 }

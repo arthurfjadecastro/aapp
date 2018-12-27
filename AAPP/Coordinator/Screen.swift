@@ -18,6 +18,6 @@ struct Screen {
     ///Property responsible for containing the information needed to call the map screen
     static let map = Screen(storyboard: "Map", controller: "Map")
     ///Property responsible for containing the information needed to call the BrotherHood screen
-    static let BrotherHood = Screen(storyboard: "BrotherHood", controller: "BrotherHood")
+    static let brotherHood = Screen(storyboard: "BrotherHood", controller: "BrotherHood")
     
 }

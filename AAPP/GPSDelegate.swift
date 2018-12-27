@@ -10,5 +10,5 @@ import Foundation
 
 
 protocol GPSDelegate {
-    func gps(_ gps: GPS,didUpdate location: Location)
+    func gps(_ gps: GPS,didUpdate location: Coordinate)
 }

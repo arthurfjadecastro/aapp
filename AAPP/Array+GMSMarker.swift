@@ -13,6 +13,8 @@ extension Array where Element == Pin {
     
     ///Method responsible for convert Pin to Mark
     func asMarkers() -> [GMSMarker] {
-        return self.map({ GMSMarker(pin: $0) })
+        return self.map({ $0.asMarker() })
     }
+    
+    
 }

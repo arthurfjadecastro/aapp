@@ -16,8 +16,8 @@ class MapViewController: UIViewController, Coordinable {
     
     
     //MARK: - Properties
-    ///
-    var gps = GPS()
+   
+    
     ///
     var mapView: GMSMapView?
     ///
@@ -34,6 +34,9 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - IBO
     
     
+     
+    
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         self.setupMap()
@@ -42,14 +45,13 @@ class MapViewController: UIViewController, Coordinable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.gps.captureLocation()
     }
     
     
     //MARK: - IBA
     
     @IBAction func goToEntity(_ sender: Any) {
-        self.coordinator?.present(.BrotherHood)
+        self.coordinator?.present(.brotherHood)
     }
     
     
@@ -59,7 +61,6 @@ class MapViewController: UIViewController, Coordinable {
     
     ///
     private func setupGPS(){
-        self.gps.delegate = GPSUpdatesHandler(mapViewController: self)
     }
     
     
@@ -73,12 +74,6 @@ class MapViewController: UIViewController, Coordinable {
         
         self.mapView = _mapView
         self.mapView?.isMyLocationEnabled = true
-//        guard let mylocation = self.mapView?.myLocation else {
-//            assertionFailure("fail when try find my location")
-//            return
-//        }
-//        let _mya = mylocation.altitude
-//        print(_mya)
         self.setupMapStyle()
         self.fetchPins()
         self.view.addSubview(_mapView)

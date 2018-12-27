@@ -11,7 +11,11 @@ import CoreLocation
 
 extension CLLocationCoordinate2D {
     ///Intializer location contains latitude and longitude
-    init(location: Location) {
-        self.init(latitude: location.latitude, longitude: location.longitude)
+    init(coordinate: Coordinate) {
+        self.init(latitude: coordinate.latitude, longitude: coordinate.longitude)
+    }
+    ///
+    func asCoordinate() -> Coordinate {
+        return Coordinate(clCoordinate: self)
     }
 }

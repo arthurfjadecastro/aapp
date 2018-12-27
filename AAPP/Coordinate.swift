@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 ///Struct Location
-struct Location {
+struct Coordinate {
     let latitude: Double
     let longitude: Double
     
@@ -21,14 +21,18 @@ struct Location {
     }
 }
 
-
-extension Location {
+extension Coordinate {
     ///Initializer location of type Coordinate2D
-    init(location: CLLocationCoordinate2D ) {
-        self.latitude = location.latitude
-        self.longitude = location.longitude
+    init(clCoordinate: CLLocationCoordinate2D ) {
+        self.latitude = clCoordinate.latitude
+        self.longitude = clCoordinate.longitude
     }
     
+    ///
+    func asCLCoordinate() -> CLLocationCoordinate2D{
+        return CLLocationCoordinate2D(coordinate: self)
+    }
+
 
     
 }

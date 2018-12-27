@@ -19,8 +19,8 @@ struct GPSUpdatesHandler: GPSDelegate {
         self.mapViewController = mapViewController
     }
     
-    func gps(_ gps: GPS, didUpdate location: Location) {
-        let _location = CLLocationCoordinate2D(location: location)
+    func gps(_ gps: GPS, didUpdate location: Coordinate) {
+        let _location = CLLocationCoordinate2D(coordinate: location)
         let _camera = GMSCameraPosition.camera(withTarget: _location , zoom: 15)
         self.mapViewController?.mapView?.camera = _camera
         //print(self.mapViewController?.mapView?.myLocation?.coordinate)
