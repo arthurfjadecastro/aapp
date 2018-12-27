@@ -43,6 +43,9 @@
 		3DFA25C121D57F2300EB3F8C /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA25B721D57F2200EB3F8C /* SF-Pro-Display-Light.otf */; };
 		3DFA25C221D57F2300EB3F8C /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA25B821D57F2300EB3F8C /* SF-Pro-Text-Bold.otf */; };
 		3DFA25C321D57F2300EB3F8C /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA25B921D57F2300EB3F8C /* SF-Pro-Display-Regular.otf */; };
+		3DFA25C521D5931400EB3F8C /* Shadowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA25C421D5931400EB3F8C /* Shadowable.swift */; };
+		3DFA25C721D5933500EB3F8C /* ShadowConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA25C621D5933500EB3F8C /* ShadowConstraints.swift */; };
+		3DFA25C921D5939C00EB3F8C /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA25C821D5939C00EB3F8C /* K.swift */; };
 		6B48B3411D0F8A83A627496B /* Pods_AAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960097B3B109FF86EEE69FB3 /* Pods_AAPP.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +89,9 @@
 		3DFA25B721D57F2200EB3F8C /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		3DFA25B821D57F2300EB3F8C /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		3DFA25B921D57F2300EB3F8C /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		3DFA25C421D5931400EB3F8C /* Shadowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadowable.swift; sourceTree = "<group>"; };
+		3DFA25C621D5933500EB3F8C /* ShadowConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowConstraints.swift; sourceTree = "<group>"; };
+		3DFA25C821D5939C00EB3F8C /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		960097B3B109FF86EEE69FB3 /* Pods_AAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E9F14584D87E134FC5019C /* Pods-AAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AAPP/Pods-AAPP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +207,9 @@
 			children = (
 				3DC6759C21CDA11C008719B4 /* File.swift */,
 				3DB84C5321D0F2A100D3681D /* Result.swift */,
+				3DFA25C421D5931400EB3F8C /* Shadowable.swift */,
+				3DFA25C621D5933500EB3F8C /* ShadowConstraints.swift */,
+				3DFA25C821D5939C00EB3F8C /* K.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -400,6 +409,7 @@
 				3D2C240021D509D3004E6D3F /* Coordinator.swift in Sources */,
 				3DB84C5C21D10C7900D3681D /* Array+Pins.swift in Sources */,
 				3D18983721D395790036C85F /* GPSAuthorizationHandler.swift in Sources */,
+				3DFA25C521D5931400EB3F8C /* Shadowable.swift in Sources */,
 				3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */,
 				3D2C240421D50C79004E6D3F /* CLLocationCoordinate2D.swift in Sources */,
 				3D72A8AC21CABF720041C1D8 /* BrotherHoodViewController.swift in Sources */,
@@ -407,6 +417,8 @@
 				3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */,
 				3D18983521D38F8F0036C85F /* GPSUpdatesHandler.swift in Sources */,
 				3DC6759F21CDA204008719B4 /* Bundle+File.swift in Sources */,
+				3DFA25C921D5939C00EB3F8C /* K.swift in Sources */,
+				3DFA25C721D5933500EB3F8C /* ShadowConstraints.swift in Sources */,
 				3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -160,7 +160,7 @@ Segundo Andar</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bsE-gZ-EJp" firstAttribute="bottom" secondItem="FTt-lc-JIN" secondAttribute="bottom" id="0aN-0Y-4Xg"/>
                             <constraint firstItem="FTt-lc-JIN" firstAttribute="centerX" secondItem="bsE-gZ-EJp" secondAttribute="centerX" id="4gk-8T-Ubz"/>
@@ -172,6 +172,9 @@ Segundo Andar</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bsE-gZ-EJp"/>
                     </view>
+                    <connections>
+                        <outlet property="popUpView" destination="pde-G6-Tuk" id="Wi0-CV-duD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBv-FF-a4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

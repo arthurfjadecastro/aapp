@@ -21,11 +21,12 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     
     //MARK: - IBO
+    @IBOutlet weak var popUpView: UIView!
     
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
-        
+        self.addShadowPopUpView()
     }
     
     
@@ -34,12 +35,24 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     //MARK: - IBA
     
+    
+    
+    ///
     @IBAction func goToMap(_ sender: Any) {
         self.coordinator?.dismiss()
     }
     
     
-    //MARK: - Helper Methods
     
+    //MARK: - API
+    
+    
+    
+    
+    //MARK: - Helper Methods
+    private func addShadowPopUpView(){
+        self.popUpView.createShadowLayerWith(color: K.BottomCustomShadow.colorShadow, opacity: K.BottomCustomShadow.opacity, offset: K.BottomCustomShadow.offset, radius: K.BottomCustomShadow.radius)
+        self.popUpView.createShadowLayerWith(color: K.TopCustomShadow.colorShadow, opacity: K.TopCustomShadow.opacity, offset: K.TopCustomShadow.offset, radius: K.TopCustomShadow.radius)
+    }
     
 }
