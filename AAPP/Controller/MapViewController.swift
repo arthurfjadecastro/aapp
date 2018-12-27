@@ -40,7 +40,7 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         self.setupMap()
-        self.setupGPS()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,22 +57,13 @@ class MapViewController: UIViewController, Coordinable {
     
     
     //MARK: - Helper Methods
-
-    
-    ///
-    private func setupGPS(){
-    }
-    
-    
     ///
     private func setupMap(){
         let _camera = GMSCameraPosition.camera(withLatitude: -15.83616738, longitude: -48.05389939, zoom: 15.0)
         self.camera = _camera
-        
-        
         let _mapView = GMSMapView.map(withFrame: self.view.frame, camera: _camera)
-        
         self.mapView = _mapView
+        self.mapView?.delegate = self
         self.mapView?.isMyLocationEnabled = true
         self.setupMapStyle()
         self.fetchPins()
@@ -106,12 +97,6 @@ class MapViewController: UIViewController, Coordinable {
         }
         self.mapView?.mapStyle = _styleMap
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
+
+
