@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pde-G6-Tuk">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pde-G6-Tuk">
                                 <rect key="frame" x="7" y="306" width="361" height="270"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowup" translatesAutoresizingMaskIntoConstraints="NO" id="I6V-rB-5jw">
@@ -151,6 +151,11 @@ Segundo Andar</string>
                                     <constraint firstItem="ODE-fM-pQi" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="17 / 270" id="xAs-oY-Fyq"/>
                                     <constraint firstItem="Dym-4c-haU" firstAttribute="top" secondItem="BNt-2g-0l1" secondAttribute="bottom" id="y3d-Ws-Oda"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-lc-JIN">
                                 <rect key="frame" x="16" y="576" width="343" height="91"/>
