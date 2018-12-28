@@ -26,6 +26,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GET-ud-3jo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonDissmisPreview" destination="skt-In-n8z" eventType="touchUpInside" id="HlA-Ll-FDp"/>
+                                </connections>
+                            </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pde-G6-Tuk">
                                 <rect key="frame" x="7" y="306" width="361" height="270"/>
                                 <subviews>
@@ -43,7 +50,7 @@
                                             <constraint firstAttribute="width" constant="321" id="Ier-WK-NGs"/>
                                         </constraints>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODE-fM-pQi">
+                                    <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODE-fM-pQi">
                                         <rect key="frame" x="20" y="253" width="321" height="17"/>
                                         <color key="backgroundColor" red="0.0" green="0.98039215690000003" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -134,10 +141,7 @@ Segundo Andar</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-NV-wpp">
-                                        <rect key="frame" x="138" y="16.5" width="85" height="28"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Ld9-NV-wpp" secondAttribute="height" multiplier="85:28" id="Zpq-ws-pPR"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="213"/>
                                         <connections>
                                             <action selector="moreDetailsBrotherHood:" destination="skt-In-n8z" eventType="touchUpInside" id="uMC-ku-udA"/>
                                         </connections>
@@ -171,23 +175,23 @@ Segundo Andar</string>
                                     <constraint firstItem="Dda-KY-FcR" firstAttribute="centerX" secondItem="ZMV-on-Nv0" secondAttribute="centerX" id="KxI-rT-MKm"/>
                                     <constraint firstItem="eBb-bl-KZN" firstAttribute="width" secondItem="6PX-Yx-cdT" secondAttribute="width" id="LUU-Xu-lDS"/>
                                     <constraint firstItem="BNt-2g-0l1" firstAttribute="width" secondItem="pde-G6-Tuk" secondAttribute="width" multiplier="337 / 361" id="MaI-s0-vLy"/>
+                                    <constraint firstItem="Ld9-NV-wpp" firstAttribute="leading" secondItem="pde-G6-Tuk" secondAttribute="leading" id="PiI-1A-CMb"/>
                                     <constraint firstItem="vQM-X9-h7Q" firstAttribute="centerX" secondItem="pde-G6-Tuk" secondAttribute="centerX" id="QTd-sj-2r7"/>
                                     <constraint firstItem="26k-sY-Vag" firstAttribute="bottom" secondItem="Dym-4c-haU" secondAttribute="bottom" id="Ram-5o-NbS"/>
                                     <constraint firstItem="eBb-bl-KZN" firstAttribute="leading" secondItem="6PX-Yx-cdT" secondAttribute="trailing" constant="24" id="RhG-kO-wVR"/>
                                     <constraint firstItem="LRv-U1-9B1" firstAttribute="top" secondItem="BNt-2g-0l1" secondAttribute="bottom" id="UNt-gi-GrK"/>
                                     <constraint firstItem="U6D-qz-vlw" firstAttribute="centerX" secondItem="6PX-Yx-cdT" secondAttribute="centerX" id="Wea-8w-Dvz"/>
                                     <constraint firstItem="6PX-Yx-cdT" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="18 / 270" id="X2L-64-pN8"/>
-                                    <constraint firstItem="Ld9-NV-wpp" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="28/270" id="XYY-zD-gbd"/>
                                     <constraint firstItem="CzM-u9-8Km" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="25/270" id="aao-DP-nZx"/>
                                     <constraint firstItem="26k-sY-Vag" firstAttribute="leading" secondItem="dkP-iW-bcQ" secondAttribute="leading" id="b6J-9C-qB7"/>
-                                    <constraint firstItem="Ld9-NV-wpp" firstAttribute="centerY" secondItem="Dct-9A-mWQ" secondAttribute="centerY" constant="-7" id="bXv-YM-1B5"/>
                                     <constraint firstItem="Dda-KY-FcR" firstAttribute="centerY" secondItem="ZMV-on-Nv0" secondAttribute="centerY" id="bpB-Cm-bnQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ld9-NV-wpp" secondAttribute="trailing" id="cSt-FP-8yc"/>
                                     <constraint firstItem="BNt-2g-0l1" firstAttribute="top" secondItem="Dct-9A-mWQ" secondAttribute="bottom" id="cko-k1-NIW"/>
                                     <constraint firstItem="Dym-4c-haU" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="102/270" id="fNB-1H-PkC"/>
-                                    <constraint firstItem="Ld9-NV-wpp" firstAttribute="centerX" secondItem="Dct-9A-mWQ" secondAttribute="centerX" id="hCu-KW-yPP"/>
                                     <constraint firstItem="ODE-fM-pQi" firstAttribute="centerX" secondItem="pde-G6-Tuk" secondAttribute="centerX" id="hUS-Av-IsO"/>
                                     <constraint firstItem="Dym-4c-haU" firstAttribute="leading" secondItem="dkP-iW-bcQ" secondAttribute="trailing" constant="8" id="haI-jY-O5o"/>
                                     <constraint firstItem="Dct-9A-mWQ" firstAttribute="top" secondItem="I6V-rB-5jw" secondAttribute="bottom" constant="8" id="ids-Bz-o93"/>
+                                    <constraint firstItem="Ld9-NV-wpp" firstAttribute="top" secondItem="pde-G6-Tuk" secondAttribute="top" id="kNi-T0-K6A"/>
                                     <constraint firstItem="ZMV-on-Nv0" firstAttribute="width" secondItem="eBb-bl-KZN" secondAttribute="width" multiplier="21/18" id="l7m-Re-Add"/>
                                     <constraint firstItem="26k-sY-Vag" firstAttribute="trailing" secondItem="dkP-iW-bcQ" secondAttribute="trailing" id="m7l-SI-2hM"/>
                                     <constraint firstItem="Gox-1a-fXv" firstAttribute="trailing" secondItem="dkP-iW-bcQ" secondAttribute="trailing" id="mjk-lU-iG3"/>
@@ -195,6 +199,7 @@ Segundo Andar</string>
                                     <constraint firstItem="CzM-u9-8Km" firstAttribute="centerX" secondItem="eBb-bl-KZN" secondAttribute="centerX" id="nnj-2T-fx0"/>
                                     <constraint firstItem="26k-sY-Vag" firstAttribute="top" secondItem="dkP-iW-bcQ" secondAttribute="bottom" id="qcb-bx-X0d"/>
                                     <constraint firstItem="LRv-U1-9B1" firstAttribute="width" secondItem="pde-G6-Tuk" secondAttribute="width" multiplier="18 / 361" id="rzb-ko-2XE"/>
+                                    <constraint firstItem="Dda-KY-FcR" firstAttribute="top" secondItem="Ld9-NV-wpp" secondAttribute="bottom" constant="17" id="tJ3-JY-KAb"/>
                                     <constraint firstItem="ODE-fM-pQi" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="17 / 270" id="xAs-oY-Fyq"/>
                                     <constraint firstItem="U6D-qz-vlw" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="25/270" id="xjE-rn-f26"/>
                                     <constraint firstItem="Dym-4c-haU" firstAttribute="top" secondItem="BNt-2g-0l1" secondAttribute="bottom" id="y3d-Ws-Oda"/>
@@ -205,7 +210,7 @@ Segundo Andar</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-lc-JIN">
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-lc-JIN">
                                 <rect key="frame" x="16" y="576" width="343" height="91"/>
                                 <color key="backgroundColor" red="0.0" green="0.98039215686274506" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -213,14 +218,21 @@ Segundo Andar</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GET-ud-3jo" firstAttribute="leading" secondItem="bsE-gZ-EJp" secondAttribute="leading" id="02m-DB-du4"/>
                             <constraint firstItem="bsE-gZ-EJp" firstAttribute="bottom" secondItem="FTt-lc-JIN" secondAttribute="bottom" id="0aN-0Y-4Xg"/>
                             <constraint firstItem="FTt-lc-JIN" firstAttribute="centerX" secondItem="bsE-gZ-EJp" secondAttribute="centerX" id="4gk-8T-Ubz"/>
                             <constraint firstItem="pde-G6-Tuk" firstAttribute="height" secondItem="hjE-ph-4h6" secondAttribute="height" multiplier="270 / 667" id="DJC-zr-dUa"/>
+                            <constraint firstItem="GET-ud-3jo" firstAttribute="leading" secondItem="bsE-gZ-EJp" secondAttribute="leading" id="Jat-Pf-dLu"/>
+                            <constraint firstItem="GET-ud-3jo" firstAttribute="top" secondItem="hjE-ph-4h6" secondAttribute="top" id="KA0-6R-7UU"/>
+                            <constraint firstItem="GET-ud-3jo" firstAttribute="trailing" secondItem="bsE-gZ-EJp" secondAttribute="trailing" id="MdI-7z-Bgx"/>
+                            <constraint firstItem="GET-ud-3jo" firstAttribute="top" secondItem="hjE-ph-4h6" secondAttribute="top" id="ZHP-z0-giv"/>
                             <constraint firstItem="pde-G6-Tuk" firstAttribute="width" secondItem="hjE-ph-4h6" secondAttribute="width" multiplier="361 / 375" id="cDL-tb-KIC"/>
                             <constraint firstItem="pde-G6-Tuk" firstAttribute="centerX" secondItem="bsE-gZ-EJp" secondAttribute="centerX" id="cna-6C-Ctw"/>
                             <constraint firstItem="FTt-lc-JIN" firstAttribute="height" secondItem="hjE-ph-4h6" secondAttribute="height" multiplier="91 / 667" id="nTT-M0-fpt"/>
+                            <constraint firstItem="bsE-gZ-EJp" firstAttribute="trailing" secondItem="GET-ud-3jo" secondAttribute="trailing" id="sn3-KV-iB1"/>
+                            <constraint firstItem="GET-ud-3jo" firstAttribute="bottom" secondItem="bsE-gZ-EJp" secondAttribute="bottom" id="uGz-TY-dvD"/>
                             <constraint firstItem="FTt-lc-JIN" firstAttribute="top" secondItem="pde-G6-Tuk" secondAttribute="bottom" id="yR7-Fw-mwh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bsE-gZ-EJp"/>

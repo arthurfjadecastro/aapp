@@ -37,6 +37,10 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     //MARK: - IBA
     
     ///
+    @IBAction func buttonDissmisPreview(){
+    }
+    
+    ///
     @IBAction func moreDetailsBrotherHood(_ sender: UIButton) {print("moredetail")}
     
     ///
