@@ -51,7 +51,7 @@ class AppCoordinator: Coordinator {
     //MARK: - Helper methods
 
     ///Method responsible for implementing the desired view controller presentation
-    fileprivate func presentController(_ screen: Screen) {
+    fileprivate func presentController(_ screen: Screen, transition: ScreenTransition = .popUpIn) {
         let _storyboard = UIStoryboard(name: screen.storyboard, bundle: nil)
         let _controller = _storyboard.instantiateViewController(withIdentifier: screen.controller)
         guard var _nextViewController = _controller as? (Coordinable & UIViewController) else {
@@ -60,6 +60,7 @@ class AppCoordinator: Coordinator {
         }
         let _coordinator = AppCoordinator(current: _nextViewController)
         _nextViewController.coordinator = _coordinator
-        self.currentController.present(_nextViewController, animated: true, completion: nil)
+        transition.present(current: self.currentController, next: _nextViewController)
+        
     }
 }

@@ -38,6 +38,7 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     ///
     @IBAction func buttonDissmisPreview(){
+        self.coordinator?.dismiss()
     }
     
     ///

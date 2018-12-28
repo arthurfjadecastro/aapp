@@ -45,9 +45,9 @@ class MapViewController: UIViewController, Coordinable {
     
     //MARK: - IBA
     ///Action call when there is need to go to Brotherhood Screen.
-    @IBAction func goToBrotherHood(_ sender: Any) {
-        self.coordinator?.present(.brotherHood)
-    }
+//    @IBAction func goToBrotherHood(_ sender: Any) {
+//        self.coordinator?.present(.brotherHood)
+//    }
     
     
     
