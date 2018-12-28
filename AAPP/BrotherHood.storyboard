@@ -26,11 +26,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1T-C4-nEj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GET-ud-3jo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="buttonDissmisPreview" destination="skt-In-n8z" eventType="touchUpInside" id="HlA-Ll-FDp"/>
+                                    <action selector="goToMap:" destination="skt-In-n8z" eventType="touchUpInside" id="HtV-9K-gzp"/>
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pde-G6-Tuk">
@@ -224,12 +228,16 @@ Segundo Andar</string>
                             <constraint firstItem="bsE-gZ-EJp" firstAttribute="bottom" secondItem="FTt-lc-JIN" secondAttribute="bottom" id="0aN-0Y-4Xg"/>
                             <constraint firstItem="FTt-lc-JIN" firstAttribute="centerX" secondItem="bsE-gZ-EJp" secondAttribute="centerX" id="4gk-8T-Ubz"/>
                             <constraint firstItem="pde-G6-Tuk" firstAttribute="height" secondItem="hjE-ph-4h6" secondAttribute="height" multiplier="270 / 667" id="DJC-zr-dUa"/>
+                            <constraint firstItem="M1T-C4-nEj" firstAttribute="leading" secondItem="hjE-ph-4h6" secondAttribute="leading" id="Gj1-JL-oXe"/>
                             <constraint firstItem="GET-ud-3jo" firstAttribute="leading" secondItem="bsE-gZ-EJp" secondAttribute="leading" id="Jat-Pf-dLu"/>
                             <constraint firstItem="GET-ud-3jo" firstAttribute="top" secondItem="hjE-ph-4h6" secondAttribute="top" id="KA0-6R-7UU"/>
+                            <constraint firstAttribute="bottom" secondItem="M1T-C4-nEj" secondAttribute="bottom" id="Lqe-jl-Jz2"/>
                             <constraint firstItem="GET-ud-3jo" firstAttribute="trailing" secondItem="bsE-gZ-EJp" secondAttribute="trailing" id="MdI-7z-Bgx"/>
+                            <constraint firstAttribute="trailing" secondItem="M1T-C4-nEj" secondAttribute="trailing" id="PGR-H7-qJh"/>
                             <constraint firstItem="GET-ud-3jo" firstAttribute="top" secondItem="hjE-ph-4h6" secondAttribute="top" id="ZHP-z0-giv"/>
                             <constraint firstItem="pde-G6-Tuk" firstAttribute="width" secondItem="hjE-ph-4h6" secondAttribute="width" multiplier="361 / 375" id="cDL-tb-KIC"/>
                             <constraint firstItem="pde-G6-Tuk" firstAttribute="centerX" secondItem="bsE-gZ-EJp" secondAttribute="centerX" id="cna-6C-Ctw"/>
+                            <constraint firstItem="M1T-C4-nEj" firstAttribute="top" secondItem="hjE-ph-4h6" secondAttribute="top" id="dlH-ch-Qy5"/>
                             <constraint firstItem="FTt-lc-JIN" firstAttribute="height" secondItem="hjE-ph-4h6" secondAttribute="height" multiplier="91 / 667" id="nTT-M0-fpt"/>
                             <constraint firstItem="bsE-gZ-EJp" firstAttribute="trailing" secondItem="GET-ud-3jo" secondAttribute="trailing" id="sn3-KV-iB1"/>
                             <constraint firstItem="GET-ud-3jo" firstAttribute="bottom" secondItem="bsE-gZ-EJp" secondAttribute="bottom" id="uGz-TY-dvD"/>
@@ -238,6 +246,7 @@ Segundo Andar</string>
                         <viewLayoutGuide key="safeArea" id="bsE-gZ-EJp"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="M1T-C4-nEj" id="eKO-wH-o4i"/>
                         <outlet property="popUpView" destination="pde-G6-Tuk" id="Wi0-CV-duD"/>
                     </connections>
                 </viewController>

@@ -20,10 +20,12 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     
     
+    
     //MARK: - IBO
     ///Outlet responsible for presentation preview details of BrotherHood
     @IBOutlet weak var popUpView: UIView!
     
+    @IBOutlet weak var backgroundView: UIView!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -32,15 +34,12 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     
     
-    
-    
-    //MARK: - IBA
-    
-    ///
-    @IBAction func buttonDissmisPreview(){
-        self.coordinator?.dismiss()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.presentBackground()
     }
     
+    //MARK: - IBA    
     ///
     @IBAction func moreDetailsBrotherHood(_ sender: UIButton) {print("moredetail")}
     
@@ -49,15 +48,16 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     ///
     @IBAction func callBrotherHood(_ sender: UIButton) {print("call")}
-    
-    
+
     ///
     @IBAction func routeBrotherHood(_ sender: UIButton){print("route")}
     
     
     ///Action call when there is need to go to Map Screen.
     @IBAction func goToMap(_ sender: Any) {
-        self.coordinator?.dismiss()
+        self.dismissBackground {
+            self.coordinator?.dismiss()
+        }
     }
     
     
@@ -68,6 +68,26 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     
     //MARK: - Helper Methods
+    
+    
+    
+    private func dismissBackground(_ completion: @escaping ()-> Void) {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.15, delay: 0, options: .curveEaseInOut, animations: {
+            self.backgroundView.alpha = 0
+        }, completion: { _ in
+            completion()
+        })
+    }
+    
+    private func presentBackground() {
+        self.backgroundView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.backgroundView.alpha = 0
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.45, delay: 0, options: .curveEaseInOut, animations: {
+            self.backgroundView.alpha = 0.2
+        }, completion: nil)
+    }
+    
+    
     ///Method responsible for adding shadow in pop up
     private func addShadowPopUpView(){
         self.popUpView.createShadowLayerWith(color: K.BottomCustomShadow.colorShadow, opacity: K.BottomCustomShadow.opacity, offset: K.BottomCustomShadow.offset, radius: K.BottomCustomShadow.radius)
