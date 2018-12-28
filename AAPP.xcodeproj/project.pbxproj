@@ -14,6 +14,9 @@
 		3D2C240021D509D3004E6D3F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C23FF21D509D3004E6D3F /* Coordinator.swift */; };
 		3D2C240221D509EC004E6D3F /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240121D509EC004E6D3F /* Coordinable.swift */; };
 		3D2C240421D50C79004E6D3F /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */; };
+		3D6026AA21D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */; };
+		3D6026AC21D6745500852223 /* GMSMarker+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026AB21D6745500852223 /* GMSMarker+Pin.swift */; };
+		3D6026AE21D6746B00852223 /* Pin+GMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026AD21D6746B00852223 /* Pin+GMSMarker.swift */; };
 		3D72A89121CABE1D0041C1D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A89021CABE1D0041C1D8 /* AppDelegate.swift */; };
 		3D72A89821CABE1E0041C1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D72A89721CABE1E0041C1D8 /* Assets.xcassets */; };
 		3D72A89B21CABE1E0041C1D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */; };
@@ -58,6 +61,9 @@
 		3D2C23FF21D509D3004E6D3F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3D2C240121D509EC004E6D3F /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
 		3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinate+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
+		3D6026AB21D6745500852223 /* GMSMarker+Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSMarker+Pin.swift"; sourceTree = "<group>"; };
+		3D6026AD21D6746B00852223 /* Pin+GMSMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pin+GMSMarker.swift"; sourceTree = "<group>"; };
 		3D72A88D21CABE1D0041C1D8 /* AAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D72A89021CABE1D0041C1D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D72A89721CABE1E0041C1D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -232,6 +238,9 @@
 				3DB84C5121D0F0BC00D3681D /* PinDataSource.swift */,
 				3DB84C5521D0FAA500D3681D /* Coordinate.swift */,
 				3DB84C5721D0FE1200D3681D /* Pin.swift */,
+				3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */,
+				3D6026AB21D6745500852223 /* GMSMarker+Pin.swift */,
+				3D6026AD21D6746B00852223 /* Pin+GMSMarker.swift */,
 			);
 			name = Pins;
 			sourceTree = "<group>";
@@ -400,8 +409,10 @@
 				3D2C240221D509EC004E6D3F /* Coordinable.swift in Sources */,
 				3D12462A21D2474D00D40404 /* GPSDelegate.swift in Sources */,
 				3DB84C5621D0FAA500D3681D /* Coordinate.swift in Sources */,
+				3D6026AA21D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift in Sources */,
 				3DFA25AE21D5772300EB3F8C /* MapViewController+GMSMapViewDelegate.swift in Sources */,
 				3DB84C5A21D10B0E00D3681D /* Array+GMSMarker.swift in Sources */,
+				3D6026AC21D6745500852223 /* GMSMarker+Pin.swift in Sources */,
 				3DB84C5821D0FE1200D3681D /* Pin.swift in Sources */,
 				3DC6759D21CDA11C008719B4 /* File.swift in Sources */,
 				3D72A8A721CABEB20041C1D8 /* MapViewController.swift in Sources */,
@@ -419,6 +430,7 @@
 				3DC6759F21CDA204008719B4 /* Bundle+File.swift in Sources */,
 				3DFA25C921D5939C00EB3F8C /* K.swift in Sources */,
 				3DFA25C721D5933500EB3F8C /* ShadowConstraints.swift in Sources */,
+				3D6026AE21D6746B00852223 /* Pin+GMSMarker.swift in Sources */,
 				3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

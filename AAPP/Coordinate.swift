@@ -21,18 +21,3 @@ struct Coordinate {
     }
 }
 
-extension Coordinate {
-    ///Initializer location of type Coordinate2D
-    init(clCoordinate: CLLocationCoordinate2D ) {
-        self.latitude = clCoordinate.latitude
-        self.longitude = clCoordinate.longitude
-    }
-    
-    ///
-    func asCLCoordinate() -> CLLocationCoordinate2D{
-        return CLLocationCoordinate2D(coordinate: self)
-    }
-
-
-    
-}

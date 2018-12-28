@@ -33,35 +33,6 @@ struct Pin {
 
 
 
-extension Pin {
-    ///Initializer of marker with name and location
-    init(marker: GMSMarker) {
-        self.name = marker.title ?? "Desconhecido"
-        self.location = Coordinate(clCoordinate: marker.position)
-    }
-    
-    ///
-    func asMarker() -> GMSMarker {
-        return GMSMarker(pin: self)
-    }
-}
 
 
-extension GMSMarker {
-   
-    ///Initializer Pin with coordinate2D, position and name.
-    convenience init(pin: Pin) {
-        let coordinate2d = CLLocationCoordinate2D(coordinate: pin.location)
-        self.init(position: coordinate2d)
-        self.title = pin.name
-    }
-    
-    ///
-    func asPin() -> Pin {
-        return Pin(marker: self)
-    }
-    
-    
-    
-    
-}
+
