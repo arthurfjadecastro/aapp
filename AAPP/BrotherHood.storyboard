@@ -106,11 +106,49 @@ Segundo Andar</string>
                                             <constraint firstAttribute="width" secondItem="ZMV-on-Nv0" secondAttribute="height" multiplier="1:1" id="itf-lX-1Y6"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-u9-8Km">
+                                        <rect key="frame" x="44.5" y="231.5" width="37" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="CzM-u9-8Km" secondAttribute="height" multiplier="37:25" id="ZQE-JL-f2X"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="callBrotherHood:" destination="skt-In-n8z" eventType="touchUpInside" id="T2s-3N-xxR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dda-KY-FcR">
+                                        <rect key="frame" x="88" y="230" width="37" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Dda-KY-FcR" secondAttribute="height" multiplier="37:25" id="E2A-nh-lOu"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="routeBrotherHood:" destination="skt-In-n8z" eventType="touchUpInside" id="hwn-Cs-tAx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6D-qz-vlw">
+                                        <rect key="frame" x="2.5" y="231.5" width="37" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="U6D-qz-vlw" secondAttribute="height" multiplier="37:25" id="DD1-LD-8Pv"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sharedBrotherHood:" destination="skt-In-n8z" eventType="touchUpInside" id="3rv-qO-HFA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-NV-wpp">
+                                        <rect key="frame" x="138" y="16.5" width="85" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ld9-NV-wpp" secondAttribute="height" multiplier="85:28" id="Zpq-ws-pPR"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="moreDetailsBrotherHood:" destination="skt-In-n8z" eventType="touchUpInside" id="uMC-ku-udA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Dct-9A-mWQ" firstAttribute="centerX" secondItem="I6V-rB-5jw" secondAttribute="centerX" id="27E-Nl-sKU"/>
                                     <constraint firstItem="Gox-1a-fXv" firstAttribute="leading" secondItem="LRv-U1-9B1" secondAttribute="trailing" constant="9" id="2Qp-na-G1o"/>
+                                    <constraint firstItem="U6D-qz-vlw" firstAttribute="centerY" secondItem="6PX-Yx-cdT" secondAttribute="centerY" id="39e-iK-Q1C"/>
+                                    <constraint firstItem="CzM-u9-8Km" firstAttribute="centerY" secondItem="eBb-bl-KZN" secondAttribute="centerY" id="47p-Gs-JM1"/>
                                     <constraint firstItem="vQM-X9-h7Q" firstAttribute="top" secondItem="pde-G6-Tuk" secondAttribute="top" id="4lk-Kf-E5A"/>
                                     <constraint firstItem="ODE-fM-pQi" firstAttribute="top" secondItem="eBb-bl-KZN" secondAttribute="bottom" id="5as-iU-LNC"/>
                                     <constraint firstItem="ODE-fM-pQi" firstAttribute="top" secondItem="ZMV-on-Nv0" secondAttribute="bottom" id="5qw-dG-Qru"/>
@@ -119,6 +157,7 @@ Segundo Andar</string>
                                     <constraint firstItem="ZMV-on-Nv0" firstAttribute="leading" secondItem="eBb-bl-KZN" secondAttribute="trailing" constant="24" id="8dU-I8-24V"/>
                                     <constraint firstItem="LRv-U1-9B1" firstAttribute="leading" secondItem="BNt-2g-0l1" secondAttribute="leading" id="8ru-C0-NtC"/>
                                     <constraint firstItem="Dym-4c-haU" firstAttribute="trailing" secondItem="BNt-2g-0l1" secondAttribute="trailing" id="D0s-xA-HQJ"/>
+                                    <constraint firstItem="Dda-KY-FcR" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="25/270" id="Dfc-Qf-RnO"/>
                                     <constraint firstItem="dkP-iW-bcQ" firstAttribute="top" secondItem="Gox-1a-fXv" secondAttribute="bottom" constant="2.5" id="E7V-cx-MSV"/>
                                     <constraint firstItem="vQM-X9-h7Q" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="17 / 270" id="EM4-Ng-PFx"/>
                                     <constraint firstItem="ODE-fM-pQi" firstAttribute="top" secondItem="6PX-Yx-cdT" secondAttribute="bottom" id="FOX-rZ-kjS"/>
@@ -129,16 +168,23 @@ Segundo Andar</string>
                                     <constraint firstItem="Gox-1a-fXv" firstAttribute="top" secondItem="BNt-2g-0l1" secondAttribute="bottom" id="IXK-CS-sOE"/>
                                     <constraint firstItem="6PX-Yx-cdT" firstAttribute="leading" secondItem="BNt-2g-0l1" secondAttribute="leading" id="J5a-Hj-lY3"/>
                                     <constraint firstItem="BNt-2g-0l1" firstAttribute="centerX" secondItem="pde-G6-Tuk" secondAttribute="centerX" id="KGf-fa-GpD"/>
+                                    <constraint firstItem="Dda-KY-FcR" firstAttribute="centerX" secondItem="ZMV-on-Nv0" secondAttribute="centerX" id="KxI-rT-MKm"/>
                                     <constraint firstItem="eBb-bl-KZN" firstAttribute="width" secondItem="6PX-Yx-cdT" secondAttribute="width" id="LUU-Xu-lDS"/>
                                     <constraint firstItem="BNt-2g-0l1" firstAttribute="width" secondItem="pde-G6-Tuk" secondAttribute="width" multiplier="337 / 361" id="MaI-s0-vLy"/>
                                     <constraint firstItem="vQM-X9-h7Q" firstAttribute="centerX" secondItem="pde-G6-Tuk" secondAttribute="centerX" id="QTd-sj-2r7"/>
                                     <constraint firstItem="26k-sY-Vag" firstAttribute="bottom" secondItem="Dym-4c-haU" secondAttribute="bottom" id="Ram-5o-NbS"/>
                                     <constraint firstItem="eBb-bl-KZN" firstAttribute="leading" secondItem="6PX-Yx-cdT" secondAttribute="trailing" constant="24" id="RhG-kO-wVR"/>
                                     <constraint firstItem="LRv-U1-9B1" firstAttribute="top" secondItem="BNt-2g-0l1" secondAttribute="bottom" id="UNt-gi-GrK"/>
+                                    <constraint firstItem="U6D-qz-vlw" firstAttribute="centerX" secondItem="6PX-Yx-cdT" secondAttribute="centerX" id="Wea-8w-Dvz"/>
                                     <constraint firstItem="6PX-Yx-cdT" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="18 / 270" id="X2L-64-pN8"/>
+                                    <constraint firstItem="Ld9-NV-wpp" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="28/270" id="XYY-zD-gbd"/>
+                                    <constraint firstItem="CzM-u9-8Km" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="25/270" id="aao-DP-nZx"/>
                                     <constraint firstItem="26k-sY-Vag" firstAttribute="leading" secondItem="dkP-iW-bcQ" secondAttribute="leading" id="b6J-9C-qB7"/>
+                                    <constraint firstItem="Ld9-NV-wpp" firstAttribute="centerY" secondItem="Dct-9A-mWQ" secondAttribute="centerY" constant="-7" id="bXv-YM-1B5"/>
+                                    <constraint firstItem="Dda-KY-FcR" firstAttribute="centerY" secondItem="ZMV-on-Nv0" secondAttribute="centerY" id="bpB-Cm-bnQ"/>
                                     <constraint firstItem="BNt-2g-0l1" firstAttribute="top" secondItem="Dct-9A-mWQ" secondAttribute="bottom" id="cko-k1-NIW"/>
                                     <constraint firstItem="Dym-4c-haU" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="102/270" id="fNB-1H-PkC"/>
+                                    <constraint firstItem="Ld9-NV-wpp" firstAttribute="centerX" secondItem="Dct-9A-mWQ" secondAttribute="centerX" id="hCu-KW-yPP"/>
                                     <constraint firstItem="ODE-fM-pQi" firstAttribute="centerX" secondItem="pde-G6-Tuk" secondAttribute="centerX" id="hUS-Av-IsO"/>
                                     <constraint firstItem="Dym-4c-haU" firstAttribute="leading" secondItem="dkP-iW-bcQ" secondAttribute="trailing" constant="8" id="haI-jY-O5o"/>
                                     <constraint firstItem="Dct-9A-mWQ" firstAttribute="top" secondItem="I6V-rB-5jw" secondAttribute="bottom" constant="8" id="ids-Bz-o93"/>
@@ -146,9 +192,11 @@ Segundo Andar</string>
                                     <constraint firstItem="26k-sY-Vag" firstAttribute="trailing" secondItem="dkP-iW-bcQ" secondAttribute="trailing" id="m7l-SI-2hM"/>
                                     <constraint firstItem="Gox-1a-fXv" firstAttribute="trailing" secondItem="dkP-iW-bcQ" secondAttribute="trailing" id="mjk-lU-iG3"/>
                                     <constraint firstItem="I6V-rB-5jw" firstAttribute="centerX" secondItem="pde-G6-Tuk" secondAttribute="centerX" id="mlw-6J-Vt0"/>
+                                    <constraint firstItem="CzM-u9-8Km" firstAttribute="centerX" secondItem="eBb-bl-KZN" secondAttribute="centerX" id="nnj-2T-fx0"/>
                                     <constraint firstItem="26k-sY-Vag" firstAttribute="top" secondItem="dkP-iW-bcQ" secondAttribute="bottom" id="qcb-bx-X0d"/>
                                     <constraint firstItem="LRv-U1-9B1" firstAttribute="width" secondItem="pde-G6-Tuk" secondAttribute="width" multiplier="18 / 361" id="rzb-ko-2XE"/>
                                     <constraint firstItem="ODE-fM-pQi" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="17 / 270" id="xAs-oY-Fyq"/>
+                                    <constraint firstItem="U6D-qz-vlw" firstAttribute="height" secondItem="pde-G6-Tuk" secondAttribute="height" multiplier="25/270" id="xjE-rn-f26"/>
                                     <constraint firstItem="Dym-4c-haU" firstAttribute="top" secondItem="BNt-2g-0l1" secondAttribute="bottom" id="y3d-Ws-Oda"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
