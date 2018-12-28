@@ -18,25 +18,20 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - Properties
    
     
-    ///
+    ///Property responsible for being the application map
     var mapView: GMSMapView?
-    ///
+    ///Property responsible for viewing the map camera
     private var camera: GMSCameraPosition?
-    ///
+    ///Property responsible for manipulating pin data
     private let pinDataSource = PinDataSource()
-    
     ///Property responsible for the flow management of the screen
     var coordinator: Coordinator?
-    
-    
     
     
     //MARK: - IBO
     
     
-     
-    
-    
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         self.setupMap()
@@ -49,15 +44,15 @@ class MapViewController: UIViewController, Coordinable {
     
     
     //MARK: - IBA
-    
-    @IBAction func goToEntity(_ sender: Any) {
+    ///Action call when there is need to go to Brotherhood Screen.
+    @IBAction func goToBrotherHood(_ sender: Any) {
         self.coordinator?.present(.brotherHood)
     }
     
     
     
     //MARK: - Helper Methods
-    ///
+    ///Method responsible for initial configuration Map.
     private func setupMap(){
         let _camera = GMSCameraPosition.camera(withLatitude: -15.83616738, longitude: -48.05389939, zoom: 15.0)
         self.camera = _camera
@@ -69,7 +64,7 @@ class MapViewController: UIViewController, Coordinable {
         self.fetchPins()
         self.view.addSubview(_mapView)
     }
-    ///
+    ///Method responsible for markers search
     func fetchPins(){
         guard let _mapView = self.mapView else {
             assertionFailure("There's no map to fetch pins")
@@ -85,7 +80,7 @@ class MapViewController: UIViewController, Coordinable {
             }
         }
     }
-    ///
+    ///Method responsible for the visual configuration of the map, from a configuration JSON file.
     func setupMapStyle() {
         guard let _url = Bundle.main.url(mapStyleFile) else {
             assertionFailure("Fail when try find file")

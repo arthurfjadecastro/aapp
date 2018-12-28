@@ -21,6 +21,7 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     
     //MARK: - IBO
+    ///Outlet responsible for presentation preview details of BrotherHood
     @IBOutlet weak var popUpView: UIView!
     
     
@@ -49,7 +50,7 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     @IBAction func routeBrotherHood(_ sender: UIButton){print("route")}
     
     
-    ///
+    ///Action call when there is need to go to Map Screen.
     @IBAction func goToMap(_ sender: Any) {
         self.coordinator?.dismiss()
     }
@@ -62,6 +63,7 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     
     //MARK: - Helper Methods
+    ///Method responsible for adding shadow in pop up
     private func addShadowPopUpView(){
         self.popUpView.createShadowLayerWith(color: K.BottomCustomShadow.colorShadow, opacity: K.BottomCustomShadow.opacity, offset: K.BottomCustomShadow.offset, radius: K.BottomCustomShadow.radius)
         self.popUpView.createShadowLayerWith(color: K.TopCustomShadow.colorShadow, opacity: K.TopCustomShadow.opacity, offset: K.TopCustomShadow.offset, radius: K.TopCustomShadow.radius)
