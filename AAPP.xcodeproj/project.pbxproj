@@ -27,6 +27,9 @@
 		3D72A8AC21CABF720041C1D8 /* BrotherHoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */; };
 		3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AE21CAC8780041C1D8 /* Screen.swift */; };
 		3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */; };
+		3D7C90DD21E3DDA600F51942 /* BrotherHoodDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7C90DC21E3DDA600F51942 /* BrotherHoodDetails.storyboard */; };
+		3D7C90E021E3E0C400F51942 /* PlacesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */; };
+		3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90E221E3F62800F51942 /* RequestHandler.swift */; };
 		3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5121D0F0BC00D3681D /* PinDataSource.swift */; };
 		3DB84C5421D0F2A100D3681D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5321D0F2A100D3681D /* Result.swift */; };
 		3DB84C5621D0FAA500D3681D /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5521D0FAA500D3681D /* Coordinate.swift */; };
@@ -50,6 +53,7 @@
 		3DFA25C521D5931400EB3F8C /* Shadowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA25C421D5931400EB3F8C /* Shadowable.swift */; };
 		3DFA25C721D5933500EB3F8C /* ShadowConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA25C621D5933500EB3F8C /* ShadowConstraints.swift */; };
 		3DFA25C921D5939C00EB3F8C /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA25C821D5939C00EB3F8C /* K.swift */; };
+		3DFE4E2021E53F1700F3E635 /* URLSession+DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE4E1F21E53F1700F3E635 /* URLSession+DataTask.swift */; };
 		6B48B3411D0F8A83A627496B /* Pods_AAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960097B3B109FF86EEE69FB3 /* Pods_AAPP.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,9 @@
 		3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotherHoodViewController.swift; sourceTree = "<group>"; };
 		3D72A8AE21CAC8780041C1D8 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		3D7C90DC21E3DDA600F51942 /* BrotherHoodDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BrotherHoodDetails.storyboard; sourceTree = "<group>"; };
+		3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServices.swift; sourceTree = "<group>"; };
+		3D7C90E221E3F62800F51942 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		3DB84C5121D0F0BC00D3681D /* PinDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataSource.swift; sourceTree = "<group>"; };
 		3DB84C5321D0F2A100D3681D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		3DB84C5521D0FAA500D3681D /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 		3DFA25C421D5931400EB3F8C /* Shadowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadowable.swift; sourceTree = "<group>"; };
 		3DFA25C621D5933500EB3F8C /* ShadowConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowConstraints.swift; sourceTree = "<group>"; };
 		3DFA25C821D5939C00EB3F8C /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		3DFE4E1F21E53F1700F3E635 /* URLSession+DataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+DataTask.swift"; sourceTree = "<group>"; };
 		960097B3B109FF86EEE69FB3 /* Pods_AAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E9F14584D87E134FC5019C /* Pods-AAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AAPP/Pods-AAPP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +164,8 @@
 		3D72A88F21CABE1D0041C1D8 /* AAPP */ = {
 			isa = PBXGroup;
 			children = (
+				3D7C90E121E3F5C900F51942 /* Request */,
+				3D7C90DE21E3E0A600F51942 /* Places */,
 				3DFA25AF21D57F0D00EB3F8C /* Fonts */,
 				3D12462421D244AF00D40404 /* Location */,
 				3DB84C5021D0F06600D3681D /* Pins */,
@@ -178,6 +188,7 @@
 				3D72A89721CABE1E0041C1D8 /* Assets.xcassets */,
 				3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */,
 				3D72A8A321CABE8A0041C1D8 /* Map.storyboard */,
+				3D7C90DC21E3DDA600F51942 /* BrotherHoodDetails.storyboard */,
 				3D72A8A921CABF650041C1D8 /* BrotherHood.storyboard */,
 			);
 			name = View;
@@ -210,6 +221,22 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		3D7C90DE21E3E0A600F51942 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */,
+			);
+			name = Places;
+			sourceTree = "<group>";
+		};
+		3D7C90E121E3F5C900F51942 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				3D7C90E221E3F62800F51942 /* RequestHandler.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
 		3DB84C4B21D0E94000D3681D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +253,7 @@
 		3DB84C4C21D0E95C00D3681D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3DFE4E1F21E53F1700F3E635 /* URLSession+DataTask.swift */,
 				3DC6759E21CDA204008719B4 /* Bundle+File.swift */,
 				3DB84C5921D10B0E00D3681D /* Array+GMSMarker.swift */,
 				3DB84C5B21D10C7900D3681D /* Array+Pins.swift */,
@@ -352,6 +380,7 @@
 				3D72A89821CABE1E0041C1D8 /* Assets.xcassets in Resources */,
 				3DFA25C221D57F2300EB3F8C /* SF-Pro-Text-Bold.otf in Resources */,
 				3DFA25BF21D57F2300EB3F8C /* SF-Pro-Display-MediumItalic.otf in Resources */,
+				3D7C90DD21E3DDA600F51942 /* BrotherHoodDetails.storyboard in Resources */,
 				3DFA25BE21D57F2300EB3F8C /* SF-Pro-Text-Regular.otf in Resources */,
 				3D72A8A421CABE8A0041C1D8 /* Map.storyboard in Resources */,
 				3DFA25BB21D57F2300EB3F8C /* SF-Pro-Display-Medium.otf in Resources */,
@@ -430,12 +459,15 @@
 				3DB84C5421D0F2A100D3681D /* Result.swift in Sources */,
 				3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */,
 				3D18983521D38F8F0036C85F /* GPSUpdatesHandler.swift in Sources */,
+				3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */,
+				3D7C90E021E3E0C400F51942 /* PlacesServices.swift in Sources */,
 				3DC6759F21CDA204008719B4 /* Bundle+File.swift in Sources */,
 				3DFA25C921D5939C00EB3F8C /* K.swift in Sources */,
 				3D6026B021D6B0A400852223 /* ScreenTransition.swift in Sources */,
 				3DFA25C721D5933500EB3F8C /* ShadowConstraints.swift in Sources */,
 				3D6026AE21D6746B00852223 /* Pin+GMSMarker.swift in Sources */,
 				3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */,
+				3DFE4E2021E53F1700F3E635 /* URLSession+DataTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

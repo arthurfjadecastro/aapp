@@ -28,6 +28,8 @@ class MapViewController: UIViewController, Coordinable {
     var coordinator: Coordinator?
     
     
+    
+    
     //MARK: - IBO
     
     
@@ -35,6 +37,15 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         self.setupMap()
+        //RequestHandler.request(fromUrl: "https://viacep.com.br/ws/01001000/json/")
+        RequestHandler.requestJSON(fromUrl: "https://viacep.com.br/ws/01001000/json/") { (result: Result<ViaCep>) in
+            switch result  {
+            case .success(let cep):
+                print(cep.bairro)
+            case .error(let error):
+                print(error)
+            }
+        }
         
     }
     
