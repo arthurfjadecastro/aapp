@@ -11,6 +11,7 @@ import GoogleMaps
 
 
 
+
 ///Struct Pin
 struct Pin {
     ///Name a pin

@@ -39,6 +39,9 @@
 		3DC6759B21CD9E9A008719B4 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DC6759A21CD9E9A008719B4 /* MapStyle.json */; };
 		3DC6759D21CDA11C008719B4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6759C21CDA11C008719B4 /* File.swift */; };
 		3DC6759F21CDA204008719B4 /* Bundle+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6759E21CDA204008719B4 /* Bundle+File.swift */; };
+		3DDD030A21E67D7C0054E739 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD030921E67D7C0054E739 /* Distance.swift */; };
+		3DDD030C21E68BA60054E739 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD030B21E68BA60054E739 /* GooglePlace.swift */; };
+		3DDD030E21E68BCF0054E739 /* GooglePlaces+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD030D21E68BCF0054E739 /* GooglePlaces+Decodable.swift */; };
 		3DFA25AE21D5772300EB3F8C /* MapViewController+GMSMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA25AD21D5772300EB3F8C /* MapViewController+GMSMapViewDelegate.swift */; };
 		3DFA25BA21D57F2300EB3F8C /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA25B021D57F2100EB3F8C /* SF-Pro-Display-Bold.otf */; };
 		3DFA25BB21D57F2300EB3F8C /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA25B121D57F2100EB3F8C /* SF-Pro-Display-Medium.otf */; };
@@ -93,6 +96,9 @@
 		3DC6759A21CD9E9A008719B4 /* MapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
 		3DC6759C21CDA11C008719B4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3DC6759E21CDA204008719B4 /* Bundle+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+File.swift"; sourceTree = "<group>"; };
+		3DDD030921E67D7C0054E739 /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
+		3DDD030B21E68BA60054E739 /* GooglePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		3DDD030D21E68BCF0054E739 /* GooglePlaces+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GooglePlaces+Decodable.swift"; sourceTree = "<group>"; };
 		3DFA25AD21D5772300EB3F8C /* MapViewController+GMSMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+GMSMapViewDelegate.swift"; sourceTree = "<group>"; };
 		3DFA25B021D57F2100EB3F8C /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		3DFA25B121D57F2100EB3F8C /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
@@ -225,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */,
+				3DDD030B21E68BA60054E739 /* GooglePlace.swift */,
 			);
 			name = Places;
 			sourceTree = "<group>";
@@ -246,6 +253,7 @@
 				3DFA25C621D5933500EB3F8C /* ShadowConstraints.swift */,
 				3DFA25C821D5939C00EB3F8C /* K.swift */,
 				3D6026AF21D6B0A400852223 /* ScreenTransition.swift */,
+				3DDD030921E67D7C0054E739 /* Distance.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -259,6 +267,7 @@
 				3DB84C5B21D10C7900D3681D /* Array+Pins.swift */,
 				3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */,
 				3DFA25AD21D5772300EB3F8C /* MapViewController+GMSMapViewDelegate.swift */,
+				3DDD030D21E68BCF0054E739 /* GooglePlaces+Decodable.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -439,6 +448,7 @@
 			files = (
 				3D72A89121CABE1D0041C1D8 /* AppDelegate.swift in Sources */,
 				3D2C240221D509EC004E6D3F /* Coordinable.swift in Sources */,
+				3DDD030C21E68BA60054E739 /* GooglePlace.swift in Sources */,
 				3D12462A21D2474D00D40404 /* GPSDelegate.swift in Sources */,
 				3DB84C5621D0FAA500D3681D /* Coordinate.swift in Sources */,
 				3D6026AA21D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift in Sources */,
@@ -457,8 +467,10 @@
 				3D2C240421D50C79004E6D3F /* CLLocationCoordinate2D.swift in Sources */,
 				3D72A8AC21CABF720041C1D8 /* BrotherHoodViewController.swift in Sources */,
 				3DB84C5421D0F2A100D3681D /* Result.swift in Sources */,
+				3DDD030A21E67D7C0054E739 /* Distance.swift in Sources */,
 				3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */,
 				3D18983521D38F8F0036C85F /* GPSUpdatesHandler.swift in Sources */,
+				3DDD030E21E68BCF0054E739 /* GooglePlaces+Decodable.swift in Sources */,
 				3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */,
 				3D7C90E021E3E0C400F51942 /* PlacesServices.swift in Sources */,
 				3DC6759F21CDA204008719B4 /* Bundle+File.swift in Sources */,

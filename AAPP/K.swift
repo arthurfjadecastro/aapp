@@ -29,5 +29,13 @@ struct K {
         static let radius: CGFloat = 1
     }
     
+    
+    struct PlacesSearch {
+        static let key: String = "AIzaSyBmPKemulOhCfyawZO2humY78PXdIgya1Q"
+        static let radius = Distance(km: 4)
+        static let endpoint = "https://maps.googleapis.com/maps/api/place/nearbysearch/"
+    }
+    
+    
 }
 

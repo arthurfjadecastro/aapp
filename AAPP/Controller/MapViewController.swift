@@ -35,16 +35,14 @@ class MapViewController: UIViewController, Coordinable {
     
 
     //MARK: - Lifecycle
+    //Fechado para alteracoes dentro ele
+    //Aberto para extensao
+    //principio aberto fechado open closed principle
     override func viewDidLoad() {
         self.setupMap()
         //RequestHandler.request(fromUrl: "https://viacep.com.br/ws/01001000/json/")
-        RequestHandler.requestJSON(fromUrl: "https://viacep.com.br/ws/01001000/json/") { (result: Result<ViaCep>) in
-            switch result  {
-            case .success(let cep):
-                print(cep.bairro)
-            case .error(let error):
-                print(error)
-            }
+        PlacesServices.brotherHoods { (pin) in
+            print(512)
         }
         
     }

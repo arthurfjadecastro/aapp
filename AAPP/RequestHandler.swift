@@ -32,6 +32,12 @@ class RequestHandler {
     
     //MARK: - Helpers Method
     static func requestJSON<T>(url: URL, completion: @escaping (Result<T>) -> Void) where T:Decodable {
+        RequestHandler.requestJSON(url: URLRequest(url: url), completion: completion)
+    }
+    
+    
+    
+    static func requestJSON<T>(url: URLRequest, completion: @escaping (Result<T>) -> Void) where T:Decodable {
         RequestHandler.request(from: url) { (result) in
             switch result {
             case .success(let data):
@@ -60,7 +66,6 @@ class RequestHandler {
                 }catch {
                     completion(Result.error(error))
                 }
-                
             case .error(let error):
                 completion(Result.error(error))
             }
@@ -80,7 +85,14 @@ class RequestHandler {
         }
     }
     
-    static func request(from url: URL, completion: @escaping (Result<Data>) -> Void ){
+    static func request(from url: URL, completion: @escaping (Result<Data>) -> Void ) {
+        RequestHandler.request(from: URLRequest(url: url), completion: completion)
+    }
+    
+    
+    
+    
+    static func request(from url: URLRequest, completion: @escaping (Result<Data>) -> Void ){
         URLSession.shared.dataTask(with: url) { (result) in
             switch result {
                 case .success(let response):
