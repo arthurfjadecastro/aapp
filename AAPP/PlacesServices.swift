@@ -48,20 +48,38 @@ class PlacesServices {
                 self.results = try values.decode([GooglePlace].self, forKey: .results)
             }
         }
-        guard let nameUrl = URL(string: K.PlacesSearch.endpoint) else {
-            assertionFailure("Fail when try get url")
-            return
-        }
-        var _urlRequest = URLRequest(url: nameUrl)
-        _urlRequest.addValue(K.PlacesSearch.key, forHTTPHeaderField: "key")
+
         let _distance = K.PlacesSearch.radius.asMeters
         let _stringDistance = "\(_distance)"
+        var urlComponents = URLComponents(string: K.PlacesSearch.endpoint)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "key", value: K.PlacesSearch.key),
+            URLQueryItem(name: "radius", value: _stringDistance),
+            URLQueryItem(name: "location", value: "-33.85992227989272,151.2085402201073")
+        ]
         
-        _urlRequest.addValue(_stringDistance, forHTTPHeaderField: "radius")
         
-        _urlRequest.addValue("-33.85992227989272,151.2085402201073", forHTTPHeaderField: "location")
         
-        RequestHandler.requestJSON(url: _urlRequest) { (result: Result<GooglePlaces>) in
+      
+     
+        
+        guard let _url = urlComponents?.url else {
+            assertionFailure("Fail when try get specific url")
+            return
+        }
+        
+        RequestHandler.request(from: _url) { (result: Result<Data>) in
+            switch result {
+            case .success(let places):
+                let placesString = String(data: places, encoding: .utf8)
+               // print(placesString)
+                
+            case .error(let error):
+                print(error)
+            }
+        }
+        ///convert json
+        RequestHandler.requestJSON(url: _url) { (result: Result<GooglePlaces>) in
             switch result {
             case .success(let places):
                 print(places)
@@ -69,9 +87,6 @@ class PlacesServices {
                 print(error)
             }
         }
-        
-        
-        
     }
     
     

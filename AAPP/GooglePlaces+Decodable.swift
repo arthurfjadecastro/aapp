@@ -22,8 +22,8 @@ extension GooglePlace: Decodable {
         let values = try decoder.container(keyedBy: GooglePlaceKeys.self)
         
         struct Location:Decodable {
-            let latitude: Double
-            let longitude: Double
+            let lat: Double
+            let lng: Double
         }
         
         struct Geometry:Decodable {
@@ -48,7 +48,7 @@ extension GooglePlace: Decodable {
         
         
         let _geometry = try values.decode(Geometry.self, forKey: .geometry)
-        let _coordinate = Coordinate(latitude: _geometry.location.latitude, longitude: _geometry.location.longitude)
+        let _coordinate = Coordinate(latitude: _geometry.location.lat, longitude: _geometry.location.lng)
         self.name = try values.decode(String.self, forKey: .name)
         self.location = _coordinate
         

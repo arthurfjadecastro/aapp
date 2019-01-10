@@ -33,7 +33,7 @@ struct K {
     struct PlacesSearch {
         static let key: String = "AIzaSyBmPKemulOhCfyawZO2humY78PXdIgya1Q"
         static let radius = Distance(km: 4)
-        static let endpoint = "https://maps.googleapis.com/maps/api/place/nearbysearch/"
+        static let endpoint = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
     }
     
     
