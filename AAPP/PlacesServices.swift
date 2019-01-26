@@ -18,24 +18,19 @@ class PlacesServices {
     
     
     //MARK: - Properties
+    ///
     static let shared = PlacesServices()
-    
+    ///
+    var requester: Requester.Type = RequestHandler.self
     
     
     private init() {
     }
     
-    
-    
-    
-    //MARK: - API
-    
-    
-    
 
-    
-    
-    static func brotherHoods(completion: ([Pin]) -> Void) {
+    //MARK: - API
+
+     static func brotherHoods(completion: ([Pin]) -> Void) {
         struct GooglePlaces: Decodable {
             let results: [GooglePlace]
             
@@ -57,29 +52,13 @@ class PlacesServices {
             URLQueryItem(name: "radius", value: _stringDistance),
             URLQueryItem(name: "location", value: "-33.85992227989272,151.2085402201073")
         ]
-        
-        
-        
-      
-     
-        
+
         guard let _url = urlComponents?.url else {
             assertionFailure("Fail when try get specific url")
             return
         }
-        
-        RequestHandler.request(from: _url) { (result: Result<Data>) in
-            switch result {
-            case .success(let places):
-                let placesString = String(data: places, encoding: .utf8)
-               // print(placesString)
-                
-            case .error(let error):
-                print(error)
-            }
-        }
         ///convert json
-        RequestHandler.requestJSON(url: _url) { (result: Result<GooglePlaces>) in
+        self.shared.requester.requestJSON(url: _url) { (result: Result<GooglePlaces>) in
             switch result {
             case .success(let places):
                 print(places)

@@ -10,10 +10,7 @@ import Foundation
 
 
 
-
-
-
-class RequestHandler {
+class RequestHandler: Requester {
 
     
     
@@ -59,9 +56,7 @@ class RequestHandler {
         }
     }
     
-    
-    
-    
+   
     
     static func request(fromUrl url: String, completion: @escaping (Result<Data>) -> Void) {
         if let _url = URL(string: url) {
@@ -79,7 +74,7 @@ class RequestHandler {
     
     
     
-    static func request(from url: URLRequest, completion: @escaping (Result<Data>) -> Void ){
+    class func request(from url: URLRequest, completion: @escaping (Result<Data>) -> Void ){
         URLSession.shared.dataTask(with: url) { (result) in
             switch result {
                 case .success(let response):
