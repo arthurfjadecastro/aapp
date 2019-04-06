@@ -38,5 +38,7 @@ construcão com a utilização da metodologia ágil Scrum e boas práticas de de
 
 ## Agradecimentos
 
-* Gustavo Almeida - [GitHub](https://github.com/almeidaws) - Mentor
+* Mário Braga - Orientador
+* Coordenadoria de Assistência Técnica Integral - CATI DF
+* Gustavo Almeida - [GitHub](https://github.com/almeidaws)
 
