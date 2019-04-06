@@ -14,6 +14,8 @@
 		3D2C240021D509D3004E6D3F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C23FF21D509D3004E6D3F /* Coordinator.swift */; };
 		3D2C240221D509EC004E6D3F /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240121D509EC004E6D3F /* Coordinable.swift */; };
 		3D2C240421D50C79004E6D3F /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */; };
+		3D364B9822595A1900EB0864 /* BrotherHoodDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D364B9722595A1900EB0864 /* BrotherHoodDetails.storyboard */; };
+		3D364B9A22595B0700EB0864 /* BrotherHoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D364B9922595B0700EB0864 /* BrotherHoodDetailsViewController.swift */; };
 		3D38283F21FD1068009178E2 /* AAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38283E21FD1068009178E2 /* AAPPTests.swift */; };
 		3D38284721FD1361009178E2 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38284621FD1361009178E2 /* Requester.swift */; };
 		3D38284921FD1865009178E2 /* PlacesServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38284821FD1865009178E2 /* PlacesServicesTests.swift */; };
@@ -36,7 +38,6 @@
 		3D72A8AC21CABF720041C1D8 /* BrotherHoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */; };
 		3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AE21CAC8780041C1D8 /* Screen.swift */; };
 		3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */; };
-		3D7C90DD21E3DDA600F51942 /* BrotherHoodDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7C90DC21E3DDA600F51942 /* BrotherHoodDetails.storyboard */; };
 		3D7C90E021E3E0C400F51942 /* PlacesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */; };
 		3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90E221E3F62800F51942 /* RequestHandler.swift */; };
 		3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5121D0F0BC00D3681D /* PinDataSource.swift */; };
@@ -88,6 +89,8 @@
 		3D2C23FF21D509D3004E6D3F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3D2C240121D509EC004E6D3F /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
 		3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		3D364B9722595A1900EB0864 /* BrotherHoodDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrotherHoodDetails.storyboard; sourceTree = "<group>"; };
+		3D364B9922595B0700EB0864 /* BrotherHoodDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotherHoodDetailsViewController.swift; sourceTree = "<group>"; };
 		3D38283C21FD1067009178E2 /* AAPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AAPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D38283E21FD1068009178E2 /* AAPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPPTests.swift; sourceTree = "<group>"; };
 		3D38284021FD1068009178E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,7 +112,6 @@
 		3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotherHoodViewController.swift; sourceTree = "<group>"; };
 		3D72A8AE21CAC8780041C1D8 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		3D7C90DC21E3DDA600F51942 /* BrotherHoodDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BrotherHoodDetails.storyboard; sourceTree = "<group>"; };
 		3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServices.swift; sourceTree = "<group>"; };
 		3D7C90E221E3F62800F51942 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		3DB84C5121D0F0BC00D3681D /* PinDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataSource.swift; sourceTree = "<group>"; };
@@ -237,9 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				3D72A89721CABE1E0041C1D8 /* Assets.xcassets */,
+				3D364B9722595A1900EB0864 /* BrotherHoodDetails.storyboard */,
 				3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */,
 				3D72A8A321CABE8A0041C1D8 /* Map.storyboard */,
-				3D7C90DC21E3DDA600F51942 /* BrotherHoodDetails.storyboard */,
 				3D72A8A921CABF650041C1D8 /* BrotherHood.storyboard */,
 			);
 			name = View;
@@ -250,6 +252,7 @@
 			children = (
 				3D72A8A621CABEB20041C1D8 /* MapViewController.swift */,
 				3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */,
+				3D364B9922595B0700EB0864 /* BrotherHoodDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -465,7 +468,7 @@
 				3D72A89821CABE1E0041C1D8 /* Assets.xcassets in Resources */,
 				3DFA25C221D57F2300EB3F8C /* SF-Pro-Text-Bold.otf in Resources */,
 				3DFA25BF21D57F2300EB3F8C /* SF-Pro-Display-MediumItalic.otf in Resources */,
-				3D7C90DD21E3DDA600F51942 /* BrotherHoodDetails.storyboard in Resources */,
+				3D364B9822595A1900EB0864 /* BrotherHoodDetails.storyboard in Resources */,
 				3DFA25BE21D57F2300EB3F8C /* SF-Pro-Text-Regular.otf in Resources */,
 				3D72A8A421CABE8A0041C1D8 /* Map.storyboard in Resources */,
 				3DFA25BB21D57F2300EB3F8C /* SF-Pro-Display-Medium.otf in Resources */,
@@ -547,6 +550,7 @@
 				3DB84C5A21D10B0E00D3681D /* Array+GMSMarker.swift in Sources */,
 				3D6026AC21D6745500852223 /* GMSMarker+Pin.swift in Sources */,
 				3DB84C5821D0FE1200D3681D /* Pin.swift in Sources */,
+				3D364B9A22595B0700EB0864 /* BrotherHoodDetailsViewController.swift in Sources */,
 				3DC6759D21CDA11C008719B4 /* File.swift in Sources */,
 				3D72A8A721CABEB20041C1D8 /* MapViewController.swift in Sources */,
 				3D12462621D2452600D40404 /* GPS.swift in Sources */,
@@ -603,6 +607,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RD6V8JKJ5P;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = AAPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,6 +628,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RD6V8JKJ5P;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = AAPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

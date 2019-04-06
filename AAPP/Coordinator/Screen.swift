@@ -15,9 +15,11 @@ struct Screen {
     ///Controller reference string
     let controller: String
     
-    ///Property responsible for containing the information needed to call the map screen
+    ///Property responsible for containing information needed to call the map screen
     static let map = Screen(storyboard: "Map", controller: "Map")
-    ///Property responsible for containing the information needed to call the BrotherHood screen
+    ///Property responsible for containing information needed to call the BrotherHood screen
     static let brotherHood = Screen(storyboard: "BrotherHood", controller: "BrotherHood")
+    ///Property responsible for containing information needed to call the BrotherHoodDetails screen
+    static let brotherHoodDetails = Screen(storyboard: "BrotherHoodDetails", controller: "BrotherHoodDetails")
     
 }

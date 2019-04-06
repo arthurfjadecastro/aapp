@@ -45,6 +45,8 @@ class MapViewController: UIViewController, Coordinable {
             print(512)
         }
         
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {

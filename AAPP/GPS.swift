@@ -48,7 +48,6 @@ class GPS: NSObject {
         self.locationManager.requestWhenInUseAuthorization()
     }
     
-    
 }
 
 

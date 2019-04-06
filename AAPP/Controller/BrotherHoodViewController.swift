@@ -41,7 +41,12 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     //MARK: - IBA    
     ///
-    @IBAction func moreDetailsBrotherHood(_ sender: UIButton) {print("moredetail")}
+    @IBAction func moreDetailsBrotherHood(_ sender: UIButton) {
+        
+        self.coordinator?.present(.brotherHoodDetails)
+        print("moredetail")
+        
+    }
     
     ///
     @IBAction func sharedBrotherHood(_ sender: UIButton) {print("shared")}
