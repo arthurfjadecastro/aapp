@@ -58,6 +58,7 @@ class PlacesServices {
             return
         }
         ///convert json
+        print(_url)
         self.shared.requester.requestJSON(url: _url) { (result: Result<GooglePlaces>) in
             switch result {
             case .success(let places):

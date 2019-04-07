@@ -20,18 +20,39 @@ let pin3 = Pin(name: "fake03", latitude: -15.86562992, longitude: -48.02961393)
 
 ///Class responsible for managing the data of the registered pins
 class PinDataSource {
+    
     ///Method responsible for create pins
     func pins(completion: @escaping (Result<[Pin]>) -> Void){
+        guard let url = URL(string: "https://admaa.aabrasil.org.br/ws/md/index.php?MD=1&AREA=17") else {
+            fatalError("error fatal url ")
+        }
+        
+        RequestHandler.request(from: url) { (result: Result<Data>) in
+            switch result {
+            case .success(let places):
+                let strData = String(decoding: places, as: UTF8.self)
+                print(strData)
+            case .error(let error):
+                print(error)
+            }
+        }
+        
         let pins = [pin1,pin2,pin3]
         completion(Result.success(pins))
+    }
+      
+        
+        //fazer requisicao dos dados em html, converter pra json, popular pins
+        //chamar o result de pins com nome latitude e longitude através de um completion método de requisicao 
+    
         // Errorsóaceita
         //completion(Result.error(FileError.fileNotFound))
-    }
+}
     
     
 
     
-}
+
 
 
 

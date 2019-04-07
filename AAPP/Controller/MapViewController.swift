@@ -41,9 +41,9 @@ class MapViewController: UIViewController, Coordinable {
     override func viewDidLoad() {
         self.setupMap()
         //RequestHandler.request(fromUrl: "https://viacep.com.br/ws/01001000/json/")
-        PlacesServices.brotherHoods { (pin) in
-            print(512)
-        }
+//        PlacesServices.brotherHoods { (pin) in
+//            print(512)
+//        }
         
         
        
@@ -81,6 +81,7 @@ class MapViewController: UIViewController, Coordinable {
             assertionFailure("There's no map to fetch pins")
             return
         }
+        
         pinDataSource.pins { (result) in
             switch result {
             case .success(let pins):
