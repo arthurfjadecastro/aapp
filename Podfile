@@ -6,7 +6,7 @@ target 'AAPP' do
   use_frameworks!
   pod 'GoogleMaps'
   pod 'GooglePlaces'
-
+  pod 'SwiftSoup'
   # Pods for AAPP
 
 end
