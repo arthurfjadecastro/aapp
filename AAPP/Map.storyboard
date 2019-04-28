@@ -17,9 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="RXk-Fi-qET">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFm-OF-slU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PFm-OF-slU" firstAttribute="top" secondItem="hsE-MH-VbG" secondAttribute="top" id="J8J-p9-Um4"/>
+                            <constraint firstItem="PFm-OF-slU" firstAttribute="trailing" secondItem="hsE-MH-VbG" secondAttribute="trailing" id="M4c-us-67I"/>
+                            <constraint firstItem="PFm-OF-slU" firstAttribute="bottom" secondItem="hsE-MH-VbG" secondAttribute="bottom" id="R0I-7h-vKU"/>
+                            <constraint firstItem="PFm-OF-slU" firstAttribute="leading" secondItem="hsE-MH-VbG" secondAttribute="leading" id="hgM-jO-0qB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hsE-MH-VbG"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="PFm-OF-slU" id="zxW-Y6-kPa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEV-Jq-0ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
