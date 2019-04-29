@@ -37,12 +37,17 @@ struct BrotherHoodDetailModel: Decodable {
     
 }
 
+
+
 class MapViewController: UIViewController, Coordinable {
     
     
     //MARK: - Properties
-   
+    ///array de ceps encontrados
+    var ceps = [String]()
     
+    ///resultado das buscas dos grupos
+     var result = [BrotherHoodDetailModel]()
     ///Property responsible for being the application map
     var mapView: GMSMapView?
     ///Property responsible for viewing the map camera
@@ -66,7 +71,9 @@ class MapViewController: UIViewController, Coordinable {
     //principio aberto fechado open closed principle
     override func viewDidLoad() {
         self.captureDataBrotherHood()
+       
         self.setupMap()
+        
         
         //RequestHandler.request(fromUrl: "https://viacep.com.br/ws/01001000/json/")
 //        PlacesServices.brotherHoods { (pin) in
@@ -74,6 +81,7 @@ class MapViewController: UIViewController, Coordinable {
 //        }
     
     }
+  
     
     func captureDataBrotherHood() {
         
@@ -103,15 +111,12 @@ class MapViewController: UIViewController, Coordinable {
     
     
     
-    
-    func doSomething(elements : [BrotherHoodDetailModel]) {
-        print(elements)
-    }
+ 
     
     //MARK: - Helper Methods
     ///Method responsible for initial configuration Map.
     private func setupMap(){
-        let _camera = GMSCameraPosition.camera(withLatitude: -15.83616738, longitude: -48.05389939, zoom: 15.0)
+        let _camera = GMSCameraPosition.camera(withLatitude: -22.9035, longitude: -43.2096, zoom: 15.0)
         self.camera = _camera
         let _mapView = GMSMapView.map(withFrame: self.view.frame, camera: _camera)
         self.mapView = _mapView
@@ -121,6 +126,48 @@ class MapViewController: UIViewController, Coordinable {
         self.fetchPins()
         self.view.addSubview(_mapView)
     }
+    
+    
+    func doSomething(brotherHoods : [BrotherHoodDetailModel]) {
+        
+        let geocoder = CLGeocoder()
+        
+        for element in brotherHoods {
+            self.ceps.append(element.cep)
+            
+            geocoder.geocodeAddressString(self.ceps.first ?? "72015-050", completionHandler: { (placemarks, error) in
+                self.processResponse(withPlacemarks: placemarks, error: error)
+            })
+        }
+    }
+    
+    func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
+        if((error) != nil){
+            print(error!)
+        }
+        print("ae")
+        var location: CLLocation?
+        if let placemarks = placemarks, placemarks.count > 0 {
+            location = placemarks.first?.location
+         }
+        
+        if let location = location {
+            let lat = location.coordinate.latitude
+            let long = location.coordinate.longitude
+            var coordinate = Coordinate(latitude: lat, longitude: long)
+            print(coordinate)
+        }
+    //                var placeMark = CLPlacemark(placemark: <#T##CLPlacemark#>)
+//        if let placemark = placemarks?.first {
+//            print(placemark)
+//            let lat = placemark.location!.coordinate.latitude
+//            let long = placemark.location!.coordinate.longitude
+//            var coordinate = Coordinate(latitude: lat, longitude: long)
+//            print(coordinate)
+//
+//        }
+    }
+    
     ///Method responsible for markers search
     func fetchPins(){
         guard let _mapView = self.mapView else {
@@ -197,7 +244,7 @@ extension MapViewController: WKScriptMessageHandler, WKNavigationDelegate  {
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
-        var result = [BrotherHoodDetailModel]()
+      
         
         if let receivedEvents = message.body as? [[String : Any]] {
             for element in receivedEvents {
@@ -205,13 +252,13 @@ extension MapViewController: WKScriptMessageHandler, WKNavigationDelegate  {
              
                 let brotherHood = BrotherHoodDetailModel(uf: element["uf"] as! String, Grupo: element["Grupo"] as! String, inicio_atividades: element["inicio_atividades"] as! String, telefones: element["telefones"] as! String, logradouro: element["logradouro"] as! String, numero: element["numero"] as! String, complemento: element["complemento"] as! String, bairro: element["bairro"] as! String , cep: element["cep"] as! String, reunioes_2a: element["reunioes_2a"] as! String , reunioes_3a: element["reunioes_3a"] as! String , reunioes_4a: element["reunioes_4a"] as! String, reunioes_5a: element["reunioes_5a"] as! String, reunioes6a: element["reunioes_6a"] as! String, reunioes_sab: element["reunioes_sab"] as! String, reunioes_dom: element["reunioes_dom"] as! String, reunioes_fer: element["reunioes_fer"] as! String)
                 
-                result.append(brotherHood)
+                self.result.append(brotherHood)
                 
 
             }
         }
         
-        self.doSomething(elements: result)
+        self.doSomething(brotherHoods: result)
     }
     
     
