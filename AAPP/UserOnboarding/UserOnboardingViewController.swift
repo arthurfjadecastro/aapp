@@ -149,11 +149,13 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
             if(self.pageIndex == 0) {
                 self.scrollViewOnboarding.contentOffset.x = 375.0
                 
-            }else {
+            }else if (self.scrollViewOnboarding.contentOffset.x == 375.0) {
                 self.scrollViewOnboarding.contentOffset.x = 750.0
-                
+            }else {
+                self.coordinator?.present(.map)
             }
         }.startAnimation()
+        
        
         
     }
