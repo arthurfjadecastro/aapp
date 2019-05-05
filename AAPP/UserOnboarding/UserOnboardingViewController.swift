@@ -15,7 +15,7 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
     //MARK: - Properties
     var slides:[Slide] = [];
     var pageIndex = Int()
-    var offsetScrollView = CGFloat()
+    
 
     
     //MARK: - IBO
@@ -89,12 +89,11 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
         self.pageIndex = Int(round(scrollView.contentOffset.x/view.frame.width))
         pageControl.currentPage = self.pageIndex
         
-        let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
-        let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
-        self.offsetScrollView = currentHorizontalOffset
-        print(currentHorizontalOffset)
-        print(maximumHorizontalOffset)
-        print(pageIndex)
+//        let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
+//        let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
+//        print(currentHorizontalOffset)
+//        print(maximumHorizontalOffset)
+//        print(pageIndex)
 
 //        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
 //        pageControl.currentPage = Int(pageIndex)
@@ -146,11 +145,8 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
     
     @IBAction func buttonNext(_ sender: Any) {
         UIViewPropertyAnimator(duration: 1, dampingRatio: 1) {
-            if(self.pageIndex == 0) {
-                self.scrollViewOnboarding.contentOffset.x = 375.0
-                
-            }else if (self.scrollViewOnboarding.contentOffset.x == 375.0) {
-                self.scrollViewOnboarding.contentOffset.x = 750.0
+            if(self.pageIndex <= 1) {
+                self.scrollViewOnboarding.contentOffset.x = (self.scrollViewOnboarding.contentOffset.x + self.view.frame.width)
             }else {
                 self.coordinator?.present(.map)
             }
