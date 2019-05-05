@@ -116,7 +116,7 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - Helper Methods
     ///Method responsible for initial configuration Map.
     private func setupMap(){
-        let _camera = GMSCameraPosition.camera(withLatitude: -22.9035, longitude: -43.2096, zoom: 15.0)
+        let _camera = GMSCameraPosition.camera(withLatitude: -15.8537382, longitude: -48.1371014, zoom: 15.0)
         self.camera = _camera
         let _mapView = GMSMapView.map(withFrame: self.view.frame, camera: _camera)
         self.mapView = _mapView
@@ -134,8 +134,8 @@ class MapViewController: UIViewController, Coordinable {
         
         for element in brotherHoods {
             self.ceps.append(element.cep)
-            
-            geocoder.geocodeAddressString(self.ceps.first ?? "72015-050", completionHandler: { (placemarks, error) in
+//            geocoder.geocodePostalAddress
+            geocoder.geocodeAddressString(element.cep, completionHandler: { (placemarks, error) in
                 self.processResponse(withPlacemarks: placemarks, error: error)
             })
         }

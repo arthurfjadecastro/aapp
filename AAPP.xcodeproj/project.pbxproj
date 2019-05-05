@@ -25,12 +25,12 @@
 		3D38284F21FD20EE009178E2 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90E221E3F62800F51942 /* RequestHandler.swift */; };
 		3D38285021FD2338009178E2 /* PlacesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */; };
 		3D38285121FD2892009178E2 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5721D0FE1200D3681D /* Pin.swift */; };
+		3D46AC35227F764600F1A4D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D46AC34227F764600F1A4D6 /* Assets.xcassets */; };
 		3D6026AA21D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */; };
 		3D6026AC21D6745500852223 /* GMSMarker+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026AB21D6745500852223 /* GMSMarker+Pin.swift */; };
 		3D6026AE21D6746B00852223 /* Pin+GMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026AD21D6746B00852223 /* Pin+GMSMarker.swift */; };
 		3D6026B021D6B0A400852223 /* ScreenTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026AF21D6B0A400852223 /* ScreenTransition.swift */; };
 		3D72A89121CABE1D0041C1D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A89021CABE1D0041C1D8 /* AppDelegate.swift */; };
-		3D72A89821CABE1E0041C1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D72A89721CABE1E0041C1D8 /* Assets.xcassets */; };
 		3D72A89B21CABE1E0041C1D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */; };
 		3D72A8A421CABE8A0041C1D8 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D72A8A321CABE8A0041C1D8 /* Map.storyboard */; };
 		3D72A8A721CABEB20041C1D8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8A621CABEB20041C1D8 /* MapViewController.swift */; };
@@ -97,13 +97,13 @@
 		3D38284621FD1361009178E2 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		3D38284821FD1865009178E2 /* PlacesServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServicesTests.swift; sourceTree = "<group>"; };
 		3D38284A21FD1E0B009178E2 /* RequestHandlerMockup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandlerMockup.swift; sourceTree = "<group>"; };
+		3D46AC34227F764600F1A4D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinate+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
 		3D6026AB21D6745500852223 /* GMSMarker+Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSMarker+Pin.swift"; sourceTree = "<group>"; };
 		3D6026AD21D6746B00852223 /* Pin+GMSMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pin+GMSMarker.swift"; sourceTree = "<group>"; };
 		3D6026AF21D6B0A400852223 /* ScreenTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTransition.swift; sourceTree = "<group>"; };
 		3D72A88D21CABE1D0041C1D8 /* AAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D72A89021CABE1D0041C1D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D72A89721CABE1E0041C1D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D72A89A21CABE1E0041C1D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D72A89C21CABE1E0041C1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D72A8A321CABE8A0041C1D8 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		3D72A8A221CABE3D0041C1D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3D72A89721CABE1E0041C1D8 /* Assets.xcassets */,
+				3D46AC34227F764600F1A4D6 /* Assets.xcassets */,
 				3D364B9722595A1900EB0864 /* BrotherHoodDetails.storyboard */,
 				3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */,
 				3D72A8A321CABE8A0041C1D8 /* Map.storyboard */,
@@ -465,7 +465,6 @@
 				3DFA25C121D57F2300EB3F8C /* SF-Pro-Display-Light.otf in Resources */,
 				3DFA25BA21D57F2300EB3F8C /* SF-Pro-Display-Bold.otf in Resources */,
 				3D72A8AA21CABF650041C1D8 /* BrotherHood.storyboard in Resources */,
-				3D72A89821CABE1E0041C1D8 /* Assets.xcassets in Resources */,
 				3DFA25C221D57F2300EB3F8C /* SF-Pro-Text-Bold.otf in Resources */,
 				3DFA25BF21D57F2300EB3F8C /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				3D364B9822595A1900EB0864 /* BrotherHoodDetails.storyboard in Resources */,
@@ -473,6 +472,7 @@
 				3D72A8A421CABE8A0041C1D8 /* Map.storyboard in Resources */,
 				3DFA25BB21D57F2300EB3F8C /* SF-Pro-Display-Medium.otf in Resources */,
 				3DFA25C321D57F2300EB3F8C /* SF-Pro-Display-Regular.otf in Resources */,
+				3D46AC35227F764600F1A4D6 /* Assets.xcassets in Resources */,
 				3DFA25BD21D57F2300EB3F8C /* SF-Pro-Text-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
