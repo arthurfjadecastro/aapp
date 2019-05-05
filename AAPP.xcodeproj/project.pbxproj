@@ -26,6 +26,10 @@
 		3D38285021FD2338009178E2 /* PlacesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */; };
 		3D38285121FD2892009178E2 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5721D0FE1200D3681D /* Pin.swift */; };
 		3D46AC35227F764600F1A4D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D46AC34227F764600F1A4D6 /* Assets.xcassets */; };
+		3D46AC38227F7BE100F1A4D6 /* UserOnboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D46AC37227F7BE100F1A4D6 /* UserOnboarding.storyboard */; };
+		3D46AC3A227F7C0E00F1A4D6 /* UserOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46AC39227F7C0E00F1A4D6 /* UserOnboardingViewController.swift */; };
+		3D46AC3C227F7D3200F1A4D6 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46AC3B227F7D3200F1A4D6 /* Slide.swift */; };
+		3D46AC3E227F7D5C00F1A4D6 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D46AC3D227F7D5C00F1A4D6 /* Slide.xib */; };
 		3D6026AA21D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */; };
 		3D6026AC21D6745500852223 /* GMSMarker+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026AB21D6745500852223 /* GMSMarker+Pin.swift */; };
 		3D6026AE21D6746B00852223 /* Pin+GMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026AD21D6746B00852223 /* Pin+GMSMarker.swift */; };
@@ -98,6 +102,10 @@
 		3D38284821FD1865009178E2 /* PlacesServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServicesTests.swift; sourceTree = "<group>"; };
 		3D38284A21FD1E0B009178E2 /* RequestHandlerMockup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandlerMockup.swift; sourceTree = "<group>"; };
 		3D46AC34227F764600F1A4D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D46AC37227F7BE100F1A4D6 /* UserOnboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserOnboarding.storyboard; sourceTree = "<group>"; };
+		3D46AC39227F7C0E00F1A4D6 /* UserOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOnboardingViewController.swift; sourceTree = "<group>"; };
+		3D46AC3B227F7D3200F1A4D6 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		3D46AC3D227F7D5C00F1A4D6 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinate+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
 		3D6026AB21D6745500852223 /* GMSMarker+Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSMarker+Pin.swift"; sourceTree = "<group>"; };
 		3D6026AD21D6746B00852223 /* Pin+GMSMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pin+GMSMarker.swift"; sourceTree = "<group>"; };
@@ -194,6 +202,17 @@
 			path = AAPPTests;
 			sourceTree = "<group>";
 		};
+		3D46AC36227F7BB500F1A4D6 /* UserOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3D46AC37227F7BE100F1A4D6 /* UserOnboarding.storyboard */,
+				3D46AC39227F7C0E00F1A4D6 /* UserOnboardingViewController.swift */,
+				3D46AC3B227F7D3200F1A4D6 /* Slide.swift */,
+				3D46AC3D227F7D5C00F1A4D6 /* Slide.xib */,
+			);
+			path = UserOnboarding;
+			sourceTree = "<group>";
+		};
 		3D72A88421CABE1C0041C1D8 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +236,7 @@
 		3D72A88F21CABE1D0041C1D8 /* AAPP */ = {
 			isa = PBXGroup;
 			children = (
+				3D46AC36227F7BB500F1A4D6 /* UserOnboarding */,
 				3D7C90E121E3F5C900F51942 /* Request */,
 				3D7C90DE21E3E0A600F51942 /* Places */,
 				3DFA25AF21D57F0D00EB3F8C /* Fonts */,
@@ -460,6 +480,7 @@
 			files = (
 				3DFA25C021D57F2300EB3F8C /* SF-Pro-Text-Semibold.otf in Resources */,
 				3DFA25BC21D57F2300EB3F8C /* SF-Pro-Display-Semibold.otf in Resources */,
+				3D46AC38227F7BE100F1A4D6 /* UserOnboarding.storyboard in Resources */,
 				3D72A89B21CABE1E0041C1D8 /* LaunchScreen.storyboard in Resources */,
 				3DC6759B21CD9E9A008719B4 /* MapStyle.json in Resources */,
 				3DFA25C121D57F2300EB3F8C /* SF-Pro-Display-Light.otf in Resources */,
@@ -474,6 +495,7 @@
 				3DFA25C321D57F2300EB3F8C /* SF-Pro-Display-Regular.otf in Resources */,
 				3D46AC35227F764600F1A4D6 /* Assets.xcassets in Resources */,
 				3DFA25BD21D57F2300EB3F8C /* SF-Pro-Text-Medium.otf in Resources */,
+				3D46AC3E227F7D5C00F1A4D6 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +597,8 @@
 				3DFA25C721D5933500EB3F8C /* ShadowConstraints.swift in Sources */,
 				3D6026AE21D6746B00852223 /* Pin+GMSMarker.swift in Sources */,
 				3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */,
+				3D46AC3C227F7D3200F1A4D6 /* Slide.swift in Sources */,
+				3D46AC3A227F7C0E00F1A4D6 /* UserOnboardingViewController.swift in Sources */,
 				3DFE4E2021E53F1700F3E635 /* URLSession+DataTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

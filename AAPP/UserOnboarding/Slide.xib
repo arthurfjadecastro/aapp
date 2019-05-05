@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Slide" customModule="AAPP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flat-color-icons:search" translatesAutoresizingMaskIntoConstraints="NO" id="x9P-od-RSZ">
+                    <rect key="frame" x="136.5" y="6" width="102" height="102"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá, seja bem vindo a nossa plataforma de busca, estamos feliz por ajudar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnW-HB-NWw">
+                    <rect key="frame" x="61" y="126" width="253" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="94" id="NxF-xm-IUS"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="94" id="u7c-Wg-4Ja"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
+                    <color key="textColor" red="0.76862745099999996" green="0.83137254900000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JnW-HB-NWw" firstAttribute="top" secondItem="x9P-od-RSZ" secondAttribute="bottom" constant="18" id="Mpk-vR-o50"/>
+                <constraint firstItem="JnW-HB-NWw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="61" id="QlR-uo-EtL"/>
+                <constraint firstItem="JnW-HB-NWw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cOe-ab-aeQ"/>
+                <constraint firstItem="x9P-od-RSZ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="eeI-YI-Cl3"/>
+                <constraint firstItem="x9P-od-RSZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="6" id="ye2-Bb-ido"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageOnboarding" destination="x9P-od-RSZ" id="9MO-UF-2J9"/>
+                <outlet property="subTitleOnboarding" destination="JnW-HB-NWw" id="zp2-gu-rsd"/>
+            </connections>
+            <point key="canvasLocation" x="52" y="29.685157421289357"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="flat-color-icons:search" width="102" height="102"/>
+    </resources>
+</document>
