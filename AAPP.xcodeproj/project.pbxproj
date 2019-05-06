@@ -50,6 +50,7 @@
 		3DB84C5821D0FE1200D3681D /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5721D0FE1200D3681D /* Pin.swift */; };
 		3DB84C5A21D10B0E00D3681D /* Array+GMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5921D10B0E00D3681D /* Array+GMSMarker.swift */; };
 		3DB84C5C21D10C7900D3681D /* Array+Pins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5B21D10C7900D3681D /* Array+Pins.swift */; };
+		3DC40F2C227FB9C1005E5532 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC40F2B227FB9C1005E5532 /* WebKit.framework */; };
 		3DC6759B21CD9E9A008719B4 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DC6759A21CD9E9A008719B4 /* MapStyle.json */; };
 		3DC6759D21CDA11C008719B4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6759C21CDA11C008719B4 /* File.swift */; };
 		3DC6759F21CDA204008719B4 /* Bundle+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6759E21CDA204008719B4 /* Bundle+File.swift */; };
@@ -128,6 +129,7 @@
 		3DB84C5721D0FE1200D3681D /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		3DB84C5921D10B0E00D3681D /* Array+GMSMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+GMSMarker.swift"; sourceTree = "<group>"; };
 		3DB84C5B21D10C7900D3681D /* Array+Pins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Pins.swift"; sourceTree = "<group>"; };
+		3DC40F2B227FB9C1005E5532 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3DC6759A21CD9E9A008719B4 /* MapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
 		3DC6759C21CDA11C008719B4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3DC6759E21CDA204008719B4 /* Bundle+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+File.swift"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC40F2C227FB9C1005E5532 /* WebKit.framework in Frameworks */,
 				6B48B3411D0F8A83A627496B /* Pods_AAPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +178,7 @@
 		22454D78FD514D4D9AD0D3C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DC40F2B227FB9C1005E5532 /* WebKit.framework */,
 				960097B3B109FF86EEE69FB3 /* Pods_AAPP.framework */,
 			);
 			name = Frameworks;

@@ -144,13 +144,16 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
     
     
     @IBAction func buttonNext(_ sender: Any) {
-        UIViewPropertyAnimator(duration: 1, dampingRatio: 1) {
+        
             if(self.pageIndex <= 1) {
-                self.scrollViewOnboarding.contentOffset.x = (self.scrollViewOnboarding.contentOffset.x + self.view.frame.width)
+                UIViewPropertyAnimator(duration: 1, dampingRatio: 1) {
+                    self.scrollViewOnboarding.contentOffset.x = (self.scrollViewOnboarding.contentOffset.x + self.view.frame.width)
+                }.startAnimation()
             }else {
                 self.coordinator?.present(.map)
             }
-        }.startAnimation()
+        
+        
         
        
         
