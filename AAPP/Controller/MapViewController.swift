@@ -43,6 +43,10 @@ class MapViewController: UIViewController, Coordinable {
     
     
     //MARK: - Properties
+    var activeMessage: Bool?
+    var activeMap = true
+    
+    
     ///array de ceps encontrados
     var ceps = [String]()
     
@@ -102,8 +106,27 @@ class MapViewController: UIViewController, Coordinable {
         super.viewWillAppear(animated)
     }
     
+    @IBOutlet weak var imageGeofence: UIImageView!
     
+    @IBOutlet weak var imageMessage: UIImageView!
     //MARK: - IBA
+    @IBAction func buttonGoMap(_ sender: Any) {
+        
+       
+            self.imageGeofence.image = UIImage(named: "geo_fence_Active")
+            self.imageMessage.image = UIImage(named: "message")
+        
+    }
+
+    
+    @IBAction func buttonGoMessages(_ sender: Any) {
+            self.imageGeofence.image = UIImage(named: "geo_fence")
+            self.imageMessage.image = UIImage(named: "message_Active")
+        
+        
+//        self.coordinator?.present(.messages)
+    }
+    
     ///Action call when there is need to go to Brotherhood Screen.
 //    @IBAction func goToBrotherHood(_ sender: Any) {
 //        self.coordinator?.present(.brotherHood)
@@ -118,7 +141,7 @@ class MapViewController: UIViewController, Coordinable {
     private func setupMap(){
         let _camera = GMSCameraPosition.camera(withLatitude: -15.8537382, longitude: -48.1371014, zoom: 15.0)
         self.camera = _camera
-        let _mapView = GMSMapView.map(withFrame: self.view.frame, camera: _camera)
+        let _mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.9), camera: _camera)
         self.mapView = _mapView
         self.mapView?.delegate = self
         self.mapView?.isMyLocationEnabled = true
