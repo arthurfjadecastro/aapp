@@ -34,6 +34,8 @@ struct BrotherHoodDetailModel: Decodable {
     let reunioes_sab: String
     let reunioes_dom: String
     let reunioes_fer: String
+    let lat: Double
+    let long: Double
     
 }
 
@@ -45,7 +47,8 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - Properties
     var activeMessage: Bool?
     var activeMap = true
-    
+    var lat = Double()
+    var coordinate = [Coordinate]()
     
     ///array de ceps encontrados
     var ceps = [String]()
@@ -150,21 +153,81 @@ class MapViewController: UIViewController, Coordinable {
         self.view.addSubview(_mapView)
     }
     
-    
-    func doSomething(brotherHoods : [BrotherHoodDetailModel]) {
-        
+    func getCoordinate( addressString : String,
+                        completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
         let geocoder = CLGeocoder()
-        
-        for element in brotherHoods {
-            self.ceps.append(element.cep)
-//            geocoder.geocodePostalAddress
-            geocoder.geocodeAddressString(element.cep, completionHandler: { (placemarks, error) in
-                self.processResponse(withPlacemarks: placemarks, error: error)
-            })
+        geocoder.geocodeAddressString(addressString) { (placemarks, error) in
+            if error == nil {
+                if let placemark = placemarks?[0] {
+                    let location = placemark.location!
+                    
+                    completionHandler(location.coordinate, nil)
+                    print(location)
+                    return
+                }
+            }
+            
+            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
         }
     }
     
-    func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
+    
+    func doSomething(brotherHoods : [BrotherHoodDetailModel]) {
+        
+//        self.coordinate.append(<#T##newElement: Coordinate##Coordinate#>)
+//
+        let geocoder = CLGeocoder()
+        var count = 0
+        
+        for element in brotherHoods {
+            count = count + 1
+            self.ceps.append(element.cep)
+            self.getCoordinate(addressString: element.cep) { (location, error) in
+                    self.coordinate.append(location.asCoordinate())
+            }
+        }
+        print(self.coordinate.count)
+        print(self.coordinate.description)
+        print(self.coordinate)
+      
+
+////            geocoder.geocodePostalAddress
+////            geocoder.geocodeAddressString(element.cep, completionHandler: { (placemarks, error) in
+////                print(placemarks)
+//////                self.processResponse(withPlacemarks: placemarks, error: error)
+////            })
+//        }
+//        var i  = 0
+//
+//        while i <= count {
+//
+//            geocoder.geocodeAddressString(self.ceps[i]) { (placemark, error) in
+//                guard let _placemark = placemark?.first else { return }
+//                print(_placemark.locality as Any)
+//                print(_placemark.location?.coordinate.asCoordinate() as Any)
+//                    self.coordinate.append((_placemark.location?.coordinate.asCoordinate())!)
+//                self.lat = (_placemark.location?.coordinate.latitude)!
+//                print("Coordenadas:" , self.coordinate)
+//                }
+//               i = i + 1
+//            if(i == 93) {
+//                break;
+//            }
+//
+//            }
+        
+            
+        }
+    
+
+       
+    
+    
+    
+   
+    
+    
+    func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) -> Coordinate {
         if((error) != nil){
             print(error!)
         }
@@ -179,6 +242,7 @@ class MapViewController: UIViewController, Coordinable {
             let long = location.coordinate.longitude
             var coordinate = Coordinate(latitude: lat, longitude: long)
             print(coordinate)
+            return coordinate
         }
     //                var placeMark = CLPlacemark(placemark: <#T##CLPlacemark#>)
 //        if let placemark = placemarks?.first {
@@ -189,6 +253,7 @@ class MapViewController: UIViewController, Coordinable {
 //            print(coordinate)
 //
 //        }
+                  return Coordinate(latitude: -150000, longitude: -150000)
     }
     
     ///Method responsible for markers search
@@ -267,17 +332,10 @@ extension MapViewController: WKScriptMessageHandler, WKNavigationDelegate  {
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
-      
-        
         if let receivedEvents = message.body as? [[String : Any]] {
             for element in receivedEvents {
-                
-             
-                let brotherHood = BrotherHoodDetailModel(uf: element["uf"] as! String, Grupo: element["Grupo"] as! String, inicio_atividades: element["inicio_atividades"] as! String, telefones: element["telefones"] as! String, logradouro: element["logradouro"] as! String, numero: element["numero"] as! String, complemento: element["complemento"] as! String, bairro: element["bairro"] as! String , cep: element["cep"] as! String, reunioes_2a: element["reunioes_2a"] as! String , reunioes_3a: element["reunioes_3a"] as! String , reunioes_4a: element["reunioes_4a"] as! String, reunioes_5a: element["reunioes_5a"] as! String, reunioes6a: element["reunioes_6a"] as! String, reunioes_sab: element["reunioes_sab"] as! String, reunioes_dom: element["reunioes_dom"] as! String, reunioes_fer: element["reunioes_fer"] as! String)
-                
-                self.result.append(brotherHood)
-                
-
+                let brotherHood = BrotherHoodDetailModel(uf: element["uf"] as! String, Grupo: element["Grupo"] as! String, inicio_atividades: element["inicio_atividades"] as! String, telefones: element["telefones"] as! String, logradouro: element["logradouro"] as! String, numero: element["numero"] as! String, complemento: element["complemento"] as! String, bairro: element["bairro"] as! String , cep: element["cep"] as! String, reunioes_2a: element["reunioes_2a"] as! String , reunioes_3a: element["reunioes_3a"] as! String , reunioes_4a: element["reunioes_4a"] as! String, reunioes_5a: element["reunioes_5a"] as! String, reunioes6a: element["reunioes_6a"] as! String, reunioes_sab: element["reunioes_sab"] as! String, reunioes_dom: element["reunioes_dom"] as! String, reunioes_fer: element["reunioes_fer"] as! String, lat: -15000, long: -15000)
+                    self.result.append(brotherHood)
             }
         }
         
