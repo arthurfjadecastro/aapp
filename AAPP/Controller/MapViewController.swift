@@ -34,8 +34,8 @@ struct BrotherHoodDetailModel: Decodable {
     let reunioes_sab: String
     let reunioes_dom: String
     let reunioes_fer: String
-    let lat: Double
-    let long: Double
+    var lat: Double
+    var long: Double
     
 }
 
@@ -63,6 +63,8 @@ class MapViewController: UIViewController, Coordinable {
     private let pinDataSource = PinDataSource()
     ///Property responsible for the flow management of the screen
     var coordinator: Coordinator?
+    
+     var count = 0
     
     
     
@@ -153,108 +155,79 @@ class MapViewController: UIViewController, Coordinable {
         self.view.addSubview(_mapView)
     }
     
+    let dispatchGroup = DispatchGroup()
+    
+    func doSomething(brotherHoods : [BrotherHoodDetailModel]) {
+        //            print(brotherHoods.count)
+        
+        for element in brotherHoods {
+//        first element - "71691-010"
+            Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (timer) in
+                self.getCoordinate(addressString: element.cep) { (location, error) in
+                    if((error) != nil) {
+                        print(error!)
+                    }
+                    //                self.count = self.count + 1
+                    //                print(self.count , "LAT:  ", location.latitude)
+                    //                print(self.count , "LONG:  ", location.longitude)
+                }
+            }
+           
+        }
+        dispatchGroup.notify(queue: .main) {
+            print("apresentar ")
+        }
+    }
+    
+    
     func getCoordinate( addressString : String,
                         completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
+        
+        self.dispatchGroup.enter()
         let geocoder = CLGeocoder()
+       
         geocoder.geocodeAddressString(addressString) { (placemarks, error) in
+        
+            
             if error == nil {
                 if let placemark = placemarks?[0] {
                     let location = placemark.location!
-                    
                     completionHandler(location.coordinate, nil)
-                    print(location)
+                    self.count = self.count + 1
+//                    print(self.count , "LAT:  ", location.coordinate.latitude)
+//                    print(self.count , "LONG:  ", location.coordinate.longitude)
+                    print(self.count , "asCoordinate:  ", location.coordinate.asCoordinate())
+                    self.dispatchGroup.leave()
                     return
                 }
             }
             
             completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
+            self.dispatchGroup.leave()
         }
     }
     
-    
-    func doSomething(brotherHoods : [BrotherHoodDetailModel]) {
-        
-//        self.coordinate.append(<#T##newElement: Coordinate##Coordinate#>)
-//
-        let geocoder = CLGeocoder()
-        var count = 0
-        
-        for element in brotherHoods {
-            count = count + 1
-            self.ceps.append(element.cep)
-            self.getCoordinate(addressString: element.cep) { (location, error) in
-                    self.coordinate.append(location.asCoordinate())
-            }
-        }
-        print(self.coordinate.count)
-        print(self.coordinate.description)
-        print(self.coordinate)
-      
 
-////            geocoder.geocodePostalAddress
-////            geocoder.geocodeAddressString(element.cep, completionHandler: { (placemarks, error) in
-////                print(placemarks)
-//////                self.processResponse(withPlacemarks: placemarks, error: error)
-////            })
+//
+//    func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) -> Coordinate {
+//        if((error) != nil){
+//            print(error!)
 //        }
-//        var i  = 0
+//        print("ae")
+//        var location: CLLocation?
+//        if let placemarks = placemarks, placemarks.count > 0 {
+//            location = placemarks.first?.location
+//         }
 //
-//        while i <= count {
-//
-//            geocoder.geocodeAddressString(self.ceps[i]) { (placemark, error) in
-//                guard let _placemark = placemark?.first else { return }
-//                print(_placemark.locality as Any)
-//                print(_placemark.location?.coordinate.asCoordinate() as Any)
-//                    self.coordinate.append((_placemark.location?.coordinate.asCoordinate())!)
-//                self.lat = (_placemark.location?.coordinate.latitude)!
-//                print("Coordenadas:" , self.coordinate)
-//                }
-//               i = i + 1
-//            if(i == 93) {
-//                break;
-//            }
-//
-//            }
-        
-            
-        }
-    
-
-       
-    
-    
-    
-   
-    
-    
-    func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) -> Coordinate {
-        if((error) != nil){
-            print(error!)
-        }
-        print("ae")
-        var location: CLLocation?
-        if let placemarks = placemarks, placemarks.count > 0 {
-            location = placemarks.first?.location
-         }
-        
-        if let location = location {
-            let lat = location.coordinate.latitude
-            let long = location.coordinate.longitude
-            var coordinate = Coordinate(latitude: lat, longitude: long)
-            print(coordinate)
-            return coordinate
-        }
-    //                var placeMark = CLPlacemark(placemark: <#T##CLPlacemark#>)
-//        if let placemark = placemarks?.first {
-//            print(placemark)
-//            let lat = placemark.location!.coordinate.latitude
-//            let long = placemark.location!.coordinate.longitude
+//        if let location = location {
+//            let lat = location.coordinate.latitude
+//            let long = location.coordinate.longitude
 //            var coordinate = Coordinate(latitude: lat, longitude: long)
 //            print(coordinate)
-//
+//            return coordinate
 //        }
-                  return Coordinate(latitude: -150000, longitude: -150000)
-    }
+//                  return Coordinate(latitude: -150000, longitude: -150000)
+//    }
     
     ///Method responsible for markers search
     func fetchPins(){
