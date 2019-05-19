@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAf-ea-EhH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Lib Details View Controller-->
+        <scene sceneID="F9Q-lj-uLs">
+            <objects>
+                <viewController storyboardIdentifier="LibDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rAf-ea-EhH" customClass="LibDetailsViewController" customModule="AAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TxJ-Z1-BzO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2240"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4t-Jt-NUT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2240"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="755-IA-C0i">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2240"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-6Y-wed" userLabel="viewContainerImage">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
+                                                <color key="backgroundColor" red="0.49019607843137253" green="0.5490196078431373" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-sq-O0K">
+                                                <rect key="frame" x="8" y="570" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9f-Tg-isE">
+                                                <rect key="frame" x="8" y="628" width="343" height="50.5"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cancel" translatesAutoresizingMaskIntoConstraints="NO" id="Yb0-Go-gtI">
+                                                <rect key="frame" x="325" y="20" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="36" id="JSM-tV-bAc"/>
+                                                    <constraint firstAttribute="height" constant="36" id="UOv-GU-9EZ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0L-KG-uiW">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
+                                                <connections>
+                                                    <action selector="handleBack:" destination="rAf-ea-EhH" eventType="touchUpInside" id="ysS-QJ-ViC"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doze passos e Tradições" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwo-Y1-q1v">
+                                                <rect key="frame" x="12" y="326" width="351" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="351" id="1BZ-3L-RGd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steps" translatesAutoresizingMaskIntoConstraints="NO" id="uR1-37-zBG">
+                                                <rect key="frame" x="98" y="99" width="171" height="171"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="171" id="FGX-4R-EQL"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ny-a3-ffr">
+                                                <rect key="frame" x="8" y="708" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgI-vF-Bo0">
+                                                <rect key="frame" x="8" y="765" width="343" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="LXV-Iz-o4o"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHb-zb-R2Z">
+                                                <rect key="frame" x="8" y="846" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezj-vp-ErC">
+                                                <rect key="frame" x="8" y="904" width="343" height="51"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5g-Qw-ONv">
+                                                <rect key="frame" x="8" y="984" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3M-Zb-nFs">
+                                                <rect key="frame" x="8" y="1042" width="343" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="edI-ry-ksJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtG-AS-WDM">
+                                                <rect key="frame" x="8" y="1121" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q1-Gn-0TX">
+                                                <rect key="frame" x="8" y="1179" width="343" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="Thq-i6-CbJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2W-Ef-cX3">
+                                                <rect key="frame" x="8" y="1260" width="343" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGu-7j-eVh">
+                                                <rect key="frame" x="8" y="1317.5" width="343" height="50.5"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ird-0R-tI0">
+                                                <rect key="frame" x="8" y="1397" width="343" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="poi-Ni-kkZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akr-Kg-XEX">
+                                                <rect key="frame" x="8" y="1455" width="343" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="9Fc-yg-bIY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-Oe-KYF">
+                                                <rect key="frame" x="8" y="1536" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDz-4v-VwX">
+                                                <rect key="frame" x="8" y="1594" width="343" height="50.5"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvP-kM-ZDW">
+                                                <rect key="frame" x="8" y="1672.5" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIS-74-xnh">
+                                                <rect key="frame" x="8" y="1730.5" width="343" height="50.5"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS5-hG-aZO">
+                                                <rect key="frame" x="8" y="1811" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUF-N5-VZ2">
+                                                <rect key="frame" x="8" y="1869" width="343" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="W6K-yj-xz0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="11 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWA-iT-faG">
+                                                <rect key="frame" x="8" y="1949" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWL-f6-L97">
+                                                <rect key="frame" x="8" y="2007" width="343" height="50"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="12 Passo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ph0-59-Fyd">
+                                                <rect key="frame" x="8" y="2087" width="343" height="37"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admitimos que éramos impotentes perante o álcool - que tínhamos perdido o domínio sobre nossas vidas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jk-CF-F1J">
+                                                <rect key="frame" x="8" y="2145" width="343" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="Zwu-PH-lQw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="a2W-Ef-cX3" secondAttribute="trailing" id="1Fq-E4-PIU"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="IGu-7j-eVh" secondAttribute="leading" id="21e-ii-IbO"/>
+                                            <constraint firstItem="RgQ-sq-O0K" firstAttribute="leading" secondItem="755-IA-C0i" secondAttribute="leading" constant="8" id="2fV-H5-mSs"/>
+                                            <constraint firstItem="5ny-a3-ffr" firstAttribute="leading" secondItem="755-IA-C0i" secondAttribute="leading" constant="8" id="34s-dt-5FN"/>
+                                            <constraint firstItem="cwo-Y1-q1v" firstAttribute="top" secondItem="l0L-KG-uiW" secondAttribute="bottom" constant="-214" id="37q-8Q-rHQ"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="IGu-7j-eVh" secondAttribute="trailing" id="39Z-Ay-lfM"/>
+                                            <constraint firstItem="7Jk-CF-F1J" firstAttribute="top" secondItem="Ph0-59-Fyd" secondAttribute="bottom" constant="21" id="4H8-Af-WVD"/>
+                                            <constraint firstItem="l0L-KG-uiW" firstAttribute="width" secondItem="Ma8-6Y-wed" secondAttribute="width" id="520-YM-TzZ"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="5ny-a3-ffr" secondAttribute="leading" id="55r-cn-tom"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="YvP-kM-ZDW" secondAttribute="trailing" id="5ZI-o9-n9n"/>
+                                            <constraint firstItem="I3M-Zb-nFs" firstAttribute="top" secondItem="z5g-Qw-ONv" secondAttribute="bottom" constant="21" id="6if-z1-vuD"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="Ird-0R-tI0" secondAttribute="leading" id="85Q-8K-gSE"/>
+                                            <constraint firstAttribute="bottom" secondItem="7Jk-CF-F1J" secondAttribute="bottom" constant="44" id="9UT-iy-Uld"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="mDz-4v-VwX" secondAttribute="leading" id="AC5-Ol-imG"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="Akr-Kg-XEX" secondAttribute="trailing" id="AOx-To-hlq"/>
+                                            <constraint firstAttribute="trailing" secondItem="cwo-Y1-q1v" secondAttribute="trailing" constant="12" id="B18-Ou-5jk"/>
+                                            <constraint firstItem="LHb-zb-R2Z" firstAttribute="top" secondItem="IgI-vF-Bo0" secondAttribute="bottom" constant="30" id="BDg-VV-yfa"/>
+                                            <constraint firstItem="l0L-KG-uiW" firstAttribute="height" secondItem="Ma8-6Y-wed" secondAttribute="height" id="BF6-zs-tE6"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="uWL-f6-L97" secondAttribute="trailing" id="BX2-Ls-MAH"/>
+                                            <constraint firstItem="uR1-37-zBG" firstAttribute="leading" secondItem="755-IA-C0i" secondAttribute="leading" constant="98" id="BYy-DI-KYL"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="IgI-vF-Bo0" secondAttribute="trailing" id="BzT-0B-wN8"/>
+                                            <constraint firstItem="IGu-7j-eVh" firstAttribute="top" secondItem="a2W-Ef-cX3" secondAttribute="bottom" constant="21" id="CcZ-64-nqT"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="IgI-vF-Bo0" secondAttribute="leading" id="E5j-6u-ngi"/>
+                                            <constraint firstAttribute="bottom" secondItem="Akr-Kg-XEX" secondAttribute="bottom" constant="734" id="E8i-sQ-cIw"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="vUF-N5-VZ2" secondAttribute="trailing" id="Eja-wG-yP4"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ma8-6Y-wed" secondAttribute="trailing" id="GBY-jY-McQ"/>
+                                            <constraint firstItem="bVi-Oe-KYF" firstAttribute="top" secondItem="Akr-Kg-XEX" secondAttribute="bottom" constant="30" id="Ikx-t8-hy8"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="a2W-Ef-cX3" secondAttribute="leading" id="JAC-sZ-Rdi"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="LHb-zb-R2Z" secondAttribute="leading" id="K8k-dP-Hl0"/>
+                                            <constraint firstItem="Ma8-6Y-wed" firstAttribute="leading" secondItem="755-IA-C0i" secondAttribute="leading" id="KUH-l9-ykf"/>
+                                            <constraint firstItem="Q9f-Tg-isE" firstAttribute="top" secondItem="RgQ-sq-O0K" secondAttribute="bottom" constant="21" id="KlH-fC-mnU"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="mDz-4v-VwX" secondAttribute="trailing" id="KrQ-y5-hpt"/>
+                                            <constraint firstItem="ezj-vp-ErC" firstAttribute="top" secondItem="LHb-zb-R2Z" secondAttribute="bottom" constant="21" id="LMr-CD-KY2"/>
+                                            <constraint firstItem="z5g-Qw-ONv" firstAttribute="top" secondItem="755-IA-C0i" secondAttribute="top" constant="984" id="LNz-oF-wdB"/>
+                                            <constraint firstItem="Yb0-Go-gtI" firstAttribute="top" secondItem="755-IA-C0i" secondAttribute="top" constant="20" id="MwF-QY-vOz"/>
+                                            <constraint firstItem="WIS-74-xnh" firstAttribute="top" secondItem="YvP-kM-ZDW" secondAttribute="bottom" constant="21" id="N43-7a-aa2"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="5ny-a3-ffr" secondAttribute="trailing" id="Ngk-8I-3BL"/>
+                                            <constraint firstItem="Q9f-Tg-isE" firstAttribute="leading" secondItem="755-IA-C0i" secondAttribute="leading" constant="8" id="Ni3-cZ-JMc"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="WIS-74-xnh" secondAttribute="trailing" id="PVy-3u-hKb"/>
+                                            <constraint firstItem="Ird-0R-tI0" firstAttribute="top" secondItem="IGu-7j-eVh" secondAttribute="bottom" constant="29" id="Q9O-Ek-vLb"/>
+                                            <constraint firstItem="a2W-Ef-cX3" firstAttribute="top" secondItem="2q1-Gn-0TX" secondAttribute="bottom" constant="30" id="QP5-U8-yd3"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="YvP-kM-ZDW" secondAttribute="leading" id="Qoz-xo-GIx"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="I3M-Zb-nFs" secondAttribute="leading" id="ReO-eR-jWC"/>
+                                            <constraint firstItem="OWA-iT-faG" firstAttribute="top" secondItem="vUF-N5-VZ2" secondAttribute="bottom" constant="29" id="SiL-jI-sJl"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="ZtG-AS-WDM" secondAttribute="leading" id="Ty0-kQ-VIg"/>
+                                            <constraint firstItem="IgI-vF-Bo0" firstAttribute="top" secondItem="755-IA-C0i" secondAttribute="top" constant="765" id="VB7-EN-IGp"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="bVi-Oe-KYF" secondAttribute="trailing" id="VX3-7I-1r3"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="I3M-Zb-nFs" secondAttribute="trailing" id="VuG-dJ-oDi"/>
+                                            <constraint firstItem="IgI-vF-Bo0" firstAttribute="top" secondItem="5ny-a3-ffr" secondAttribute="bottom" constant="20" id="WEV-9g-3Vr"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="Ird-0R-tI0" secondAttribute="trailing" id="WEc-iR-H9o"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q9f-Tg-isE" secondAttribute="trailing" constant="24" id="Wbs-Gy-Fqy"/>
+                                            <constraint firstAttribute="bottom" secondItem="vUF-N5-VZ2" secondAttribute="bottom" constant="320" id="YgF-ic-1dP"/>
+                                            <constraint firstItem="5ny-a3-ffr" firstAttribute="top" secondItem="Q9f-Tg-isE" secondAttribute="bottom" constant="29.5" id="ZQK-JR-POf"/>
+                                            <constraint firstItem="l0L-KG-uiW" firstAttribute="top" secondItem="uR1-37-zBG" secondAttribute="bottom" constant="-270" id="ZYd-bj-ggM"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="top" secondItem="ZtG-AS-WDM" secondAttribute="bottom" constant="21" id="ZZH-Tv-JUN"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="z5g-Qw-ONv" secondAttribute="leading" id="ajR-LN-7lu"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="VS5-hG-aZO" secondAttribute="trailing" id="bPa-eK-9aW"/>
+                                            <constraint firstItem="cwo-Y1-q1v" firstAttribute="leading" secondItem="755-IA-C0i" secondAttribute="leading" constant="12" id="cHD-hn-yCf"/>
+                                            <constraint firstItem="uWL-f6-L97" firstAttribute="top" secondItem="OWA-iT-faG" secondAttribute="bottom" constant="21" id="dUy-zy-UHk"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="OWA-iT-faG" secondAttribute="trailing" id="dlY-JL-PhN"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="7Jk-CF-F1J" secondAttribute="leading" id="e2N-MF-zR9"/>
+                                            <constraint firstItem="vUF-N5-VZ2" firstAttribute="top" secondItem="VS5-hG-aZO" secondAttribute="bottom" constant="21" id="g5s-zw-6BV"/>
+                                            <constraint firstItem="cwo-Y1-q1v" firstAttribute="top" secondItem="uR1-37-zBG" secondAttribute="bottom" constant="56" id="gP2-45-3Wg"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="bVi-Oe-KYF" secondAttribute="leading" id="gxd-5u-xVY"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="vUF-N5-VZ2" secondAttribute="leading" id="h3s-Fr-4ob"/>
+                                            <constraint firstAttribute="trailing" secondItem="5ny-a3-ffr" secondAttribute="trailing" constant="24" id="hig-Bi-pbP"/>
+                                            <constraint firstItem="l0L-KG-uiW" firstAttribute="leading" secondItem="Ma8-6Y-wed" secondAttribute="leading" id="i6N-w9-7du"/>
+                                            <constraint firstItem="RgQ-sq-O0K" firstAttribute="top" secondItem="l0L-KG-uiW" secondAttribute="bottom" constant="30" id="ktj-RF-4Mw"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yb0-Go-gtI" secondAttribute="trailing" constant="14" id="l90-1c-0k2"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="LHb-zb-R2Z" secondAttribute="trailing" id="lEN-Ig-9KY"/>
+                                            <constraint firstItem="VS5-hG-aZO" firstAttribute="top" secondItem="WIS-74-xnh" secondAttribute="bottom" constant="30" id="lSt-aM-t8D"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="z5g-Qw-ONv" secondAttribute="trailing" id="lXI-nB-ZN8"/>
+                                            <constraint firstItem="z5g-Qw-ONv" firstAttribute="top" secondItem="ezj-vp-ErC" secondAttribute="bottom" constant="29" id="lrA-jr-1jU"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="OWA-iT-faG" secondAttribute="leading" id="m6t-0P-ns4"/>
+                                            <constraint firstItem="Ma8-6Y-wed" firstAttribute="top" secondItem="755-IA-C0i" secondAttribute="top" id="nal-bQ-Bfn"/>
+                                            <constraint firstItem="uR1-37-zBG" firstAttribute="height" secondItem="l0L-KG-uiW" secondAttribute="height" constant="-369" id="oue-T4-scw"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="7Jk-CF-F1J" secondAttribute="trailing" id="pXP-f7-qdT"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="ezj-vp-ErC" secondAttribute="trailing" id="qgN-Y0-4lr"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="WIS-74-xnh" secondAttribute="leading" id="r6X-hw-sES"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="Akr-Kg-XEX" secondAttribute="leading" id="rTf-0e-O7c"/>
+                                            <constraint firstItem="Ph0-59-Fyd" firstAttribute="top" secondItem="uWL-f6-L97" secondAttribute="bottom" constant="30" id="rpW-RQ-vzw"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="uWL-f6-L97" secondAttribute="leading" id="srD-gg-ffv"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="Ph0-59-Fyd" secondAttribute="trailing" id="u2Z-IJ-3fS"/>
+                                            <constraint firstItem="Akr-Kg-XEX" firstAttribute="top" secondItem="Ird-0R-tI0" secondAttribute="bottom" constant="21" id="uaV-tQ-tei"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="trailing" secondItem="ZtG-AS-WDM" secondAttribute="trailing" id="w2T-3o-fEz"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="ezj-vp-ErC" secondAttribute="leading" id="xiD-t5-oOr"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="Ph0-59-Fyd" secondAttribute="leading" id="xt9-Eq-jut"/>
+                                            <constraint firstItem="mDz-4v-VwX" firstAttribute="top" secondItem="bVi-Oe-KYF" secondAttribute="bottom" constant="21" id="yFO-wP-xzo"/>
+                                            <constraint firstItem="l0L-KG-uiW" firstAttribute="top" secondItem="Ma8-6Y-wed" secondAttribute="top" id="yd4-Sv-2vA"/>
+                                            <constraint firstAttribute="bottom" secondItem="2q1-Gn-0TX" secondAttribute="bottom" constant="1010" id="yyg-Q2-j7e"/>
+                                            <constraint firstItem="2q1-Gn-0TX" firstAttribute="leading" secondItem="VS5-hG-aZO" secondAttribute="leading" id="zdT-bk-0u0"/>
+                                            <constraint firstAttribute="trailing" secondItem="RgQ-sq-O0K" secondAttribute="trailing" constant="24" id="zx1-xM-dwH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="755-IA-C0i" secondAttribute="trailing" id="49P-Vb-gcB"/>
+                                    <constraint firstItem="755-IA-C0i" firstAttribute="leading" secondItem="f4t-Jt-NUT" secondAttribute="leading" id="El4-Aj-k3R"/>
+                                    <constraint firstItem="755-IA-C0i" firstAttribute="height" secondItem="f4t-Jt-NUT" secondAttribute="height" priority="250" id="K1I-TF-rtF"/>
+                                    <constraint firstItem="755-IA-C0i" firstAttribute="top" secondItem="f4t-Jt-NUT" secondAttribute="top" id="bW8-kK-rbK"/>
+                                    <constraint firstItem="755-IA-C0i" firstAttribute="width" secondItem="f4t-Jt-NUT" secondAttribute="width" id="f5v-W7-i7t"/>
+                                    <constraint firstAttribute="bottom" secondItem="755-IA-C0i" secondAttribute="bottom" id="tyr-ym-FZw"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f4t-Jt-NUT" firstAttribute="leading" secondItem="RW7-cL-tnk" secondAttribute="leading" id="3ll-CL-gV5"/>
+                            <constraint firstItem="RW7-cL-tnk" firstAttribute="trailing" secondItem="f4t-Jt-NUT" secondAttribute="trailing" id="5sG-ms-dVL"/>
+                            <constraint firstItem="f4t-Jt-NUT" firstAttribute="top" secondItem="TxJ-Z1-BzO" secondAttribute="top" id="Cfx-tv-sMv"/>
+                            <constraint firstItem="RW7-cL-tnk" firstAttribute="bottom" secondItem="f4t-Jt-NUT" secondAttribute="bottom" id="vq7-dl-o7H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RW7-cL-tnk"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="2240"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="stespImage" destination="uR1-37-zBG" id="ssz-z4-dVS"/>
+                        <outlet property="titleImage" destination="cwo-Y1-q1v" id="FFl-Hk-5vt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZAT-X2-o23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455.19999999999999" y="-269.86506746626691"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_cancel" width="27" height="27"/>
+        <image name="steps" width="105" height="113"/>
+    </resources>
+</document>

@@ -37,9 +37,13 @@ class LibAAViewController: UIViewController, Coordinable {
     //MARK: - IBO
     ///Outlet responsible for presentation preview details of BrotherHood
     
-   @IBOutlet weak var popUpViewTradition: UIView!
+    @IBOutlet weak var stepImage: UIImageView!
     
-    @IBOutlet weak var popUpViewMotivation: UIView!
+    @IBOutlet weak var titleImage: UILabel!
+    
+   @IBOutlet weak var popUpViewMotivation: UIView!
+    
+    @IBOutlet weak var popUpViewTradition: UIView!
     
     @IBOutlet weak var alphaBackgroundView: UIView!
     
@@ -60,7 +64,7 @@ class LibAAViewController: UIViewController, Coordinable {
     ///
     @IBAction func moreDetailsTradition(_ sender: UIButton) {
         
-//        self.coordinator?.present(.brotherHoodDetails)
+        self.coordinator?.present(.libDetails)
         print("moredetail tradition")
         
     }
