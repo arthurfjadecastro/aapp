@@ -162,28 +162,32 @@ class MapViewController: UIViewController, Coordinable {
         
         for element in brotherHoods {
 //        first element - "71691-010"
-            Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (timer) in
+           
+      
                 self.getCoordinate(addressString: element.cep) { (location, error) in
                     if((error) != nil) {
                         print(error!)
                     }
-                    //                self.count = self.count + 1
-                    //                print(self.count , "LAT:  ", location.latitude)
-                    //                print(self.count , "LONG:  ", location.longitude)
+//                           ("------- Full COORDINATES with erros total de 93 em Brasília  -------")
+//                                    self.count = self.count + 1
+//                                    print(self.count , "LAT:  ", location.latitude)
+//                                    print(self.count , "LONG:  ", location.longitude)
                 }
-            }
+            
            
         }
-        dispatchGroup.notify(queue: .main) {
-            print("apresentar ")
-        }
+//        dispatchGroup.notify(queue: .main) {
+//            print("apresentar ")
+                //Add lat and long in array brotherhoods or result
+        
+//        }
     }
     
     
     func getCoordinate( addressString : String,
                         completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
         
-        self.dispatchGroup.enter()
+//        self.dispatchGroup.enter()
         let geocoder = CLGeocoder()
        
         geocoder.geocodeAddressString(addressString) { (placemarks, error) in
@@ -193,41 +197,20 @@ class MapViewController: UIViewController, Coordinable {
                 if let placemark = placemarks?[0] {
                     let location = placemark.location!
                     completionHandler(location.coordinate, nil)
+//                   ("------- Return COORDINATES ok - falha na quantidade - retorna corretamente entre 39-43  -------")
                     self.count = self.count + 1
-//                    print(self.count , "LAT:  ", location.coordinate.latitude)
-//                    print(self.count , "LONG:  ", location.coordinate.longitude)
                     print(self.count , "asCoordinate:  ", location.coordinate.asCoordinate())
-                    self.dispatchGroup.leave()
+                    
+//                    self.dispatchGroup.leave()
                     return
                 }
             }
             
             completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
-            self.dispatchGroup.leave()
+//            self.dispatchGroup.leave()
         }
     }
     
-
-//
-//    func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) -> Coordinate {
-//        if((error) != nil){
-//            print(error!)
-//        }
-//        print("ae")
-//        var location: CLLocation?
-//        if let placemarks = placemarks, placemarks.count > 0 {
-//            location = placemarks.first?.location
-//         }
-//
-//        if let location = location {
-//            let lat = location.coordinate.latitude
-//            let long = location.coordinate.longitude
-//            var coordinate = Coordinate(latitude: lat, longitude: long)
-//            print(coordinate)
-//            return coordinate
-//        }
-//                  return Coordinate(latitude: -150000, longitude: -150000)
-//    }
     
     ///Method responsible for markers search
     func fetchPins(){
@@ -318,6 +301,11 @@ extension MapViewController: WKScriptMessageHandler, WKNavigationDelegate  {
     
     
 }
+
+
+
+
+
 
 
 
