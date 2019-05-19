@@ -33,7 +33,6 @@ class PinDataSource {
         
         
             
-        
         let pins = [pin1,pin2,pin3]
         completion(Result.success(pins))
     }
