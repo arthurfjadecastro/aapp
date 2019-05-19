@@ -37,13 +37,13 @@
                                 <rect key="frame" x="10" y="296" width="349" height="229"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="hand_cursor" translatesAutoresizingMaskIntoConstraints="NO" id="Uwd-g2-nUj">
-                                        <rect key="frame" x="117" y="41" width="85" height="16"/>
+                                        <rect key="frame" x="117" y="41" width="85" height="98.000000000000028"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="85" id="rCg-XI-GWC"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivação" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRf-WX-eJa">
-                                        <rect key="frame" x="106" y="80" width="127" height="112"/>
+                                        <rect key="frame" x="106" y="162" width="127" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="127" id="zZT-My-kzt"/>
                                         </constraints>
