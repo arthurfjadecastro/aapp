@@ -21,6 +21,9 @@ struct Screen {
     static let brotherHood = Screen(storyboard: "BrotherHood", controller: "BrotherHood")
     ///Property responsible for containing information needed to call the BrotherHoodDetails screen
     static let brotherHoodDetails = Screen(storyboard: "BrotherHoodDetails", controller: "BrotherHoodDetails")
+    
+    ///
+    static let libAA = Screen(storyboard: "LibAA", controller: "LibAA")
     ///
     static let userOnboarding = Screen(storyboard: "UserOnboarding", controller: "UserOnboarding")
     

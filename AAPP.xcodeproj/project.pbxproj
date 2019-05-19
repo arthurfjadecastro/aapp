@@ -43,6 +43,8 @@
 		3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */; };
 		3D7C90E021E3E0C400F51942 /* PlacesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */; };
 		3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90E221E3F62800F51942 /* RequestHandler.swift */; };
+		3D9758CD2291E78800A15B93 /* LibAAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9758CC2291E78800A15B93 /* LibAAViewController.swift */; };
+		3D9758CF2291E86500A15B93 /* LibAA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9758CE2291E86500A15B93 /* LibAA.storyboard */; };
 		3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5121D0F0BC00D3681D /* PinDataSource.swift */; };
 		3DB84C5421D0F2A100D3681D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5321D0F2A100D3681D /* Result.swift */; };
 		3DB84C5621D0FAA500D3681D /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB84C5521D0FAA500D3681D /* Coordinate.swift */; };
@@ -122,6 +124,8 @@
 		3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServices.swift; sourceTree = "<group>"; };
 		3D7C90E221E3F62800F51942 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		3D9758CC2291E78800A15B93 /* LibAAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibAAViewController.swift; sourceTree = "<group>"; };
+		3D9758CE2291E86500A15B93 /* LibAA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LibAA.storyboard; sourceTree = "<group>"; };
 		3DB84C5121D0F0BC00D3681D /* PinDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataSource.swift; sourceTree = "<group>"; };
 		3DB84C5321D0F2A100D3681D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		3DB84C5521D0FAA500D3681D /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 				3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */,
 				3D72A8A321CABE8A0041C1D8 /* Map.storyboard */,
 				3D72A8A921CABF650041C1D8 /* BrotherHood.storyboard */,
+				3D9758CE2291E86500A15B93 /* LibAA.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				3D72A8A621CABEB20041C1D8 /* MapViewController.swift */,
 				3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */,
 				3D364B9922595B0700EB0864 /* BrotherHoodDetailsViewController.swift */,
+				3D9758CC2291E78800A15B93 /* LibAAViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				3DFA25C321D57F2300EB3F8C /* SF-Pro-Display-Regular.otf in Resources */,
 				3DC40F2E227FC070005E5532 /* Assets.xcassets in Resources */,
 				3DFA25BD21D57F2300EB3F8C /* SF-Pro-Text-Medium.otf in Resources */,
+				3D9758CF2291E86500A15B93 /* LibAA.storyboard in Resources */,
 				3D46AC3E227F7D5C00F1A4D6 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,6 +610,7 @@
 				3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */,
 				3D46AC3C227F7D3200F1A4D6 /* Slide.swift in Sources */,
 				3D46AC3A227F7C0E00F1A4D6 /* UserOnboardingViewController.swift in Sources */,
+				3D9758CD2291E78800A15B93 /* LibAAViewController.swift in Sources */,
 				3DFE4E2021E53F1700F3E635 /* URLSession+DataTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
