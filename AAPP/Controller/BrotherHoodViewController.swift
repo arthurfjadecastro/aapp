@@ -43,7 +43,7 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     ///
     @IBAction func moreDetailsBrotherHood(_ sender: UIButton) {
         
-        self.coordinator?.present(.brotherHoodDetails)
+        self.coordinator?.present(.brotherHoodDetails, beforePresenting: nil)
         print("moredetail")
         
     }

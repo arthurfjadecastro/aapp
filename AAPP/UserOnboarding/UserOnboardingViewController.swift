@@ -150,7 +150,7 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
                     self.scrollViewOnboarding.contentOffset.x = (self.scrollViewOnboarding.contentOffset.x + self.view.frame.width)
                 }.startAnimation()
             }else {
-                self.coordinator?.present(.map)
+                self.coordinator?.present(.map, beforePresenting: nil)
             }
         
         

@@ -15,7 +15,7 @@ protocol Coordinator {
     ///Property responsible for storage current controller
     var currentController: UIViewController {get }
     ///Method responsible for presentation Screen in flow
-    func present(_ screen: Screen)
+    func present(_ screen: Screen, beforePresenting: ((UIViewController) -> Void)?)
     ///Method responsible for dismiss current screen
     func dismiss()
     ///Initializer current Screen

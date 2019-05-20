@@ -12,7 +12,7 @@ import GoogleMaps
 extension MapViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        self.coordinator?.present(.brotherHood)
+        self.coordinator?.present(.brotherHood, beforePresenting: nil)
         return true
     }
     

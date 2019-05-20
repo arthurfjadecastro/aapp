@@ -120,6 +120,7 @@ class MapViewController: UIViewController, Coordinable {
        
             self.imageGeofence.image = UIImage(named: "geo_fence_Active")
             self.imageMessage.image = UIImage(named: "message")
+            
         
     }
 
@@ -127,7 +128,7 @@ class MapViewController: UIViewController, Coordinable {
     @IBAction func buttonGoMessages(_ sender: Any) {
             self.imageGeofence.image = UIImage(named: "geo_fence")
             self.imageMessage.image = UIImage(named: "message_Active")
-            self.coordinator?.present(.libAA)
+        self.coordinator?.present(.libAA, beforePresenting: nil)
         
         
 //        self.coordinator?.present(.messages)

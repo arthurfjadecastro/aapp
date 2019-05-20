@@ -11,6 +11,7 @@
 		3D12462A21D2474D00D40404 /* GPSDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12462921D2474D00D40404 /* GPSDelegate.swift */; };
 		3D18983521D38F8F0036C85F /* GPSUpdatesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18983421D38F8F0036C85F /* GPSUpdatesHandler.swift */; };
 		3D18983721D395790036C85F /* GPSAuthorizationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18983621D395790036C85F /* GPSAuthorizationHandler.swift */; };
+		3D25CF6C22920EF00061C27B /* LibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D25CF6B22920EF00061C27B /* LibCell.swift */; };
 		3D2C240021D509D3004E6D3F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C23FF21D509D3004E6D3F /* Coordinator.swift */; };
 		3D2C240221D509EC004E6D3F /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240121D509EC004E6D3F /* Coordinable.swift */; };
 		3D2C240421D50C79004E6D3F /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */; };
@@ -96,6 +97,7 @@
 		3D12462921D2474D00D40404 /* GPSDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSDelegate.swift; sourceTree = "<group>"; };
 		3D18983421D38F8F0036C85F /* GPSUpdatesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSUpdatesHandler.swift; sourceTree = "<group>"; };
 		3D18983621D395790036C85F /* GPSAuthorizationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSAuthorizationHandler.swift; sourceTree = "<group>"; };
+		3D25CF6B22920EF00061C27B /* LibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibCell.swift; sourceTree = "<group>"; };
 		3D2C23FF21D509D3004E6D3F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3D2C240121D509EC004E6D3F /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
 		3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				3D72A8A921CABF650041C1D8 /* BrotherHood.storyboard */,
 				3D9758D02291F26900A15B93 /* LibDetails.storyboard */,
 				3D9758CE2291E86500A15B93 /* LibAA.storyboard */,
+				3D25CF6B22920EF00061C27B /* LibCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				3DDD030A21E67D7C0054E739 /* Distance.swift in Sources */,
 				3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */,
 				3D18983521D38F8F0036C85F /* GPSUpdatesHandler.swift in Sources */,
+				3D25CF6C22920EF00061C27B /* LibCell.swift in Sources */,
 				3DDD030E21E68BCF0054E739 /* GooglePlaces+Decodable.swift in Sources */,
 				3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */,
 				3D7C90E021E3E0C400F51942 /* PlacesServices.swift in Sources */,

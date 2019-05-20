@@ -37,5 +37,13 @@ struct K {
     }
     
     
+    /**
+     Constant values for layout Cell in TableView
+     */
+    struct LayoutCell {
+        static let widthInRelationToTableView: CGFloat = 1
+        static let heightInRelationToWidth: CGFloat = ( 290 + 24 ) / 342
+    }
+    
 }
 

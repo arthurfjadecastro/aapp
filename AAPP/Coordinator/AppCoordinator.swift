@@ -14,6 +14,8 @@ import UIKit
 ///Class responsible for the logical flow of application navigation
 class AppCoordinator: Coordinator {
     
+    
+    
     //MARK: - Properties
     
     ///Current ViewController
@@ -34,7 +36,7 @@ class AppCoordinator: Coordinator {
     }
     
     ///Method responsible for present screen
-    func present(_ screen: Screen) {
+    func present(_ screen: Screen, beforePresenting: ((UIViewController) -> Void)?) {
         self.presentController(screen)
     }
     

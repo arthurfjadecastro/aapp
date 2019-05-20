@@ -18,19 +18,17 @@ struct Messages {
     
    
     ///Property related to the movie name
-    let title: String
+    var title: String
     ///Property related to the image movie
-    let image: URL
-    ///Property equivalent to the movie description
-    let synopsys: String
+    var image: UIImage
+  
     
     //MARK: - Initializer
     
-    init(title: String, image: URL, genres: [String], synopsys: String) {
+    init(title: String, image: UIImage) {
         self.title = title
         self.image = image
-      
-        self.synopsys = synopsys
+        
     }
     
     //MARK: - Helper Methods

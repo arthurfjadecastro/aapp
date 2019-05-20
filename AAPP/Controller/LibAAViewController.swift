@@ -10,17 +10,8 @@ import Foundation
 import UIKit
 
 
-
-//
-//  EntityViewController.swift
-//  AAPP
-//
-//  Created by Arthur Castro on 19/12/2018.
-//  Copyright © 2018 Arthur Castro. All rights reserved.
-//
-
-import Foundation
-import UIKit
+fileprivate let traditionMessages = Messages(title: "12 Passos e Tradições", image: UIImage(named: "steps")!)
+fileprivate let motivationMessages = Messages(title: "UP Motivational", image: UIImage(named: "hand_cursor")!)
 
 class LibAAViewController: UIViewController, Coordinable {
     
@@ -31,26 +22,26 @@ class LibAAViewController: UIViewController, Coordinable {
     var coordinator: Coordinator?
     
     
-    
+    var messages = [Messages]()
     
     
     //MARK: - IBO
     ///Outlet responsible for presentation preview details of BrotherHood
     
-    @IBOutlet weak var stepImage: UIImageView!
     
-    @IBOutlet weak var titleImage: UILabel!
     
-   @IBOutlet weak var popUpViewMotivation: UIView!
+     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var popUpViewTradition: UIView!
+    
     
     @IBOutlet weak var alphaBackgroundView: UIView!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
-        self.addShadowPopUpViewTradition()
-        self.addShadowPopUpViewMotivation()
+        
+        self.messages.append(contentsOf: [traditionMessages, motivationMessages])
+        self.setupTableview()
+        
     }
     
     
@@ -60,11 +51,26 @@ class LibAAViewController: UIViewController, Coordinable {
         self.presentBackground()
     }
     
+    func setupTableview(){
+        let _width = K.LayoutCell.widthInRelationToTableView * tableView.frame.size.width
+        let _height = K.LayoutCell.heightInRelationToWidth * _width
+        self.tableView.rowHeight = _height
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        if (self.tableView.contentSize.height < tableView.frame.size.height) {
+            self.tableView.isScrollEnabled = false
+        }
+        else {
+             self.tableView.isScrollEnabled = true
+        }
+        
+    }
+    
     //MARK: - IBA
     ///
     @IBAction func moreDetailsTradition(_ sender: UIButton) {
         
-        self.coordinator?.present(.libDetails)
+        self.coordinator?.present(.libDetails, beforePresenting: nil)
         print("moredetail tradition")
         
     }
@@ -113,15 +119,52 @@ class LibAAViewController: UIViewController, Coordinable {
     }
     
     
-    ///Method responsible for adding shadow in pop up
-    private func addShadowPopUpViewTradition(){
-        self.popUpViewTradition.createShadowLayerWith(color: K.BottomCustomShadow.colorShadow, opacity: K.BottomCustomShadow.opacity, offset: K.BottomCustomShadow.offset, radius: K.BottomCustomShadow.radius)
-        self.popUpViewTradition.createShadowLayerWith(color: K.TopCustomShadow.colorShadow, opacity: K.TopCustomShadow.opacity, offset: K.TopCustomShadow.offset, radius: K.TopCustomShadow.radius)
+   
+    
+}
+
+
+
+extension LibAAViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.messages.count
     }
     
-    private func addShadowPopUpViewMotivation(){
-        self.popUpViewMotivation.createShadowLayerWith(color: K.BottomCustomShadow.colorShadow, opacity: K.BottomCustomShadow.opacity, offset: K.BottomCustomShadow.offset, radius: K.BottomCustomShadow.radius)
-        self.popUpViewMotivation.createShadowLayerWith(color: K.TopCustomShadow.colorShadow, opacity: K.TopCustomShadow.opacity, offset: K.TopCustomShadow.offset, radius: K.TopCustomShadow.radius)
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LibCell", for: indexPath)
+        if let libCell = cell as? LibCell {
+            libCell.img = self.messages[indexPath.row].image
+            libCell.title = self.messages[indexPath.row].title
+            libCell.libImage.hero.id = self.messages[indexPath.row].image.description
+           
+        }
+        return cell
+    }
+}
+
+
+extension LibAAViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if(indexPath.row == 0){
+            self.coordinator?.present(.libDetails, beforePresenting: nil)
+        }else {
+            self.coordinator?.present(.brotherHoodDetails, beforePresenting: nil)
+        }
+        
+        print(indexPath.row)
+//        self.coordinator?.present(.libDetails, beforePresenting: { controller in
+//            guard let _libDetailsViewController = controller as? LibDetailsViewController else {
+//                assertionFailure("The next controller must be of type ListDetailViewController")
+//                return
+//            }
+//            _libDetailsViewController = self.messages[indexPath.row]
+//        })
+    }
 }
