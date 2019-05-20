@@ -106,6 +106,7 @@
                         <viewLayoutGuide key="safeArea" id="gGz-JO-vvD"/>
                     </view>
                     <connections>
+                        <outlet property="buttonNext" destination="VsW-qH-dsI" id="GIn-lq-Q7m"/>
                         <outlet property="pageControl" destination="ppQ-zu-6fW" id="i6o-kX-K4a"/>
                         <outlet property="scrollViewOnboarding" destination="Sar-G8-fLk" id="0Us-I1-q8C"/>
                     </connections>

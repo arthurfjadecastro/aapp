@@ -17,6 +17,7 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
     var pageIndex = Int()
     
 
+    @IBOutlet weak var buttonNext: UIButton!
     
     //MARK: - IBO
     @IBOutlet weak var scrollViewOnboarding: UIScrollView!
@@ -88,6 +89,11 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
         
         self.pageIndex = Int(round(scrollView.contentOffset.x/view.frame.width))
         pageControl.currentPage = self.pageIndex
+        if(self.pageIndex == 2){
+            self.buttonNext.setTitle("Iniciar", for: .normal )
+        }else{
+             self.buttonNext.setTitle("Próximo", for: .normal )
+        }
         
 //        let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
 //        let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
@@ -144,6 +150,7 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
     
     
     @IBAction func buttonNext(_ sender: Any) {
+        
         
             if(self.pageIndex <= 1) {
                 UIViewPropertyAnimator(duration: 1, dampingRatio: 1) {
