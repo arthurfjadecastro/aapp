@@ -45,6 +45,7 @@
 		3D72A8AC21CABF720041C1D8 /* BrotherHoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */; };
 		3D72A8AF21CAC8780041C1D8 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8AE21CAC8780041C1D8 /* Screen.swift */; };
 		3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */; };
+		3D78B97E2298E82300FB6C81 /* ReuniaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78B97D2298E82300FB6C81 /* ReuniaoTableViewCell.swift */; };
 		3D7C90E021E3E0C400F51942 /* PlacesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */; };
 		3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90E221E3F62800F51942 /* RequestHandler.swift */; };
 		3D9758CD2291E78800A15B93 /* LibAAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9758CC2291E78800A15B93 /* LibAAViewController.swift */; };
@@ -132,6 +133,7 @@
 		3D72A8AB21CABF720041C1D8 /* BrotherHoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotherHoodViewController.swift; sourceTree = "<group>"; };
 		3D72A8AE21CAC8780041C1D8 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		3D72A8B421CAE4C40041C1D8 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		3D78B97D2298E82300FB6C81 /* ReuniaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuniaoTableViewCell.swift; sourceTree = "<group>"; };
 		3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServices.swift; sourceTree = "<group>"; };
 		3D7C90E221E3F62800F51942 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		3D9758CC2291E78800A15B93 /* LibAAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibAAViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				3D9758CE2291E86500A15B93 /* LibAA.storyboard */,
 				3D25CF6B22920EF00061C27B /* LibCell.swift */,
 				3D5EC35A2295F3DF00765E64 /* MotivationDetails.storyboard */,
+				3D78B97D2298E82300FB6C81 /* ReuniaoTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				3DDD030A21E67D7C0054E739 /* Distance.swift in Sources */,
 				3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */,
 				3D18983521D38F8F0036C85F /* GPSUpdatesHandler.swift in Sources */,
+				3D78B97E2298E82300FB6C81 /* ReuniaoTableViewCell.swift in Sources */,
 				3D25CF6C22920EF00061C27B /* LibCell.swift in Sources */,
 				3DDD030E21E68BCF0054E739 /* GooglePlaces+Decodable.swift in Sources */,
 				3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */,
