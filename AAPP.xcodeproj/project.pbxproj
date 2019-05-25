@@ -31,6 +31,8 @@
 		3D46AC3A227F7C0E00F1A4D6 /* UserOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46AC39227F7C0E00F1A4D6 /* UserOnboardingViewController.swift */; };
 		3D46AC3C227F7D3200F1A4D6 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46AC3B227F7D3200F1A4D6 /* Slide.swift */; };
 		3D46AC3E227F7D5C00F1A4D6 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D46AC3D227F7D5C00F1A4D6 /* Slide.xib */; };
+		3D5EC35B2295F3DF00765E64 /* MotivationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D5EC35A2295F3DF00765E64 /* MotivationDetails.storyboard */; };
+		3D5EC35D2295F68200765E64 /* MotivationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5EC35C2295F68200765E64 /* MotivationDetailsViewController.swift */; };
 		3D6026AA21D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */; };
 		3D6026AC21D6745500852223 /* GMSMarker+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026AB21D6745500852223 /* GMSMarker+Pin.swift */; };
 		3D6026AE21D6746B00852223 /* Pin+GMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026AD21D6746B00852223 /* Pin+GMSMarker.swift */; };
@@ -114,6 +116,8 @@
 		3D46AC39227F7C0E00F1A4D6 /* UserOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOnboardingViewController.swift; sourceTree = "<group>"; };
 		3D46AC3B227F7D3200F1A4D6 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		3D46AC3D227F7D5C00F1A4D6 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		3D5EC35A2295F3DF00765E64 /* MotivationDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MotivationDetails.storyboard; sourceTree = "<group>"; };
+		3D5EC35C2295F68200765E64 /* MotivationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationDetailsViewController.swift; sourceTree = "<group>"; };
 		3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinate+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
 		3D6026AB21D6745500852223 /* GMSMarker+Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSMarker+Pin.swift"; sourceTree = "<group>"; };
 		3D6026AD21D6746B00852223 /* Pin+GMSMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pin+GMSMarker.swift"; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 				3D9758D02291F26900A15B93 /* LibDetails.storyboard */,
 				3D9758CE2291E86500A15B93 /* LibAA.storyboard */,
 				3D25CF6B22920EF00061C27B /* LibCell.swift */,
+				3D5EC35A2295F3DF00765E64 /* MotivationDetails.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				3D364B9922595B0700EB0864 /* BrotherHoodDetailsViewController.swift */,
 				3D9758CC2291E78800A15B93 /* LibAAViewController.swift */,
 				3D9758D22291F3B700A15B93 /* LibDetailsViewController.swift */,
+				3D5EC35C2295F68200765E64 /* MotivationDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -513,6 +519,7 @@
 				3DFA25BF21D57F2300EB3F8C /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				3D364B9822595A1900EB0864 /* BrotherHoodDetails.storyboard in Resources */,
 				3DFA25BE21D57F2300EB3F8C /* SF-Pro-Text-Regular.otf in Resources */,
+				3D5EC35B2295F3DF00765E64 /* MotivationDetails.storyboard in Resources */,
 				3D9758D12291F26900A15B93 /* LibDetails.storyboard in Resources */,
 				3D72A8A421CABE8A0041C1D8 /* Map.storyboard in Resources */,
 				3D25CF70229233A20061C27B /* Assets.xcassets in Resources */,
@@ -650,6 +657,7 @@
 				3D46AC3A227F7C0E00F1A4D6 /* UserOnboardingViewController.swift in Sources */,
 				3D9758D32291F3B700A15B93 /* LibDetailsViewController.swift in Sources */,
 				3D9758CD2291E78800A15B93 /* LibAAViewController.swift in Sources */,
+				3D5EC35D2295F68200765E64 /* MotivationDetailsViewController.swift in Sources */,
 				3DFE4E2021E53F1700F3E635 /* URLSession+DataTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

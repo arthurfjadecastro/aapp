@@ -24,6 +24,7 @@ struct Screen {
     
     
      static let libDetails = Screen(storyboard: "LibDetails", controller: "LibDetails")
+    static let MotivationalDetails = Screen(storyboard: "MotivationDetails", controller: "MotivationDetails")
     ///
     static let libAA = Screen(storyboard: "LibAA", controller: "LibAA")
     ///

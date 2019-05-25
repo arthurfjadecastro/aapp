@@ -155,7 +155,7 @@ extension LibAAViewController: UITableViewDelegate {
         if(indexPath.row == 0){
             self.coordinator?.present(.libDetails, beforePresenting: nil)
         }else {
-            self.coordinator?.present(.brotherHoodDetails, beforePresenting: nil)
+            self.coordinator?.present(.MotivationalDetails, beforePresenting: nil)
         }
         
         print(indexPath.row)
