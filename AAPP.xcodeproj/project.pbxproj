@@ -31,6 +31,7 @@
 		3D46AC3A227F7C0E00F1A4D6 /* UserOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46AC39227F7C0E00F1A4D6 /* UserOnboardingViewController.swift */; };
 		3D46AC3C227F7D3200F1A4D6 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46AC3B227F7D3200F1A4D6 /* Slide.swift */; };
 		3D46AC3E227F7D5C00F1A4D6 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D46AC3D227F7D5C00F1A4D6 /* Slide.xib */; };
+		3D4F7376229B760D0061A9D5 /* SingletonCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F7375229B760D0061A9D5 /* SingletonCoordinate.swift */; };
 		3D5EC35B2295F3DF00765E64 /* MotivationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D5EC35A2295F3DF00765E64 /* MotivationDetails.storyboard */; };
 		3D5EC35D2295F68200765E64 /* MotivationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5EC35C2295F68200765E64 /* MotivationDetailsViewController.swift */; };
 		3D6026AA21D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */; };
@@ -117,6 +118,7 @@
 		3D46AC39227F7C0E00F1A4D6 /* UserOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOnboardingViewController.swift; sourceTree = "<group>"; };
 		3D46AC3B227F7D3200F1A4D6 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		3D46AC3D227F7D5C00F1A4D6 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		3D4F7375229B760D0061A9D5 /* SingletonCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonCoordinate.swift; sourceTree = "<group>"; };
 		3D5EC35A2295F3DF00765E64 /* MotivationDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MotivationDetails.storyboard; sourceTree = "<group>"; };
 		3D5EC35C2295F68200765E64 /* MotivationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationDetailsViewController.swift; sourceTree = "<group>"; };
 		3D6026A921D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinate+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				3D9758CC2291E78800A15B93 /* LibAAViewController.swift */,
 				3D9758D22291F3B700A15B93 /* LibDetailsViewController.swift */,
 				3D5EC35C2295F68200765E64 /* MotivationDetailsViewController.swift */,
+				3D4F7375229B760D0061A9D5 /* SingletonCoordinate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				3D18983721D395790036C85F /* GPSAuthorizationHandler.swift in Sources */,
 				3DFA25C521D5931400EB3F8C /* Shadowable.swift in Sources */,
 				3D72A8B521CAE4C40041C1D8 /* AppCoordinator.swift in Sources */,
+				3D4F7376229B760D0061A9D5 /* SingletonCoordinate.swift in Sources */,
 				3D38284721FD1361009178E2 /* Requester.swift in Sources */,
 				3D2C240421D50C79004E6D3F /* CLLocationCoordinate2D.swift in Sources */,
 				3D72A8AC21CABF720041C1D8 /* BrotherHoodViewController.swift in Sources */,

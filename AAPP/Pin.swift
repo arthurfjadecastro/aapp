@@ -17,7 +17,7 @@ struct Pin {
     ///Name a pin
     let name: String
     ///Location a pin
-    let location: Coordinate
+    var location: Coordinate
     
     ///Initializer of a pin with name and location
     init(name: String, location: Coordinate) {

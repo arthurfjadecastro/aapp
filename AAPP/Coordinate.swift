@@ -12,7 +12,7 @@ import CoreLocation
 ///Struct Location
 struct Coordinate {
     let latitude: Double
-    let longitude: Double
+    var longitude: Double
     
     ///Initializer Location with latitude and longitude
     init(latitude: Double, longitude: Double) {

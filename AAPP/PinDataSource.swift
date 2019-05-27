@@ -23,17 +23,28 @@ let pin3 = Pin(name: "fake03", latitude: -15.86562992, longitude: -48.02961393)
 ///Class responsible for managing the data of the registered pins
 class PinDataSource {
     
+    var arrayPins = [Pin]()
+    
     ///Method responsible for create pins
     func pins(completion: @escaping (Result<[Pin]>) -> Void){
-        guard let url = URL(string: "https://admaa.aabrasil.org.br/ws/md/index.php?MD=1&AREA=18") else {
-            fatalError("error fatal url ")
+//        guard let url = URL(string: "https://admaa.aabrasil.org.br/ws/md/index.php?MD=1&AREA=AC") else {
+//            fatalError("error fatal url ")
+//        }
+        var pinModifier: Pin?
+        for element in SingletonCoordinate.shared.lat {
+            pinModifier = Pin(name: "ae", latitude: element , longitude: 0.0)
+            
+        }
+        for element in SingletonCoordinate.shared.long {
+             pinModifier?.location.longitude = element
         }
         
+        self.arrayPins.append(pinModifier ?? Pin(name: "ae", latitude: -16.25940154, longitude: -47.94953618))
         
         
         
             
-        let pins = [pin1,pin2,pin3]
+        let pins = self.arrayPins
         completion(Result.success(pins))
     }
       

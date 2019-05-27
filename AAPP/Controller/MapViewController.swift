@@ -79,9 +79,9 @@ class MapViewController: UIViewController, Coordinable {
     //Aberto para extensao
     //principio aberto fechado open closed principle
     override func viewDidLoad() {
-        self.captureDataBrotherHood()
-       
         self.setupMap()
+        self.captureDataBrotherHood()
+        
         
         
         //RequestHandler.request(fromUrl: "https://viacep.com.br/ws/01001000/json/")
@@ -101,7 +101,7 @@ class MapViewController: UIViewController, Coordinable {
         self.webView.configuration.preferences.javaScriptEnabled = true
         self.webView.configuration.userContentController.add(self, name: "handleExtractionComplete")
         
-        if let url = URL(string: "https://admaa.aabrasil.org.br/ws/md/index.php?MD=1&AREA=df") {
+        if let url = URL(string: "https://admaa.aabrasil.org.br/ws/md/index.php?MD=1&AREA=DF") {
             let request = URLRequest(url: url)
             self.webView.load(request)
         }
@@ -120,6 +120,9 @@ class MapViewController: UIViewController, Coordinable {
        
             self.imageGeofence.image = UIImage(named: "geo_fence_Active")
             self.imageMessage.image = UIImage(named: "message")
+        print(SingletonCoordinate.shared.indexesGroup)
+        print(SingletonCoordinate.shared.lat)
+        print(SingletonCoordinate.shared.long)
             
         
     }
@@ -153,7 +156,6 @@ class MapViewController: UIViewController, Coordinable {
         self.mapView?.delegate = self
         self.mapView?.isMyLocationEnabled = true
         self.setupMapStyle()
-        self.fetchPins()
         self.view.addSubview(_mapView)
     }
     
@@ -161,7 +163,7 @@ class MapViewController: UIViewController, Coordinable {
     
     func doSomething(brotherHoods : [BrotherHoodDetailModel]) {
         //            print(brotherHoods.count)
-        
+        var sequenceGroups = [Int]()
         for element in brotherHoods {
 //        first element - "71691-010"
            
@@ -170,14 +172,27 @@ class MapViewController: UIViewController, Coordinable {
                     if((error) != nil) {
                         print(error!)
                     }
+                    if(location.latitude.description != "-180.0"){
+                        sequenceGroups.append(self.count)
+                        SingletonCoordinate.shared.indexesGroup.append(self.count)
+                        SingletonCoordinate.shared.lat.append(location.latitude)
+                        SingletonCoordinate.shared.long.append(location.longitude)
+                        
+//                                                            print(self.count , "LAT:  ", location.latitude)
+//                                                            print(self.count , "LONG:  ", location.longitude)
+                    }
+//                    print(sequenceGroups)
+                    self.count = self.count + 1
+                    self.fetchPins()
 //                           ("------- Full COORDINATES with erros total de 93 em Brasília  -------")
-//                                    self.count = self.count + 1
-//                                    print(self.count , "LAT:  ", location.latitude)
-//                                    print(self.count , "LONG:  ", location.longitude)
+                    
+
                 }
             
            
         }
+        
+      
 //        dispatchGroup.notify(queue: .main) {
 //            print("apresentar ")
                 //Add lat and long in array brotherhoods or result
@@ -200,8 +215,9 @@ class MapViewController: UIViewController, Coordinable {
                     let location = placemark.location!
                     completionHandler(location.coordinate, nil)
 //                   ("------- Return COORDINATES ok - falha na quantidade - retorna corretamente entre 39-43  -------")
-                    self.count = self.count + 1
-                    print(self.count , "asCoordinate:  ", location.coordinate.asCoordinate())
+//                    self.count = self.count + 1
+                    
+//                    print(self.count , "asCoordinate:  ", location.coordinate.asCoordinate())
                     
 //                    self.dispatchGroup.leave()
                     return
