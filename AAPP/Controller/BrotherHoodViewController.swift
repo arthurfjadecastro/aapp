@@ -43,16 +43,33 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     ///
     @IBAction func moreDetailsBrotherHood(_ sender: UIButton) {
         
-        self.coordinator?.present(.brotherHoodDetails, beforePresenting: nil)
+        
+        self.coordinator?.present(.brotherHoodDetails, beforePresenting: { (controller) in
+            print("ae")
+            
+        });
         print("moredetail")
         
     }
-    
+    private func callNumber(phoneNumber:String) {
+        
+        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
+    }
     ///
     @IBAction func sharedBrotherHood(_ sender: UIButton) {print("shared")}
     
     ///
-    @IBAction func callBrotherHood(_ sender: UIButton) {print("call")}
+    @IBAction func callBrotherHood(_ sender: UIButton) {
+        
+        self.callNumber(phoneNumber: "061996907025")
+        
+    }
 
     ///
     @IBAction func routeBrotherHood(_ sender: UIButton){print("route")}

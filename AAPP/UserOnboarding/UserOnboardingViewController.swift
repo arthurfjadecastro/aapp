@@ -158,6 +158,9 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
                 }.startAnimation()
             }else {
                 self.coordinator?.present(.map, beforePresenting: nil)
+                self.coordinator?.present(.map, beforePresenting: { (brotherHoodViewController) in
+                    
+                })
             }
         
         
