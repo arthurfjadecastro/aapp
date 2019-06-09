@@ -17,7 +17,7 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     ///Property responsible for the flow management of the screen
     var coordinator: Coordinator?
     
-    
+    var brotherHood: BrotherHoodDetailModel?
     
     
     
@@ -27,9 +27,21 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     @IBOutlet weak var backgroundView: UIView!
     
+    @IBOutlet weak var groupName: UILabel!
+    
+    
+    
+    
+    
+    
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         self.addShadowPopUpView()
+        guard let _brotherHood = self.brotherHood else {
+            return
+        }
+        self.groupName.text = _brotherHood.Grupo
     }
     
     
@@ -45,10 +57,12 @@ class BrotherHoodViewController: UIViewController, Coordinable {
         
         
         self.coordinator?.present(.brotherHoodDetails, beforePresenting: { (controller) in
-            print("ae")
+            if let _nextController = controller as? BrotherHoodDetailsViewController {
+                _nextController.brotherHood = self.brotherHood
+            }
             
         });
-        print("moredetail")
+       
         
     }
     private func callNumber(phoneNumber:String) {

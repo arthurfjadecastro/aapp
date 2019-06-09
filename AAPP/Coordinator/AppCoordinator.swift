@@ -37,7 +37,8 @@ class AppCoordinator: Coordinator {
     
     ///Method responsible for present screen
     func present(_ screen: Screen, beforePresenting: ((UIViewController) -> Void)?) {
-        self.presentController(screen)
+        
+        self.presentController(screen, beforePresenting: beforePresenting)
     }
     
     ///method responsible for the initial installation of the coordinator and the viewcontroller
@@ -53,7 +54,7 @@ class AppCoordinator: Coordinator {
     //MARK: - Helper methods
 
     ///Method responsible for implementing the desired view controller presentation
-    fileprivate func presentController(_ screen: Screen, transition: ScreenTransition = .popUpIn) {
+    fileprivate func presentController(_ screen: Screen, transition: ScreenTransition = .popUpIn, beforePresenting: ((UIViewController) -> Void)?) {
         let _storyboard = UIStoryboard(name: screen.storyboard, bundle: nil)
         let _controller = _storyboard.instantiateViewController(withIdentifier: screen.controller)
         guard var _nextViewController = _controller as? (Coordinable & UIViewController) else {
@@ -62,6 +63,7 @@ class AppCoordinator: Coordinator {
         }
         let _coordinator = AppCoordinator(current: _nextViewController)
         _nextViewController.coordinator = _coordinator
+        beforePresenting?(_nextViewController)
         transition.present(current: self.currentController, next: _nextViewController)
         
     }

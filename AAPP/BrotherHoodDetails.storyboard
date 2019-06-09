@@ -112,7 +112,7 @@ Segundo Andar</string>
                                                             <rect key="frame" x="0.0" y="0.0" width="346" height="364.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eaesesas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKW-8L-m1Z" userLabel="textName">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segunda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKW-8L-m1Z" userLabel="textName">
                                                                     <rect key="frame" x="140" y="64" width="72" height="177"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -197,6 +197,7 @@ Segundo Andar</string>
                         <viewLayoutGuide key="safeArea" id="CAh-UP-IPE"/>
                     </view>
                     <connections>
+                        <outlet property="nameGroup" destination="b8B-3J-X7N" id="vEq-ZB-PRl"/>
                         <outlet property="tableViewDetails" destination="022-YK-baj" id="343-z1-g1m"/>
                     </connections>
                 </viewController>

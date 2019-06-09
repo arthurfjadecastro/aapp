@@ -10,26 +10,59 @@ import Foundation
 import UIKit
 
 
-private let dayWeeks = ["Segunda","Terça","Quarta","Quinta","Sexta","Sábado","Domingo","Feriado"]
 
 
 class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableViewDataSource, UITableViewDelegate {
     var coordinator: Coordinator?
     
+    private var dayWeeks = [String]()
+
+    
+    var brotherHood: BrotherHoodDetailModel?
+    
+    @IBOutlet weak var nameGroup: UILabel!
     
     @IBOutlet weak var tableViewDetails: UITableView!
     private var data: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for i in 0...8 {
-            data.append("\(i)")
-        }
-        
+        guard let brother = self.brotherHood else {return}
+        self.nameGroup.text = brother.Grupo
+        self.setDataWeek()
         self.tableViewDetails.dataSource = self
     }
     
   
+    
+    func setDataWeek(){
+        guard let _brotherHood = self.brotherHood else  {return}
+        if(_brotherHood.reunioes_2a.trimmingCharacters(in: .whitespaces) != "") {
+            self.dayWeeks.append(_brotherHood.reunioes_2a)
+        }
+        if(_brotherHood.reunioes_3a.trimmingCharacters(in: .whitespaces) != "") {
+            self.dayWeeks.append(_brotherHood.reunioes_3a)
+        }
+        if(_brotherHood.reunioes_4a.trimmingCharacters(in: .whitespaces) != "") {
+            self.dayWeeks.append(_brotherHood.reunioes_4a)
+        }
+        if(_brotherHood.reunioes_5a.trimmingCharacters(in: .whitespaces) != "") {
+            self.dayWeeks.append(_brotherHood.reunioes_5a)
+        }
+        if(_brotherHood.reunioes6a.trimmingCharacters(in: .whitespaces) != "") {
+            self.dayWeeks.append(_brotherHood.reunioes6a)
+        }
+        if(_brotherHood.reunioes_sab.trimmingCharacters(in: .whitespaces) != "") {
+            self.dayWeeks.append(_brotherHood.reunioes_sab)
+        }
+        if(_brotherHood.reunioes_dom.trimmingCharacters(in: .whitespaces) != "") {
+            self.dayWeeks.append(_brotherHood.reunioes_dom)
+        }
+        if(_brotherHood.reunioes_fer.trimmingCharacters(in: .whitespaces) != "") {
+            self.dayWeeks.append(_brotherHood.reunioes_fer)
+        }
+        
+        
+    }
     
     
     

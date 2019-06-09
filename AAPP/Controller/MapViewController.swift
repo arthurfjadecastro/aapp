@@ -190,9 +190,10 @@ class MapViewController: UIViewController, Coordinable {
     let dispatchGroup = DispatchGroup()
     
     func doSomething(brotherHoods : [BrotherHoodDetailModel]) {
+        SingletonCoordinate.shared.brotherHoodsDetails = brotherHoods
         //            print(brotherHoods.count)
         var sequenceGroups = [Int]()
-        for element in brotherHoods {
+        for (index, element) in brotherHoods.enumerated() {
 //        first element - "71691-010"
            
       
@@ -202,9 +203,13 @@ class MapViewController: UIViewController, Coordinable {
                     }
                     if(location.latitude.description != "-180.0") {
                         sequenceGroups.append(self.count)
+                        
+                        
                         SingletonCoordinate.shared.indexesGroup.append(self.count)
                         SingletonCoordinate.shared.lat.append(location.latitude)
                         SingletonCoordinate.shared.long.append(location.longitude)
+                        SingletonCoordinate.shared.brotherHoodsDetails[index].lat = location.latitude
+                        SingletonCoordinate.shared.brotherHoodsDetails[index].long = location.longitude
                         
 //                                                            print(self.count , "LAT:  ", location.latitude)
 //                                                            print(self.count , "LONG:  ", location.longitude)
@@ -292,8 +297,9 @@ class MapViewController: UIViewController, Coordinable {
         pinDataSource.pins { (result) in
             switch result {
             case .success(let pins):
-                let markers = pins.asMarkers()
-                markers.forEach({$0.map = _mapView})
+                //let markers = pins.asMarkers()
+                //markers.forEach({$0.map = _mapView})
+                pins.forEach({ $0.map = _mapView })
             case .error(let error):
                 print(error)
             }

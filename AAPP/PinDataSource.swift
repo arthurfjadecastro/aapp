@@ -19,43 +19,80 @@ fileprivate let pin2 = Pin(name: "fake02", latitude: -16.25940154, longitude: -4
 let pin3 = Pin(name: "fake03", latitude: -15.86562992, longitude: -48.02961393)
 
 
+class BrotherMarker: GMSMarker {
+    var brotherHood: BrotherHoodDetailModel?
+}
 
-///Class responsible for managing the data of the registered pins
 class PinDataSource {
     
-    var arrayPins = [Pin]()
+    var arrayPins = [BrotherMarker]()
     
     ///Method responsible for create pins
-    func pins(completion: @escaping (Result<[Pin]>) -> Void){
-//        guard let url = URL(string: "https://admaa.aabrasil.org.br/ws/md/index.php?MD=1&AREA=AC") else {
-//            fatalError("error fatal url ")
-//        }
-        var pinModifier: Pin?
-        for element in SingletonCoordinate.shared.lat {
-            pinModifier = Pin(name: "ae", latitude: element , longitude: 0.0)
-            
-        }
-        for element in SingletonCoordinate.shared.long {
-             pinModifier?.location.longitude = element
+    func pins(completion: @escaping (Result<[BrotherMarker]>) -> Void){
+        for element in SingletonCoordinate.shared.brotherHoodsDetails {
+            let marker = BrotherMarker(position: CLLocationCoordinate2D(latitude: element.lat, longitude: element.long))
+            marker.brotherHood = element
+            //marker.title = element.name
+            marker.icon = UIImage(named: "marker")
+            arrayPins.append(marker)
         }
         
-        self.arrayPins.append(pinModifier ?? Pin(name: "ae", latitude: -16.25940154, longitude: -47.94953618))
+        
+        //self.arrayPins.append(pinModifier ?? Pin(name: "ae", latitude: -16.25940154, longitude: -47.94953618))
         
         
         
-            
+        
         let pins = self.arrayPins
         completion(Result.success(pins))
     }
-      
-        
-        //fazer requisicao dos dados em html, converter pra json, popular pins
-        //chamar o result de pins com nome latitude e longitude através de um completion método de requisicao 
     
-        // Errorsóaceita
-        //completion(Result.error(FileError.fileNotFound))
+    
+    //fazer requisicao dos dados em html, converter pra json, popular pins
+    //chamar o result de pins com nome latitude e longitude através de um completion método de requisicao
+    
+    // Errorsóaceita
+    //completion(Result.error(FileError.fileNotFound))
 }
-    
+
+
+///Class responsible for managing the data of the registered pins
+//class PinDataSource {
+//
+//    var arrayPins = [Pin]()
+//
+//    ///Method responsible for create pins
+//    func pins(completion: @escaping (Result<[Pin]>) -> Void){
+////        guard let url = URL(string: "https://admaa.aabrasil.org.br/ws/md/index.php?MD=1&AREA=AC") else {
+////            fatalError("error fatal url ")
+////        }
+//        var pinModifier: Pin?
+//        for element in SingletonCoordinate.shared.lat {
+//            pinModifier = Pin(name: "ae", latitude: element , longitude: 0.0)
+//
+//        }
+//        for element in SingletonCoordinate.shared.long {
+//             pinModifier?.location.longitude = element
+//        }
+//
+//
+//        self.arrayPins.append(pinModifier ?? Pin(name: "ae", latitude: -16.25940154, longitude: -47.94953618))
+//
+//
+//
+//
+//        let pins = self.arrayPins
+//        completion(Result.success(pins))
+//    }
+//
+//
+//        //fazer requisicao dos dados em html, converter pra json, popular pins
+//        //chamar o result de pins com nome latitude e longitude através de um completion método de requisicao
+//
+//        // Errorsóaceita
+//        //completion(Result.error(FileError.fileNotFound))
+//}
+
     
 
     

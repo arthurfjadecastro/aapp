@@ -20,7 +20,7 @@ class SingletonCoordinate {
     
     var lat = [Double]()
     var long = [Double]()
-    
+    var brotherHoodsDetails = [BrotherHoodDetailModel]()
     
     
 }
