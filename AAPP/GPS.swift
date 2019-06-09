@@ -13,7 +13,7 @@ import UIKit
 class GPS: NSObject {
     //MARK: - Properties
     ///
-    internal var delegate: GPSDelegate?
+    internal var delegate: GPSUpdatesHandler?
     ///
     private let locationManager = CLLocationManager()
     ///
@@ -23,6 +23,8 @@ class GPS: NSObject {
     ///
     func requestLocation(){
         self.locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        
     }
     
     ///
@@ -58,6 +60,7 @@ extension GPS: CLLocationManagerDelegate {
             assertionFailure("Fail when try to get first location")
             return
         }
+        
         let _locationUser = Coordinate(clCoordinate:firstLocation)
         //self.pauseUpdateLocation()
         self.delegate?.gps(self, didUpdate: _locationUser)

@@ -42,9 +42,13 @@ struct BrotherHoodDetailModel: Decodable {
 
 
 class MapViewController: UIViewController, Coordinable {
+  
+    
     
     
     //MARK: - Properties
+    var shouldRequestBrothers = true
+    var locationManager = CLLocationManager()
     var activeMessage: Bool?
     var activeMap = true
     var lat = Double()
@@ -79,8 +83,12 @@ class MapViewController: UIViewController, Coordinable {
     //Aberto para extensao
     //principio aberto fechado open closed principle
     override func viewDidLoad() {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestLocation()
         self.setupMap()
-        self.captureDataBrotherHood()
+//        self.captureDataBrotherHood()
         
         
         
@@ -92,8 +100,11 @@ class MapViewController: UIViewController, Coordinable {
     }
   
     
-    func captureDataBrotherHood() {
-        
+    func captureDataBrotherHood(state: String) {
+//        self.getStateFromLocation(location: self.mapView!.myLocation!) { (state) in
+//            print(state)
+//
+//        }
         self.webView.navigationDelegate = self
         
         self.webView.isHidden = true
@@ -101,12 +112,14 @@ class MapViewController: UIViewController, Coordinable {
         self.webView.configuration.preferences.javaScriptEnabled = true
         self.webView.configuration.userContentController.add(self, name: "handleExtractionComplete")
         
-        if let url = URL(string: "https://admaa.aabrasil.org.br/ws/md/index.php?MD=1&AREA=DF") {
+        if let url = URL(string: "https://admaa.aabrasil.org.br/ws/md/index.php?MD=1&AREA=\(state)") {
             let request = URLRequest(url: url)
             self.webView.load(request)
         }
+       
     }
     
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -117,9 +130,8 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - IBA
     @IBAction func buttonGoMap(_ sender: Any) {
         
-       
-            self.imageGeofence.image = UIImage(named: "geo_fence_Active")
-            self.imageMessage.image = UIImage(named: "message")
+        self.imageGeofence.image = UIImage(named: "geo_fence_Active")
+        self.imageMessage.image = UIImage(named: "message")
         print(SingletonCoordinate.shared.indexesGroup)
         print(SingletonCoordinate.shared.lat)
         print(SingletonCoordinate.shared.long)
@@ -149,15 +161,31 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - Helper Methods
     ///Method responsible for initial configuration Map.
     private func setupMap(){
-        let _camera = GMSCameraPosition.camera(withLatitude: -15.8537382, longitude: -48.1371014, zoom: 15.0)
-        self.camera = _camera
+       
+        
+    
+        let _camera = GMSCameraPosition.camera(withLatitude: -15.8537382, longitude: -48.1371014, zoom: 8.0)
         let _mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.9), camera: _camera)
         self.mapView = _mapView
         self.mapView?.delegate = self
         self.mapView?.isMyLocationEnabled = true
+        self.camera = _camera
+      
+        
+       
+    
+        
         self.setupMapStyle()
+       
         self.view.addSubview(_mapView)
+//        print(self.mapView?.myLocation)
+//        let _camera = GMSCameraPosition.camera(withLatitude: self.mapView!.myLocation!.coordinate.latitude, longitude: self.mapView!.myLocation!.coordinate.longitude, zoom: 13.0)
+//        self.camera = _camera
+//        self.mapView?.moveCamera(GMSCameraUpdate.set
     }
+    
+
+    
     
     let dispatchGroup = DispatchGroup()
     
@@ -172,7 +200,7 @@ class MapViewController: UIViewController, Coordinable {
                     if((error) != nil) {
                         print(error!)
                     }
-                    if(location.latitude.description != "-180.0"){
+                    if(location.latitude.description != "-180.0") {
                         sequenceGroups.append(self.count)
                         SingletonCoordinate.shared.indexesGroup.append(self.count)
                         SingletonCoordinate.shared.lat.append(location.latitude)
@@ -228,6 +256,30 @@ class MapViewController: UIViewController, Coordinable {
 //            self.dispatchGroup.leave()
         }
     }
+    
+    
+    func getStateFromLocation( location : CLLocation,
+                        completionHandler: @escaping(String) -> Void ) {
+        
+        
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            if(placemarks == nil){
+                let alert = UIAlertController(title: "Erro", message: "Não foi possível identificar sua localização", preferredStyle: .alert)
+                let act = UIAlertAction(title: "ok", style: .default, handler: nil)
+                alert.addAction(act)
+                self.present(alert, animated: true, completion: nil)
+            }else {
+                
+                completionHandler(placemarks!.first!.administrativeArea!)
+                
+            }
+            
+        }
+        
+      
+    }
+    
     
     
     ///Method responsible for markers search
@@ -320,6 +372,29 @@ extension MapViewController: WKScriptMessageHandler, WKNavigationDelegate  {
     
 }
 
+
+extension MapViewController : CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+//        print(locations.first?.responds)
+//        print(locations.debugDescription)
+//        print(locations.description)
+        self.mapView?.moveCamera(.setTarget(CLLocationCoordinate2D(latitude: locations.first!.coordinate.latitude, longitude: locations.first!.coordinate.longitude)))
+        
+            self.getStateFromLocation(location: locations.first!) { (state) in
+            if(self.shouldRequestBrothers) {
+                print(state)
+                self.captureDataBrotherHood(state: state)
+                self.shouldRequestBrothers = false
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
+}
 
 
 
