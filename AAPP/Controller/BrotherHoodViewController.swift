@@ -92,9 +92,11 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     ///Action call when there is need to go to Map Screen.
     @IBAction func goToMap(_ sender: Any) {
         self.dismissBackground {
-            self.coordinator?.dismiss()
+            self.coordinator?.dismiss(nil)
         }
     }
+    
+    
     
     
     

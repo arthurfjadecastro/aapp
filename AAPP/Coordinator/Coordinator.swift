@@ -17,7 +17,7 @@ protocol Coordinator {
     ///Method responsible for presentation Screen in flow
     func present(_ screen: Screen, beforePresenting: ((UIViewController) -> Void)?)
     ///Method responsible for dismiss current screen
-    func dismiss()
+    func dismiss(_ beforeDismiss: ((UIViewController) -> Void)?)
     ///Initializer current Screen
     init(current: UIViewController)
 }

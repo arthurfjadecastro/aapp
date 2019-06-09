@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 
-fileprivate let traditionMessages = Messages(title: "12 Passos e Tradições", image: UIImage(named: "steps")!)
-fileprivate let motivationMessages = Messages(title: "UP Motivational", image: UIImage(named: "hand_cursor")!)
+fileprivate let traditionMessages = Messages(title: "12 Passos", image: UIImage(named: "steps")!)
+fileprivate let motivationMessages = Messages(title: "12 Tradições", image: UIImage(named: "hand_cursor")!)
+fileprivate let revistaVivencia = Messages(title: "Revista Vivência", image: UIImage(named: "hand_cursor")!)
 
 class LibAAViewController: UIViewController, Coordinable {
     
@@ -39,7 +40,7 @@ class LibAAViewController: UIViewController, Coordinable {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         
-        self.messages.append(contentsOf: [traditionMessages, motivationMessages])
+        self.messages.append(contentsOf: [traditionMessages, motivationMessages, revistaVivencia])
         self.setupTableview()
         
     }
@@ -58,7 +59,7 @@ class LibAAViewController: UIViewController, Coordinable {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         if (self.tableView.contentSize.height < tableView.frame.size.height) {
-            self.tableView.isScrollEnabled = false
+            self.tableView.isScrollEnabled = true
         }
         else {
              self.tableView.isScrollEnabled = true
@@ -87,7 +88,11 @@ class LibAAViewController: UIViewController, Coordinable {
     ///Action call when there is need to go to Map Screen.
     @IBAction func goToMap(_ sender: Any) {
         self.dismissBackground {
-            self.coordinator?.dismiss()
+            self.coordinator?.dismiss { controller in
+                if let _controller = controller as? MapViewController {
+                    _controller.changeColorIconMap()
+                }
+            }
         }
     }
     
@@ -140,7 +145,7 @@ extension LibAAViewController: UITableViewDataSource {
         if let libCell = cell as? LibCell {
             libCell.img = self.messages[indexPath.row].image
             libCell.title = self.messages[indexPath.row].title
-            libCell.libImage.hero.id = self.messages[indexPath.row].image.description
+//            libCell.libImage.hero.id = self.messages[indexPath.row].image.description
            
         }
         return cell
@@ -154,8 +159,12 @@ extension LibAAViewController: UITableViewDelegate {
         
         if(indexPath.row == 0){
             self.coordinator?.present(.libDetails, beforePresenting: nil)
-        }else {
+        }else if (indexPath.row == 1) {
             self.coordinator?.present(.MotivationalDetails, beforePresenting: nil)
+        }else {
+            if let url = URL(string: "https://www.revistavivencia.org.br/") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
         }
         
         print(indexPath.row)

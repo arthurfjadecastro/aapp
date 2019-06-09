@@ -130,8 +130,7 @@ class MapViewController: UIViewController, Coordinable {
     //MARK: - IBA
     @IBAction func buttonGoMap(_ sender: Any) {
         
-        self.imageGeofence.image = UIImage(named: "geo_fence_Active")
-        self.imageMessage.image = UIImage(named: "message")
+      self.changeColorIconMap()
         print(SingletonCoordinate.shared.indexesGroup)
         print(SingletonCoordinate.shared.lat)
         print(SingletonCoordinate.shared.long)
@@ -139,6 +138,11 @@ class MapViewController: UIViewController, Coordinable {
         
     }
 
+    
+    func changeColorIconMap(){
+         self.imageGeofence.image = UIImage(named: "geo_fence_Active")
+         self.imageMessage.image = UIImage(named: "message")
+    }
     
     @IBAction func buttonGoMessages(_ sender: Any) {
             self.imageGeofence.image = UIImage(named: "geo_fence")

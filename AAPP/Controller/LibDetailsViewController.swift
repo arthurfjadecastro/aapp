@@ -53,7 +53,7 @@ class LibDetailsViewController: UIViewController, Coordinable  {
     
     ///Action responsible for remove current view controller
     @IBAction func handleBack(_ sender: Any) {
-        self.coordinator?.dismiss()
+        self.coordinator?.dismiss(nil)
     }
 }
 

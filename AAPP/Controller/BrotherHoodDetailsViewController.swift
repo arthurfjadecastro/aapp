@@ -67,7 +67,7 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
     
     
     @IBAction func buttonClose(_ sender: Any) {
-        self.coordinator?.dismiss()
+        self.coordinator?.dismiss(nil)
     }
     
     

@@ -18,7 +18,7 @@ class MotivationDetailsViewController: UIViewController, Coordinable {
     }
     
     @IBAction func dismiss(_ sender: Any) {
-        self.coordinator?.dismiss()
+        self.coordinator?.dismiss(nil)
     }
     
 }

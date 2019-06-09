@@ -13,6 +13,8 @@ import UIKit
 
 ///Class responsible for the logical flow of application navigation
 class AppCoordinator: Coordinator {
+  
+    
     
     
     
@@ -31,9 +33,13 @@ class AppCoordinator: Coordinator {
     //MARK: - API
     
     ///Method responsible for dismiss actual view controller
-    func dismiss() {
-        self.currentController.dismiss(animated: true, completion: nil)
+    func dismiss(_ beforeDismiss: ((UIViewController) -> Void)?) {
+        if let _parentController = self.currentController.presentingViewController {
+                beforeDismiss?(_parentController)
+        }
+         self.currentController.dismiss(animated: true, completion: nil)
     }
+
     
     ///Method responsible for present screen
     func present(_ screen: Screen, beforePresenting: ((UIViewController) -> Void)?) {
