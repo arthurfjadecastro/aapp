@@ -14,12 +14,14 @@ class ReuniaoTableViewCell: UITableViewCell {
     
     
     
+    @IBOutlet weak var daysLabel: UILabel!
     
     @IBOutlet weak var textName: UILabel!
     
-    var textw: String? {
+    var dailyMeeting: DailyMeeting? {
         didSet {
-            self.textName.text = textw
+            self.textName.text = dailyMeeting?.hour
+            self.daysLabel.text = dailyMeeting?.day
         }
     }
     

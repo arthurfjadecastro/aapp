@@ -41,7 +41,7 @@ struct BrotherHoodDetailModel: Decodable {
 
 
 
-class MapViewController: UIViewController, Coordinable {
+class MapViewController: UIViewController, Coordinable, libAAViewControllerDelegate {
   
     
     
@@ -147,10 +147,16 @@ class MapViewController: UIViewController, Coordinable {
     @IBAction func buttonGoMessages(_ sender: Any) {
             self.imageGeofence.image = UIImage(named: "geo_fence")
             self.imageMessage.image = UIImage(named: "message_Active")
-        self.coordinator?.present(.libAA, beforePresenting: nil)
-        
-        
+        self.coordinator?.present(.libAA) { controller in
+            if let _controller = controller as? LibAAViewController {
+                _controller.delegate = self
+            }
+        }
 //        self.coordinator?.present(.messages)
+    }
+    
+    func willDismiss(_ libAA: LibAAViewController) {
+        self.changeColorIconMap()
     }
     
     ///Action call when there is need to go to Brotherhood Screen.

@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol libAAViewControllerDelegate {
+    func willDismiss(_ libAA: LibAAViewController)
+}
+
 
 fileprivate let traditionMessages = Messages(title: "12 Passos", image: UIImage(named: "steps")!)
 fileprivate let motivationMessages = Messages(title: "12 Tradições", image: UIImage(named: "hand_cursor")!)
@@ -18,6 +22,8 @@ class LibAAViewController: UIViewController, Coordinable {
     
     
     //MARK: - Properties
+    
+    var delegate: libAAViewControllerDelegate?
     
     ///Property responsible for the flow management of the screen
     var coordinator: Coordinator?
@@ -88,11 +94,13 @@ class LibAAViewController: UIViewController, Coordinable {
     ///Action call when there is need to go to Map Screen.
     @IBAction func goToMap(_ sender: Any) {
         self.dismissBackground {
-            self.coordinator?.dismiss { controller in
-                if let _controller = controller as? MapViewController {
-                    _controller.changeColorIconMap()
-                }
-            }
+            self.coordinator?.dismiss(nil)
+            self.delegate?.willDismiss(self)
+//            self.coordinator?.dismiss { controller in
+//                if let _controller = controller as? MapViewController {
+//                    _controller.changeColorIconMap()
+//                }
+//            }
         }
     }
     
