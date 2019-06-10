@@ -80,8 +80,8 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     ///
     @IBAction func callBrotherHood(_ sender: UIButton) {
-        
-        self.callNumber(phoneNumber: "061996907025")
+        guard let phone = self.brotherHood?.telefones.description else {return}
+        self.callNumber(phoneNumber: phone)
         
     }
 
