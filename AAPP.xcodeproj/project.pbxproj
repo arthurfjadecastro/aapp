@@ -49,6 +49,10 @@
 		3D78B97E2298E82300FB6C81 /* ReuniaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78B97D2298E82300FB6C81 /* ReuniaoTableViewCell.swift */; };
 		3D7C90E021E3E0C400F51942 /* PlacesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */; };
 		3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C90E221E3F62800F51942 /* RequestHandler.swift */; };
+		3D87C77222ADDCD2003329C3 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D87C76F22ADDCD2003329C3 /* UIViewController+Loading.swift */; };
+		3D87C77322ADDCD2003329C3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D87C77022ADDCD2003329C3 /* LoadingView.swift */; };
+		3D87C77422ADDCD2003329C3 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D87C77122ADDCD2003329C3 /* LoadingView.xib */; };
+		3D87C77622ADDDD5003329C3 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D87C77522ADDDD5003329C3 /* RoundedView.swift */; };
 		3D9758CD2291E78800A15B93 /* LibAAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9758CC2291E78800A15B93 /* LibAAViewController.swift */; };
 		3D9758CF2291E86500A15B93 /* LibAA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9758CE2291E86500A15B93 /* LibAA.storyboard */; };
 		3D9758D12291F26900A15B93 /* LibDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9758D02291F26900A15B93 /* LibDetails.storyboard */; };
@@ -138,6 +142,10 @@
 		3D78B97D2298E82300FB6C81 /* ReuniaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuniaoTableViewCell.swift; sourceTree = "<group>"; };
 		3D7C90DF21E3E0C400F51942 /* PlacesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServices.swift; sourceTree = "<group>"; };
 		3D7C90E221E3F62800F51942 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		3D87C76F22ADDCD2003329C3 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
+		3D87C77022ADDCD2003329C3 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		3D87C77122ADDCD2003329C3 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		3D87C77522ADDDD5003329C3 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		3D9758CC2291E78800A15B93 /* LibAAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibAAViewController.swift; sourceTree = "<group>"; };
 		3D9758CE2291E86500A15B93 /* LibAA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LibAA.storyboard; sourceTree = "<group>"; };
 		3D9758D02291F26900A15B93 /* LibDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LibDetails.storyboard; sourceTree = "<group>"; };
@@ -285,6 +293,10 @@
 				3D25CF6D229232C70061C27B /* Assets.xcassets */,
 				3D364B9722595A1900EB0864 /* BrotherHoodDetails.storyboard */,
 				3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */,
+				3D87C77022ADDCD2003329C3 /* LoadingView.swift */,
+				3D87C77522ADDDD5003329C3 /* RoundedView.swift */,
+				3D87C77122ADDCD2003329C3 /* LoadingView.xib */,
+				3D87C76F22ADDCD2003329C3 /* UIViewController+Loading.swift */,
 				3D72A8A321CABE8A0041C1D8 /* Map.storyboard */,
 				3D72A8A921CABF650041C1D8 /* BrotherHood.storyboard */,
 				3D9758D02291F26900A15B93 /* LibDetails.storyboard */,
@@ -522,6 +534,7 @@
 				3DFA25BA21D57F2300EB3F8C /* SF-Pro-Display-Bold.otf in Resources */,
 				3D72A8AA21CABF650041C1D8 /* BrotherHood.storyboard in Resources */,
 				3DFA25C221D57F2300EB3F8C /* SF-Pro-Text-Bold.otf in Resources */,
+				3D87C77422ADDCD2003329C3 /* LoadingView.xib in Resources */,
 				3DFA25BF21D57F2300EB3F8C /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				3D364B9822595A1900EB0864 /* BrotherHoodDetails.storyboard in Resources */,
 				3DFA25BE21D57F2300EB3F8C /* SF-Pro-Text-Regular.otf in Resources */,
@@ -630,12 +643,14 @@
 				3DB84C5621D0FAA500D3681D /* Coordinate.swift in Sources */,
 				3D6026AA21D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift in Sources */,
 				3DFA25AE21D5772300EB3F8C /* MapViewController+GMSMapViewDelegate.swift in Sources */,
+				3D87C77622ADDDD5003329C3 /* RoundedView.swift in Sources */,
 				3DB84C5A21D10B0E00D3681D /* Array+GMSMarker.swift in Sources */,
 				3D6026AC21D6745500852223 /* GMSMarker+Pin.swift in Sources */,
 				3DB84C5821D0FE1200D3681D /* Pin.swift in Sources */,
 				3D364B9A22595B0700EB0864 /* BrotherHoodDetailsViewController.swift in Sources */,
 				3DC6759D21CDA11C008719B4 /* File.swift in Sources */,
 				3D72A8A721CABEB20041C1D8 /* MapViewController.swift in Sources */,
+				3D87C77322ADDCD2003329C3 /* LoadingView.swift in Sources */,
 				3D12462621D2452600D40404 /* GPS.swift in Sources */,
 				3D2C240021D509D3004E6D3F /* Coordinator.swift in Sources */,
 				3DB84C5C21D10C7900D3681D /* Array+Pins.swift in Sources */,
@@ -655,6 +670,7 @@
 				3DDD030E21E68BCF0054E739 /* GooglePlaces+Decodable.swift in Sources */,
 				3D7C90E321E3F62800F51942 /* RequestHandler.swift in Sources */,
 				3D7C90E021E3E0C400F51942 /* PlacesServices.swift in Sources */,
+				3D87C77222ADDCD2003329C3 /* UIViewController+Loading.swift in Sources */,
 				3DC6759F21CDA204008719B4 /* Bundle+File.swift in Sources */,
 				3DFA25C921D5939C00EB3F8C /* K.swift in Sources */,
 				3D6026B021D6B0A400852223 /* ScreenTransition.swift in Sources */,

@@ -45,6 +45,7 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
   
     
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     //MARK: - Properties
     var shouldRequestBrothers = true
@@ -88,6 +89,7 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestLocation()
         self.setupMap()
+        self.startLoading()
 //        self.captureDataBrotherHood()
         
         
@@ -285,9 +287,7 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
                 alert.addAction(act)
                 self.present(alert, animated: true, completion: nil)
             }else {
-                
                 completionHandler(placemarks!.first!.administrativeArea!)
-                
             }
             
         }
@@ -313,7 +313,9 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
             case .error(let error):
                 print(error)
             }
+           self.stopLoading()
         }
+        
     }
     ///Method responsible for the visual configuration of the map, from a configuration JSON file.
     func setupMapStyle() {
