@@ -45,5 +45,10 @@ struct K {
         static let heightInRelationToWidth: CGFloat = ( 290 + 24 ) / 342
     }
     
+    struct LayoutCellTableView {
+        static let widthInRelationToTableView: CGFloat = 1
+        static let heightInRelationToWidth: CGFloat = ( 200 + 24 ) / 290
+    }
+    
 }
 

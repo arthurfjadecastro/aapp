@@ -176,7 +176,7 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
        
         
     
-        let _camera = GMSCameraPosition.camera(withLatitude: -15.8537382, longitude: -48.1371014, zoom: 8.0)
+        let _camera = GMSCameraPosition.camera(withLatitude: -15.8537382, longitude: -48.1371014, zoom: 13.0)
         let _mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.9), camera: _camera)
         self.mapView = _mapView
         self.mapView?.delegate = self

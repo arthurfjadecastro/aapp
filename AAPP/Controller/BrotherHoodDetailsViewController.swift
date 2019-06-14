@@ -32,7 +32,8 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
         guard let brother = self.brotherHood else {return}
         self.nameGroup.text = brother.Grupo
         self.setDataWeek()
-        self.tableViewDetails.dataSource = self
+        
+        self.setupTableview()
     }
     
   
@@ -72,6 +73,14 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
         self.coordinator?.dismiss(nil)
     }
     
+    func setupTableview(){
+        
+        self.tableViewDetails.rowHeight = 100
+       self.tableViewDetails.delegate = self
+        self.tableViewDetails.dataSource = self
+       
+        
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,6 +94,12 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
         
         cell.dailyMeeting = text
         
+        if (self.tableViewDetails.contentSize.height > self.tableViewDetails.frame.size.height) {
+            self.tableViewDetails.isScrollEnabled = true
+        }
+        else {
+            self.tableViewDetails.isScrollEnabled = false
+        }
         
         return cell //4.
     }
