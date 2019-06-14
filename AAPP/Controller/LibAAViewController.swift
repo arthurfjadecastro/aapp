@@ -17,6 +17,7 @@ protocol libAAViewControllerDelegate {
 fileprivate let traditionMessages = Messages(title: "12 Passos", image: UIImage(named: "steps")!)
 fileprivate let motivationMessages = Messages(title: "12 Tradições", image: UIImage(named: "hand_cursor")!)
 fileprivate let revistaVivencia = Messages(title: "Revista Vivência", image: UIImage(named: "hand_cursor")!)
+fileprivate let lojaAA = Messages(title: "Loja AA", image: UIImage(named: "hand_cursor")!)
 
 class LibAAViewController: UIViewController, Coordinable {
     
@@ -46,7 +47,7 @@ class LibAAViewController: UIViewController, Coordinable {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         
-        self.messages.append(contentsOf: [traditionMessages, motivationMessages, revistaVivencia])
+        self.messages.append(contentsOf: [traditionMessages, motivationMessages, revistaVivencia, lojaAA])
         self.setupTableview()
         
     }
@@ -169,8 +170,12 @@ extension LibAAViewController: UITableViewDelegate {
             self.coordinator?.present(.libDetails, beforePresenting: nil)
         }else if (indexPath.row == 1) {
             self.coordinator?.present(.MotivationalDetails, beforePresenting: nil)
-        }else {
+        }else if (indexPath.row == 2) {
             if let url = URL(string: "https://www.revistavivencia.org.br/") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }else {
+            if let url = URL(string: "https://www.aa.org.br/loja/") {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }
