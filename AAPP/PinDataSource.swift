@@ -33,7 +33,7 @@ class PinDataSource {
             let marker = BrotherMarker(position: CLLocationCoordinate2D(latitude: element.lat, longitude: element.long))
             marker.brotherHood = element
             //marker.title = element.name
-            marker.icon = UIImage(named: "marker")
+            marker.icon = UIImage(named: "marker1")
             arrayPins.append(marker)
         }
         

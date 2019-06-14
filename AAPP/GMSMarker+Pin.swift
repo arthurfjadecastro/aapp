@@ -17,7 +17,7 @@ extension GMSMarker {
         let coordinate2d = CLLocationCoordinate2D(coordinate: pin.location)
         self.init(position: coordinate2d)
         self.title = pin.name
-        self.icon = UIImage(named: "marker")
+        self.icon = UIImage(named: "marker1")
     }
     
     ///Method responsible for convert GMSMarker in Pin
