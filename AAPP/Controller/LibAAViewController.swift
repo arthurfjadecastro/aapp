@@ -16,8 +16,8 @@ protocol libAAViewControllerDelegate {
 
 fileprivate let traditionMessages = Messages(title: "12 Passos", image: UIImage(named: "steps")!)
 fileprivate let motivationMessages = Messages(title: "12 Tradições", image: UIImage(named: "hand_cursor")!)
-fileprivate let revistaVivencia = Messages(title: "Revista Vivência", image: UIImage(named: "hand_cursor")!)
-fileprivate let lojaAA = Messages(title: "Loja AA", image: UIImage(named: "hand_cursor")!)
+fileprivate let revistaVivencia = Messages(title: "Revista Vivência", image: UIImage(named: "book")!)
+fileprivate let lojaAA = Messages(title: "Loja AA", image: UIImage(named: "handshake")!)
 
 class LibAAViewController: UIViewController, Coordinable {
     
@@ -131,10 +131,7 @@ class LibAAViewController: UIViewController, Coordinable {
             self.alphaBackgroundView.alpha = 0.2
         }, completion: nil)
     }
-    
-    
-   
-    
+
 }
 
 

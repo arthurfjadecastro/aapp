@@ -12,7 +12,6 @@
 		3D18983521D38F8F0036C85F /* GPSUpdatesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18983421D38F8F0036C85F /* GPSUpdatesHandler.swift */; };
 		3D18983721D395790036C85F /* GPSAuthorizationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18983621D395790036C85F /* GPSAuthorizationHandler.swift */; };
 		3D25CF6C22920EF00061C27B /* LibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D25CF6B22920EF00061C27B /* LibCell.swift */; };
-		3D25CF70229233A20061C27B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D25CF6D229232C70061C27B /* Assets.xcassets */; };
 		3D2C240021D509D3004E6D3F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C23FF21D509D3004E6D3F /* Coordinator.swift */; };
 		3D2C240221D509EC004E6D3F /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240121D509EC004E6D3F /* Coordinable.swift */; };
 		3D2C240421D50C79004E6D3F /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */; };
@@ -53,6 +52,7 @@
 		3D87C77322ADDCD2003329C3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D87C77022ADDCD2003329C3 /* LoadingView.swift */; };
 		3D87C77422ADDCD2003329C3 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D87C77122ADDCD2003329C3 /* LoadingView.xib */; };
 		3D87C77622ADDDD5003329C3 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D87C77522ADDDD5003329C3 /* RoundedView.swift */; };
+		3D95DFA022B41B3600A8BCD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D95DF9F22B41B3600A8BCD0 /* Assets.xcassets */; };
 		3D9758CD2291E78800A15B93 /* LibAAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9758CC2291E78800A15B93 /* LibAAViewController.swift */; };
 		3D9758CF2291E86500A15B93 /* LibAA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9758CE2291E86500A15B93 /* LibAA.storyboard */; };
 		3D9758D12291F26900A15B93 /* LibDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9758D02291F26900A15B93 /* LibDetails.storyboard */; };
@@ -106,7 +106,6 @@
 		3D18983421D38F8F0036C85F /* GPSUpdatesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSUpdatesHandler.swift; sourceTree = "<group>"; };
 		3D18983621D395790036C85F /* GPSAuthorizationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSAuthorizationHandler.swift; sourceTree = "<group>"; };
 		3D25CF6B22920EF00061C27B /* LibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibCell.swift; sourceTree = "<group>"; };
-		3D25CF6D229232C70061C27B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D2C23FF21D509D3004E6D3F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3D2C240121D509EC004E6D3F /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
 		3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
@@ -146,6 +145,7 @@
 		3D87C77022ADDCD2003329C3 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		3D87C77122ADDCD2003329C3 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		3D87C77522ADDDD5003329C3 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		3D95DF9F22B41B3600A8BCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D9758CC2291E78800A15B93 /* LibAAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibAAViewController.swift; sourceTree = "<group>"; };
 		3D9758CE2291E86500A15B93 /* LibAA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LibAA.storyboard; sourceTree = "<group>"; };
 		3D9758D02291F26900A15B93 /* LibDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LibDetails.storyboard; sourceTree = "<group>"; };
@@ -290,7 +290,7 @@
 		3D72A8A221CABE3D0041C1D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3D25CF6D229232C70061C27B /* Assets.xcassets */,
+				3D95DF9F22B41B3600A8BCD0 /* Assets.xcassets */,
 				3D364B9722595A1900EB0864 /* BrotherHoodDetails.storyboard */,
 				3D72A89921CABE1E0041C1D8 /* LaunchScreen.storyboard */,
 				3D87C77022ADDCD2003329C3 /* LoadingView.swift */,
@@ -527,6 +527,7 @@
 			files = (
 				3DFA25C021D57F2300EB3F8C /* SF-Pro-Text-Semibold.otf in Resources */,
 				3DFA25BC21D57F2300EB3F8C /* SF-Pro-Display-Semibold.otf in Resources */,
+				3D95DFA022B41B3600A8BCD0 /* Assets.xcassets in Resources */,
 				3D46AC38227F7BE100F1A4D6 /* UserOnboarding.storyboard in Resources */,
 				3D72A89B21CABE1E0041C1D8 /* LaunchScreen.storyboard in Resources */,
 				3DC6759B21CD9E9A008719B4 /* MapStyle.json in Resources */,
@@ -541,7 +542,6 @@
 				3D5EC35B2295F3DF00765E64 /* MotivationDetails.storyboard in Resources */,
 				3D9758D12291F26900A15B93 /* LibDetails.storyboard in Resources */,
 				3D72A8A421CABE8A0041C1D8 /* Map.storyboard in Resources */,
-				3D25CF70229233A20061C27B /* Assets.xcassets in Resources */,
 				3DFA25BB21D57F2300EB3F8C /* SF-Pro-Display-Medium.otf in Resources */,
 				3DFA25C321D57F2300EB3F8C /* SF-Pro-Display-Regular.otf in Resources */,
 				3DFA25BD21D57F2300EB3F8C /* SF-Pro-Text-Medium.otf in Resources */,
