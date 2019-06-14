@@ -11,7 +11,7 @@ import UIKit
 
 struct DailyMeeting {
     let day: String
-    let hour: String
+    var hour: String
 }
 
 
@@ -20,8 +20,11 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
     
     private var dayWeeks = [DailyMeeting]()
 
+    @IBOutlet weak var brotherHoodAddress: UILabel!
     
     var brotherHood: BrotherHoodDetailModel?
+    
+    var completeAddress = String()
     
     @IBOutlet weak var nameGroup: UILabel!
     
@@ -32,7 +35,7 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
         guard let brother = self.brotherHood else {return}
         self.nameGroup.text = brother.Grupo
         self.setDataWeek()
-        
+        self.brotherHoodAddress.text = self.completeAddress
         self.setupTableview()
     }
     
@@ -90,7 +93,14 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ReuniaoTableViewCell //1.
         
-        let text = dayWeeks[indexPath.row] //2.
+        var text = dayWeeks[indexPath.row] //2.
+        
+        if(text.hour.last?.description == "0"){
+            text.hour.append(contentsOf: "h")
+        }
+        
+            
+            
         
         cell.dailyMeeting = text
         

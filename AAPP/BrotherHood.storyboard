@@ -246,6 +246,7 @@ Segundo Andar</string>
                         <viewLayoutGuide key="safeArea" id="bsE-gZ-EJp"/>
                     </view>
                     <connections>
+                        <outlet property="addressPreview" destination="26k-sY-Vag" id="IB5-CP-89d"/>
                         <outlet property="backgroundView" destination="M1T-C4-nEj" id="eKO-wH-o4i"/>
                         <outlet property="groupName" destination="Gox-1a-fXv" id="YDO-2Z-L6q"/>
                         <outlet property="popUpView" destination="pde-G6-Tuk" id="Wi0-CV-duD"/>

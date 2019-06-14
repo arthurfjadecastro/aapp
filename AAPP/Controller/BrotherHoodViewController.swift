@@ -19,6 +19,7 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     var brotherHood: BrotherHoodDetailModel?
     
+    @IBOutlet weak var addressPreview: UILabel!
     
     
     //MARK: - IBO
@@ -29,7 +30,7 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     
     @IBOutlet weak var groupName: UILabel!
     
-    
+    var addressComplete = String()
     
     
     
@@ -42,6 +43,8 @@ class BrotherHoodViewController: UIViewController, Coordinable {
             return
         }
         self.groupName.text = _brotherHood.Grupo
+        self.concatPreviewDetails()
+        
     }
     
     
@@ -49,6 +52,23 @@ class BrotherHoodViewController: UIViewController, Coordinable {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.presentBackground()
+    }
+    
+    func concatPreviewDetails(){
+        guard let _brotherHood = self.brotherHood else {
+            return
+        }
+        let semNumero = "s/n"
+        if(_brotherHood.numero == semNumero.uppercased() || _brotherHood.numero == semNumero.lowercased() || _brotherHood.numero.isEmpty ){
+            
+            self.addressComplete = _brotherHood.bairro + " - " + _brotherHood.logradouro + " - " + _brotherHood.complemento
+            
+        }else {
+            self.addressComplete = _brotherHood.bairro + " - " + _brotherHood.logradouro + " - " + _brotherHood.complemento + " Nº "  + _brotherHood.numero
+        }
+        self.addressPreview.text = self.addressComplete
+        
+        
     }
     
     //MARK: - IBA    
@@ -59,6 +79,7 @@ class BrotherHoodViewController: UIViewController, Coordinable {
         self.coordinator?.present(.brotherHoodDetails, beforePresenting: { (controller) in
             if let _nextController = controller as? BrotherHoodDetailsViewController {
                 _nextController.brotherHood = self.brotherHood
+                _nextController.completeAddress = self.addressComplete
             }
             
         });
