@@ -26,11 +26,11 @@
             <objects>
                 <viewController storyboardIdentifier="LibDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rAf-ea-EhH" customClass="LibDetailsViewController" customModule="AAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TxJ-Z1-BzO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="2240"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2070"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hI-xE-xJV">
-                                <rect key="frame" x="0.0" y="20" width="375" height="2220"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="2050"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="755-IA-C0i">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="2220"/>
@@ -313,7 +313,7 @@
                         <viewLayoutGuide key="safeArea" id="RW7-cL-tnk"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="2240"/>
+                    <size key="freeformSize" width="375" height="2070"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
