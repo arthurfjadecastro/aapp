@@ -64,7 +64,7 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
         slide1.subTitleOnboarding.text = "Olá, seja bem vindo a nossa plataforma de busca, estamos felizes por ajudar."
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide2.imageOnboarding.image = UIImage(named: "flat-color-icons:multiple-devices-1")
-        slide2.subTitleOnboarding.text = "De forma fácil e intuitiva você poderá navegar entre diversos estados e cidades."
+        slide2.subTitleOnboarding.text = "De forma fácil e intuitiva você poderá navegar entre diversos grupos e usar a biblioteca do AA."
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide3.imageOnboarding.image = UIImage(named: "flat-color-icons:todo-list")
         slide3.subTitleOnboarding.text = "Aqui você poderá encontrar os grupos e reuniões mais próximos de você"
