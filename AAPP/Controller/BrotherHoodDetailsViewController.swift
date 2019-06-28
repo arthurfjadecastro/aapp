@@ -39,6 +39,39 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
         self.setupTableview()
     }
     
+    func buildShareText() -> String? {
+        guard let _brotherHood = self.brotherHood else {
+            return nil
+        }
+        
+        var text = ("Nome: \(_brotherHood.Grupo) \nEndereço: \(self.completeAddress) \n\nReuniões:\n")
+        if(_brotherHood.reunioes_2a.trimmingCharacters(in: .whitespaces) != "") {
+            text += "Segunda: " + _brotherHood.reunioes_2a + "\n"
+        }
+        if(_brotherHood.reunioes_3a.trimmingCharacters(in: .whitespaces) != "") {
+            text += "Terça: " + _brotherHood.reunioes_3a + "\n"
+        }
+        if(_brotherHood.reunioes_4a.trimmingCharacters(in: .whitespaces) != "") {
+            text += "Quarta: " + _brotherHood.reunioes_4a + "\n"
+        }
+        if(_brotherHood.reunioes_5a.trimmingCharacters(in: .whitespaces) != "") {
+            text += "Quinta: " + _brotherHood.reunioes_5a + "\n"
+        }
+        if(_brotherHood.reunioes6a.trimmingCharacters(in: .whitespaces) != "") {
+            text += "Sexta: " + _brotherHood.reunioes6a + "\n"
+        }
+        if(_brotherHood.reunioes_sab.trimmingCharacters(in: .whitespaces) != "") {
+            text += "Sábado: " + _brotherHood.reunioes_sab + "\n"
+        }
+        if(_brotherHood.reunioes_dom.trimmingCharacters(in: .whitespaces) != "") {
+            text += "Domingo: " + _brotherHood.reunioes_dom + "\n"
+        }
+        if(_brotherHood.reunioes_fer.trimmingCharacters(in: .whitespaces) != "") {
+            text += "Feriado: " + _brotherHood.reunioes_fer
+        }
+        return text
+    }
+    
   
     
     func setDataWeek(){
@@ -84,6 +117,17 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
        
         
     }
+    
+    
+    
+    @IBAction func shareText(_ sender: Any) {
+        if let sharedText = self.buildShareText() {
+            let act = UIActivityViewController(activityItems: [sharedText], applicationActivities: nil)
+            act.popoverPresentationController?.sourceView = self.view
+            self.present(act, animated: true, completion: nil)
+        }
+    }
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
