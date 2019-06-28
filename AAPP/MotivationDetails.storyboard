@@ -26,232 +26,278 @@
             <objects>
                 <viewController storyboardIdentifier="MotivationDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u4h-Mi-bPN" customClass="MotivationDetailsViewController" customModule="AAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CRQ-vU-j7v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="2240"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2275"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ye-vT-llr">
-                                <rect key="frame" x="0.0" y="44" width="375" height="2162"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="2197"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WU-j8-xgv">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="2220"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uP1-hV-qXf" userLabel="viewContainerImage">
-                                                <rect key="frame" x="0.0" y="-16" width="375" height="556"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uP1-hV-qXf" userLabel="viewContainerImage">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-7E-aCh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                                                        <connections>
+                                                            <action selector="dismiss:" destination="u4h-Mi-bPN" eventType="touchUpInside" id="yHq-yL-HM4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cancel" translatesAutoresizingMaskIntoConstraints="NO" id="5Fx-c6-uJe">
+                                                        <rect key="frame" x="309" y="30" width="36" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="36" id="2iv-wu-tpR"/>
+                                                            <constraint firstAttribute="height" constant="36" id="THy-9B-sDx"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand_cursor" translatesAutoresizingMaskIntoConstraints="NO" id="2e5-dn-Y94">
+                                                        <rect key="frame" x="115" y="161.5" width="145" height="145.00000000000003"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="145" id="8TW-Qk-CgR"/>
+                                                            <constraint firstAttribute="width" constant="145" id="vLb-UR-EnW"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Tradições" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-Ms-PEI">
+                                                        <rect key="frame" x="94.5" y="326.5" width="186.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" red="0.49019607840000001" green="0.54901960780000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="2e5-dn-Y94" firstAttribute="centerY" secondItem="uP1-hV-qXf" secondAttribute="centerY" multiplier="0.85" id="4ch-wh-6wP"/>
+                                                    <constraint firstItem="5Fx-c6-uJe" firstAttribute="top" secondItem="uP1-hV-qXf" secondAttribute="top" constant="30" id="9TE-lT-KL5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5Fx-c6-uJe" secondAttribute="trailing" constant="30" id="Ftq-Tx-Xc9"/>
+                                                    <constraint firstAttribute="height" constant="550" id="OoC-8v-Ugi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gaG-7E-aCh" secondAttribute="trailing" id="TL6-rF-phC"/>
+                                                    <constraint firstItem="2e5-dn-Y94" firstAttribute="centerX" secondItem="uP1-hV-qXf" secondAttribute="centerX" id="WRy-Wo-F9q"/>
+                                                    <constraint firstItem="iS9-Ms-PEI" firstAttribute="centerX" secondItem="uP1-hV-qXf" secondAttribute="centerX" id="cId-UY-0bV"/>
+                                                    <constraint firstItem="iS9-Ms-PEI" firstAttribute="top" secondItem="2e5-dn-Y94" secondAttribute="bottom" constant="20" id="e8m-Lq-nPs"/>
+                                                    <constraint firstItem="gaG-7E-aCh" firstAttribute="top" secondItem="uP1-hV-qXf" secondAttribute="top" id="gCd-Ox-pSV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gaG-7E-aCh" secondAttribute="bottom" id="s5y-oY-LMr"/>
+                                                    <constraint firstItem="gaG-7E-aCh" firstAttribute="leading" secondItem="uP1-hV-qXf" secondAttribute="leading" id="zw6-hq-ctB"/>
+                                                </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKm-RC-iBJ">
-                                                <rect key="frame" x="8" y="570" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKm-RC-iBJ">
+                                                <rect key="frame" x="10" y="580" width="159" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nosso bem-estar comum deve estar em primeiro lugar; a reabilitação individual depende da unidade de A.A." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4y-kH-bE1">
-                                                <rect key="frame" x="8" y="628" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nosso bem-estar comum deve estar em primeiro lugar; a reabilitação individual depende da unidade de A.A." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4y-kH-bE1">
+                                                <rect key="frame" x="10" y="627" width="355" height="50.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_cancel" translatesAutoresizingMaskIntoConstraints="NO" id="5Fx-c6-uJe">
-                                                <rect key="frame" x="325" y="20" width="36" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-7E-aCh">
-                                                <rect key="frame" x="0.0" y="-16" width="375" height="556"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="dismiss:" destination="u4h-Mi-bPN" eventType="touchUpInside" id="yHq-yL-HM4"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12 Tradições" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-Ms-PEI">
-                                                <rect key="frame" x="12" y="326" width="351" height="72"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="2 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c32-lu-VcY">
-                                                <rect key="frame" x="8" y="708" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="2 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c32-lu-VcY">
+                                                <rect key="frame" x="10" y="707.5" width="163" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87i-TS-lXL">
-                                                <rect key="frame" x="8" y="765" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87i-TS-lXL">
+                                                <rect key="frame" x="10" y="754.5" width="355" height="100.5"/>
                                                 <string key="text"> Somente uma autoridade preside, em última análise, o nosso propósito comum - um Deus amantíssimo que Se manifesta em nossa consciência coletiva. Nossos líderes são apenas servidores de confiança; não têm poderes para governar.</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXX-Ga-KZr">
-                                                <rect key="frame" x="8" y="846" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXX-Ga-KZr">
+                                                <rect key="frame" x="10" y="885" width="164" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXf-av-PVB">
-                                                <rect key="frame" x="8" y="904" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <string key="text">Para ser membro de A.A., o único requisito é o desejo de parar de beber.
-
-</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Para ser membro de A.A., o único requisito é o desejo de parar de beber." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXf-av-PVB">
+                                                <rect key="frame" x="10" y="932" width="355" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUA-dU-teo">
-                                                <rect key="frame" x="8" y="984" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUA-dU-teo">
+                                                <rect key="frame" x="10" y="995.5" width="164.5" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-5N-jUQ">
-                                                <rect key="frame" x="8" y="1042" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <string key="text">Cada Grupo deve ser autônomo, salvo em assuntos que digam respeito a outros Grupos ou a A.A. em seu conjunto.
-
-</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cada Grupo deve ser autônomo, salvo em assuntos que digam respeito a outros Grupos ou a A.A. em seu conjunto." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-5N-jUQ">
+                                                <rect key="frame" x="10" y="1042.5" width="355" height="50.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAK-T3-ViD">
-                                                <rect key="frame" x="8" y="1121" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAK-T3-ViD">
+                                                <rect key="frame" x="10" y="1123" width="164" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cada Grupo é animado de um único propósito primordial - o de transmitir sua mensagem ao alcoólico que ainda sofre." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BE-EW-3OL">
-                                                <rect key="frame" x="8" y="1179" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cada Grupo é animado de um único propósito primordial - o de transmitir sua mensagem ao alcoólico que ainda sofre." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BE-EW-3OL">
+                                                <rect key="frame" x="10" y="1170" width="355" height="50.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhQ-sa-1Tx">
-                                                <rect key="frame" x="8" y="1260" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhQ-sa-1Tx">
+                                                <rect key="frame" x="10" y="1250.5" width="164.5" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5p-xR-LNq">
-                                                <rect key="frame" x="8" y="1318" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <string key="text">Nenhum Grupo de A.A. deverá jamais sancionar, financiar ou emprestar o nome de A.A. a qualquer sociedade parecida ou empreendimento alheio à Irmandade, a fim de que problemas de dinheiro, propriedade e prestígio não nos afastem de nosso propósito primordial.
-
-</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5p-xR-LNq">
+                                                <rect key="frame" x="10" y="1297.5" width="355" height="100.5"/>
+                                                <string key="text">Nenhum Grupo de A.A. deverá jamais sancionar, financiar ou emprestar o nome de A.A. a qualquer sociedade parecida ou empreendimento alheio à Irmandade, a fim de que problemas de dinheiro, propriedade e prestígio não nos afastem de nosso propósito primordial.</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCt-MP-H3W">
-                                                <rect key="frame" x="8" y="1397" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCt-MP-H3W">
+                                                <rect key="frame" x="10" y="1428" width="162" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Todos os Grupos de A.A. deverão ser absolutamente auto-suficientes, rejeitando quaisquer doações de fora." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyz-ZO-Fbx">
-                                                <rect key="frame" x="8" y="1455" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todos os Grupos de A.A. deverão ser absolutamente auto-suficientes, rejeitando quaisquer doações de fora." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyz-ZO-Fbx">
+                                                <rect key="frame" x="10" y="1475" width="355" height="50.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a2-04-Eks">
-                                                <rect key="frame" x="8" y="1536" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a2-04-Eks">
+                                                <rect key="frame" x="10" y="1555.5" width="164.5" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-6V-y7A">
-                                                <rect key="frame" x="8" y="1594" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-6V-y7A">
+                                                <rect key="frame" x="10" y="1602.5" width="355" height="50.5"/>
                                                 <string key="text">Alcoólicos Anônimos deverá manter-se sempre não-profissional, embora nossos centros de serviços possam contratar funcionários especializados.</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-ab-tFf">
-                                                <rect key="frame" x="8" y="1673" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-ab-tFf">
+                                                <rect key="frame" x="10" y="1683" width="164.5" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-ub-1Ch">
-                                                <rect key="frame" x="8" y="1731" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <string key="text">A.A. jamais deverá organizar-se como tal; podemos, porém, criar juntas ou comitês de serviço diretamente responsáveis perante aqueles a quem prestam serviços.
-
-</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-ub-1Ch">
+                                                <rect key="frame" x="10" y="1730" width="355" height="67"/>
+                                                <string key="text">A.A. jamais deverá organizar-se como tal; podemos, porém, criar juntas ou comitês de serviço diretamente responsáveis perante aqueles a quem prestam serviços.</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztR-vZ-0Fk">
-                                                <rect key="frame" x="8" y="1811" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztR-vZ-0Fk">
+                                                <rect key="frame" x="10" y="1827" width="180.5" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnh-Oy-hXD">
-                                                <rect key="frame" x="8" y="1869" width="343" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <string key="text">Alcoólicos Anônimos não opina sobre questões alheias à Irmandade; portanto, o nome de A.A. jamais deverá aparecer em controvérsias públicas.
-</string>
-                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" text="11 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-Sl-vRa">
-                                                <rect key="frame" x="8" y="1949" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="11 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-Sl-vRa">
+                                                <rect key="frame" x="10" y="1954.5" width="175" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-K5-W3c">
-                                                <rect key="frame" x="8" y="2007" width="343" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-K5-W3c">
+                                                <rect key="frame" x="10" y="2001.5" width="355" height="67"/>
                                                 <string key="text">Nossas relações com o público baseiam-se na atração em vez da promoção; cabe-nos sempre preservar o anonimato pessoal na imprensa, no rádio e em filmes.</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" text="12 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZ7-Ta-rdR">
-                                                <rect key="frame" x="8" y="2087" width="343" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="12 Tradição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZ7-Ta-rdR">
+                                                <rect key="frame" x="10" y="2098.5" width="179" height="37"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="31"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3d-hK-bu0">
-                                                <rect key="frame" x="8" y="2145" width="343" height="69"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3d-hK-bu0">
+                                                <rect key="frame" x="10" y="2145.5" width="355" height="50.5"/>
                                                 <string key="text">O anonimato é o alicerce espiritual das nossas Tradições, lembrando-nos sempre da necessidade de colocar os princípios acima das personalidades.</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand_cursor" translatesAutoresizingMaskIntoConstraints="NO" id="2e5-dn-Y94">
-                                                <rect key="frame" x="108" y="142" width="143" height="143"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnh-Oy-hXD">
+                                                <rect key="frame" x="10" y="1874" width="355" height="50.5"/>
+                                                <string key="text">Alcoólicos Anônimos não opina sobre questões alheias à Irmandade; portanto, o nome de A.A. jamais deverá aparecer em controvérsias públicas.</string>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uP1-hV-qXf" secondAttribute="trailing" id="0vb-yw-Rqw"/>
+                                            <constraint firstItem="z9T-Sl-vRa" firstAttribute="top" secondItem="Lnh-Oy-hXD" secondAttribute="bottom" constant="30" id="1i8-de-i8U"/>
+                                            <constraint firstAttribute="trailing" secondItem="cWp-K5-W3c" secondAttribute="trailing" constant="10" id="2TG-E3-LzU"/>
+                                            <constraint firstItem="Y3d-hK-bu0" firstAttribute="top" secondItem="bZ7-Ta-rdR" secondAttribute="bottom" constant="10" id="3T8-XP-VXb"/>
+                                            <constraint firstItem="wp7-6V-y7A" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="4yr-dc-xwP"/>
+                                            <constraint firstItem="ztR-vZ-0Fk" firstAttribute="top" secondItem="fpy-ub-1Ch" secondAttribute="bottom" constant="30" id="6le-8b-kmJ"/>
+                                            <constraint firstItem="ztR-vZ-0Fk" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="8Z5-w0-f3V"/>
+                                            <constraint firstItem="Lnh-Oy-hXD" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="8be-Td-s2C"/>
+                                            <constraint firstItem="uP1-hV-qXf" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" id="8if-TL-WEW"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lnh-Oy-hXD" secondAttribute="trailing" constant="10" id="CAJ-IK-suz"/>
+                                            <constraint firstItem="KAK-T3-ViD" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="D0B-B7-XVb"/>
+                                            <constraint firstItem="gXX-Ga-KZr" firstAttribute="top" secondItem="87i-TS-lXL" secondAttribute="bottom" constant="30" id="E0O-DT-JLM"/>
+                                            <constraint firstAttribute="trailing" secondItem="87i-TS-lXL" secondAttribute="trailing" constant="10" id="E7J-2h-IaI"/>
+                                            <constraint firstItem="nvb-5N-jUQ" firstAttribute="top" secondItem="dUA-dU-teo" secondAttribute="bottom" constant="10" id="FbD-lh-ywR"/>
+                                            <constraint firstItem="wp7-6V-y7A" firstAttribute="top" secondItem="3a2-04-Eks" secondAttribute="bottom" constant="10" id="GJ3-A6-hKH"/>
+                                            <constraint firstItem="BhQ-sa-1Tx" firstAttribute="top" secondItem="4BE-EW-3OL" secondAttribute="bottom" constant="30" id="GK7-mp-hZ3"/>
+                                            <constraint firstItem="bZ7-Ta-rdR" firstAttribute="top" secondItem="cWp-K5-W3c" secondAttribute="bottom" constant="30" id="GRN-YJ-qOX"/>
+                                            <constraint firstItem="87i-TS-lXL" firstAttribute="top" secondItem="c32-lu-VcY" secondAttribute="bottom" constant="10" id="GTt-54-0LP"/>
+                                            <constraint firstItem="fpy-ub-1Ch" firstAttribute="top" secondItem="f6A-ab-tFf" secondAttribute="bottom" constant="10" id="IKo-Z9-lfV"/>
+                                            <constraint firstItem="Eyz-ZO-Fbx" firstAttribute="top" secondItem="PCt-MP-H3W" secondAttribute="bottom" constant="10" id="Jnf-iJ-G5H"/>
+                                            <constraint firstItem="L4y-kH-bE1" firstAttribute="top" secondItem="fKm-RC-iBJ" secondAttribute="bottom" constant="10" id="KSQ-m8-GRT"/>
+                                            <constraint firstAttribute="trailing" secondItem="4BE-EW-3OL" secondAttribute="trailing" constant="10" id="LQA-z2-uZm"/>
+                                            <constraint firstItem="f6A-ab-tFf" firstAttribute="top" secondItem="wp7-6V-y7A" secondAttribute="bottom" constant="30" id="MxM-Gr-vZN"/>
+                                            <constraint firstItem="dUA-dU-teo" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="N4G-j3-PX8"/>
+                                            <constraint firstItem="dUA-dU-teo" firstAttribute="top" secondItem="JXf-av-PVB" secondAttribute="bottom" constant="30" id="Sc8-Yb-Gfx"/>
+                                            <constraint firstItem="c32-lu-VcY" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="Sia-eu-vyv"/>
+                                            <constraint firstItem="Y5p-xR-LNq" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="UjN-kC-79c"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y5p-xR-LNq" secondAttribute="trailing" constant="10" id="UpT-8W-8zc"/>
+                                            <constraint firstItem="3a2-04-Eks" firstAttribute="top" secondItem="Eyz-ZO-Fbx" secondAttribute="bottom" constant="30" id="W3b-Wb-fmZ"/>
+                                            <constraint firstItem="Y3d-hK-bu0" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="WKx-nJ-qxc"/>
+                                            <constraint firstItem="PCt-MP-H3W" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="WOC-G8-5Aj"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eyz-ZO-Fbx" secondAttribute="trailing" constant="10" id="XR2-0U-Xxa"/>
+                                            <constraint firstItem="nvb-5N-jUQ" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="Yen-Xn-bZF"/>
+                                            <constraint firstItem="f6A-ab-tFf" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="ZG1-0i-1Wh"/>
+                                            <constraint firstAttribute="trailing" secondItem="JXf-av-PVB" secondAttribute="trailing" constant="10" id="b8y-bn-TQo"/>
+                                            <constraint firstItem="Lnh-Oy-hXD" firstAttribute="top" secondItem="ztR-vZ-0Fk" secondAttribute="bottom" constant="10" id="bmc-h4-3bz"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y3d-hK-bu0" secondAttribute="trailing" constant="10" id="cjc-Lb-RZE"/>
+                                            <constraint firstItem="z9T-Sl-vRa" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="dEX-6T-AHo"/>
+                                            <constraint firstItem="87i-TS-lXL" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="daw-74-e8x"/>
+                                            <constraint firstAttribute="trailing" secondItem="wp7-6V-y7A" secondAttribute="trailing" constant="10" id="djo-eq-d0e"/>
+                                            <constraint firstItem="4BE-EW-3OL" firstAttribute="top" secondItem="KAK-T3-ViD" secondAttribute="bottom" constant="10" id="egH-AT-FUS"/>
+                                            <constraint firstItem="fpy-ub-1Ch" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="eyb-aI-tMk"/>
+                                            <constraint firstAttribute="trailing" secondItem="L4y-kH-bE1" secondAttribute="trailing" constant="10" id="fRI-eV-fkF"/>
+                                            <constraint firstItem="JXf-av-PVB" firstAttribute="top" secondItem="gXX-Ga-KZr" secondAttribute="bottom" constant="10" id="fwG-rq-AEp"/>
+                                            <constraint firstItem="cWp-K5-W3c" firstAttribute="top" secondItem="z9T-Sl-vRa" secondAttribute="bottom" constant="10" id="gz0-Qd-E7A"/>
+                                            <constraint firstItem="BhQ-sa-1Tx" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="iYD-UK-IaO"/>
+                                            <constraint firstItem="4BE-EW-3OL" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="kr2-Vk-2SG"/>
+                                            <constraint firstItem="PCt-MP-H3W" firstAttribute="top" secondItem="Y5p-xR-LNq" secondAttribute="bottom" constant="30" id="m1m-EA-HVt"/>
+                                            <constraint firstItem="fKm-RC-iBJ" firstAttribute="top" secondItem="uP1-hV-qXf" secondAttribute="bottom" constant="30" id="mhC-uR-OKQ"/>
+                                            <constraint firstItem="L4y-kH-bE1" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="nfr-74-vBj"/>
                                             <constraint firstAttribute="height" constant="2220" id="pnR-fB-ElU"/>
+                                            <constraint firstAttribute="trailing" secondItem="fpy-ub-1Ch" secondAttribute="trailing" constant="10" id="rX9-jQ-cYn"/>
+                                            <constraint firstItem="fKm-RC-iBJ" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="s6I-vh-UjP"/>
+                                            <constraint firstItem="bZ7-Ta-rdR" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="stm-h3-Jy2"/>
+                                            <constraint firstItem="cWp-K5-W3c" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="tJ9-zL-Zzw"/>
+                                            <constraint firstAttribute="trailing" secondItem="nvb-5N-jUQ" secondAttribute="trailing" constant="10" id="tOC-aG-atq"/>
+                                            <constraint firstItem="c32-lu-VcY" firstAttribute="top" secondItem="L4y-kH-bE1" secondAttribute="bottom" constant="30" id="uXo-3j-iHh"/>
+                                            <constraint firstItem="Eyz-ZO-Fbx" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="um5-D4-CdY"/>
+                                            <constraint firstItem="3a2-04-Eks" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="v51-NQ-TjG"/>
+                                            <constraint firstItem="JXf-av-PVB" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="w5m-Gc-0WF"/>
+                                            <constraint firstItem="Y5p-xR-LNq" firstAttribute="top" secondItem="BhQ-sa-1Tx" secondAttribute="bottom" constant="10" id="wkA-Nd-pt0"/>
+                                            <constraint firstItem="KAK-T3-ViD" firstAttribute="top" secondItem="nvb-5N-jUQ" secondAttribute="bottom" constant="30" id="wqP-18-HsM"/>
+                                            <constraint firstItem="gXX-Ga-KZr" firstAttribute="leading" secondItem="6WU-j8-xgv" secondAttribute="leading" constant="10" id="ybk-3g-HJA"/>
+                                            <constraint firstItem="uP1-hV-qXf" firstAttribute="top" secondItem="6WU-j8-xgv" secondAttribute="top" id="zQd-vM-teW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -274,7 +320,7 @@
                         <viewLayoutGuide key="safeArea" id="tsf-T4-ALQ"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="2240"/>
+                    <size key="freeformSize" width="375" height="2275"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
