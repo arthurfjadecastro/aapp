@@ -66,9 +66,11 @@ class RequestHandler: Requester {
             completion(Result.error(RequestHandlerError.failCreateUrl("Unable to create URL object from String")))
         }
     }
-    
+     
     static func request(from url: URL, completion: @escaping (Result<Data>) -> Void ) {
-        RequestHandler.request(from: URLRequest(url: url), completion: completion)
+        var request = URLRequest(url: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        RequestHandler.request(from: request, completion: completion)
     }
     
     

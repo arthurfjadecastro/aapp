@@ -42,7 +42,6 @@ class PinDataSource {
         
         
         
-        
         let pins = self.arrayPins
         completion(Result.success(pins))
     }

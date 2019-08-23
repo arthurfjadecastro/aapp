@@ -69,6 +69,8 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
     ///Property responsible for the flow management of the screen
     var coordinator: Coordinator?
     
+    private let geocodeRequester = GeocodeRequester()
+    
      var count = 0
     
     
@@ -205,6 +207,7 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
         SingletonCoordinate.shared.brotherHoodsDetails = brotherHoods
         //            print(brotherHoods.count)
         var sequenceGroups = [Int]()
+        
         for (index, element) in brotherHoods.enumerated() {
 //        first element - "71691-010"
            
@@ -260,7 +263,7 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
                     let location = placemark.location!
                     completionHandler(location.coordinate, nil)
 //                   ("------- Return COORDINATES ok - falha na quantidade - retorna corretamente entre 39-43  -------")
-//                    self.count = self.count + 1
+//                  q  self.count = self.count + 1
                     
 //                    print(self.count , "asCoordinate:  ", location.coordinate.asCoordinate())
                     
@@ -282,7 +285,7 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
             if(placemarks == nil){
-                let alert = UIAlertController(title: "Erro", message: "Não foi possível identificar sua localização", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Erro", message: "Problemas para identificar sua localização, verifique sua contexão", preferredStyle: .alert)
                 let act = UIAlertAction(title: "ok", style: .default, handler: nil)
                 alert.addAction(act)
                 self.present(alert, animated: true, completion: nil)
@@ -304,17 +307,48 @@ class MapViewController: UIViewController, Coordinable, libAAViewControllerDeleg
             return
         }
         
-        pinDataSource.pins { (result) in
+        let ceps = SingletonCoordinate.shared.brotherHoodsDetails.map({ $0.cep })
+        self.geocodeRequester.geocode(postalCodes: ceps) { (result) in
+            self.stopLoading()
+            
+            var addresses = [(postalCode: String, address: GeocodeAddress)]()
             switch result {
-            case .success(let pins):
-                //let markers = pins.asMarkers()
-                //markers.forEach({$0.map = _mapView})
-                pins.forEach({ $0.map = _mapView })
-            case .error(let error):
-                print(error)
+            case .success(let _addresses):
+                addresses = _addresses
+                
+            case .failure(let error):
+                if case .multipleErrors(let _addresses, _) = error {
+                    addresses = _addresses
+                }
+                if addresses.isEmpty {
+                    let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
+                    let act = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                    alert.addAction(act)
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
-           self.stopLoading()
+            
+            addresses.forEach({ (location) in
+                let coordinate = location.address.coordinate.asCLCoordinate()
+                let marker = BrotherMarker(position: coordinate)
+                marker.icon = UIImage(named: "marker1")
+                let detail = SingletonCoordinate.shared.brotherHoodsDetails.first(where: { $0.cep == location.postalCode })
+                marker.brotherHood = detail
+                marker.map = _mapView
+            })
         }
+        
+//        pinDataSource.pins { (result) in
+//            switch result {
+//            case .success(let pins):
+//                let markers = pins.asMarkers()
+//                markers.forEach({$0.map = _mapView})
+//                pins.forEach({ $0.map = _mapView })
+//            case .error(let error):
+//                print(error)
+//            }
+//
+//        }
         
     }
     ///Method responsible for the visual configuration of the map, from a configuration JSON file.
@@ -383,7 +417,8 @@ extension MapViewController: WKScriptMessageHandler, WKNavigationDelegate  {
             }
         }
         
-        self.doSomething(brotherHoods: result)
+        SingletonCoordinate.shared.brotherHoodsDetails = result
+        self.fetchPins()
     }
     
     

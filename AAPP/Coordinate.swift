@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 ///Struct Location
-struct Coordinate {
+struct Coordinate: Codable {
     let latitude: Double
     var longitude: Double
     

@@ -12,6 +12,9 @@
 		3D18983521D38F8F0036C85F /* GPSUpdatesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18983421D38F8F0036C85F /* GPSUpdatesHandler.swift */; };
 		3D18983721D395790036C85F /* GPSAuthorizationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18983621D395790036C85F /* GPSAuthorizationHandler.swift */; };
 		3D25CF6C22920EF00061C27B /* LibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D25CF6B22920EF00061C27B /* LibCell.swift */; };
+		3D2B9449231056E500E90118 /* GeocodeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B9448231056E500E90118 /* GeocodeRequester.swift */; };
+		3D2B944D23105B0D00E90118 /* GeocodeRequesterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B944C23105B0D00E90118 /* GeocodeRequesterError.swift */; };
+		3D2B944F231060A400E90118 /* GeocodeAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B944E231060A400E90118 /* GeocodeAddress.swift */; };
 		3D2C240021D509D3004E6D3F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C23FF21D509D3004E6D3F /* Coordinator.swift */; };
 		3D2C240221D509EC004E6D3F /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240121D509EC004E6D3F /* Coordinable.swift */; };
 		3D2C240421D50C79004E6D3F /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */; };
@@ -106,6 +109,9 @@
 		3D18983421D38F8F0036C85F /* GPSUpdatesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSUpdatesHandler.swift; sourceTree = "<group>"; };
 		3D18983621D395790036C85F /* GPSAuthorizationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSAuthorizationHandler.swift; sourceTree = "<group>"; };
 		3D25CF6B22920EF00061C27B /* LibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibCell.swift; sourceTree = "<group>"; };
+		3D2B9448231056E500E90118 /* GeocodeRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeRequester.swift; sourceTree = "<group>"; };
+		3D2B944C23105B0D00E90118 /* GeocodeRequesterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeRequesterError.swift; sourceTree = "<group>"; };
+		3D2B944E231060A400E90118 /* GeocodeAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodeAddress.swift; sourceTree = "<group>"; };
 		3D2C23FF21D509D3004E6D3F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3D2C240121D509EC004E6D3F /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
 		3D2C240321D50C79004E6D3F /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
@@ -355,6 +361,9 @@
 			isa = PBXGroup;
 			children = (
 				3D7C90E221E3F62800F51942 /* RequestHandler.swift */,
+				3D2B9448231056E500E90118 /* GeocodeRequester.swift */,
+				3D2B944E231060A400E90118 /* GeocodeAddress.swift */,
+				3D2B944C23105B0D00E90118 /* GeocodeRequesterError.swift */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -641,8 +650,10 @@
 				3DDD030C21E68BA60054E739 /* GooglePlace.swift in Sources */,
 				3D12462A21D2474D00D40404 /* GPSDelegate.swift in Sources */,
 				3DB84C5621D0FAA500D3681D /* Coordinate.swift in Sources */,
+				3D2B944F231060A400E90118 /* GeocodeAddress.swift in Sources */,
 				3D6026AA21D673B900852223 /* Coordinate+CLLocationCoordinate2D.swift in Sources */,
 				3DFA25AE21D5772300EB3F8C /* MapViewController+GMSMapViewDelegate.swift in Sources */,
+				3D2B9449231056E500E90118 /* GeocodeRequester.swift in Sources */,
 				3D87C77622ADDDD5003329C3 /* RoundedView.swift in Sources */,
 				3DB84C5A21D10B0E00D3681D /* Array+GMSMarker.swift in Sources */,
 				3D6026AC21D6745500852223 /* GMSMarker+Pin.swift in Sources */,
@@ -661,6 +672,7 @@
 				3D38284721FD1361009178E2 /* Requester.swift in Sources */,
 				3D2C240421D50C79004E6D3F /* CLLocationCoordinate2D.swift in Sources */,
 				3D72A8AC21CABF720041C1D8 /* BrotherHoodViewController.swift in Sources */,
+				3D2B944D23105B0D00E90118 /* GeocodeRequesterError.swift in Sources */,
 				3DB84C5421D0F2A100D3681D /* Result.swift in Sources */,
 				3DDD030A21E67D7C0054E739 /* Distance.swift in Sources */,
 				3DB84C5221D0F0BC00D3681D /* PinDataSource.swift in Sources */,

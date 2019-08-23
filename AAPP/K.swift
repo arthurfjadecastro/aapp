@@ -36,6 +36,17 @@ struct K {
         static let endpoint = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
     }
     
+    struct Geocoding {
+        private init() { }
+        
+        static func url(forPostalCode postalCode: String) -> URL {
+            let cep = postalCode.filter({ $0.isNumber }).prefix(8)
+            
+            guard let urlString = "https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:\(cep)|country:BR&language=PT-BR&key=\(PlacesSearch.key)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { fatalError("The URL used to do forward geocoding isn't valid.") }
+            guard let url = URL(string: urlString) else { fatalError("The URL used to do forward geocoding isn't valid.") }
+            return url
+        }
+    }
     
     /**
      Constant values for layout Cell in TableView
