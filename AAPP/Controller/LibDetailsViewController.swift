@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Hero
+
 
 
 /**
@@ -34,8 +34,8 @@ class LibDetailsViewController: UIViewController, Coordinable  {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hero.isEnabled = true
-        self.stespImage.hero.id = "setpImage"
+        
+        
      
     }
     
