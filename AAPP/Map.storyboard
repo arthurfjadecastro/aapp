@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFm-OF-slU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -27,29 +25,28 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTn-cU-Mlt">
-                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="596" width="375" height="71"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geo_fence_Active" translatesAutoresizingMaskIntoConstraints="NO" id="VxX-aS-ayp">
-                                        <rect key="frame" x="44" y="20" width="30" height="30"/>
+                                        <rect key="frame" x="44" y="20" width="30" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="3ys-Hr-Hn0"/>
-                                            <constraint firstAttribute="height" constant="30" id="DxX-09-RBL"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="NDb-IX-e0A">
-                                        <rect key="frame" x="301" y="25" width="30" height="20"/>
+                                        <rect key="frame" x="301" y="18.5" width="30" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Gmh-CB-LFc"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZJ-6Z-fI0" userLabel="buttonMessages">
-                                        <rect key="frame" x="263" y="8" width="104" height="54"/>
+                                        <rect key="frame" x="263" y="1.5" width="104" height="68"/>
                                         <connections>
                                             <action selector="buttonGoMessages:" destination="iHu-2U-X6s" eventType="touchUpInside" id="9Y0-vF-PJm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH5-K0-v8a" userLabel="buttonGoMap">
-                                        <rect key="frame" x="8" y="8" width="104" height="54"/>
+                                        <rect key="frame" x="8" y="8" width="104" height="55"/>
                                         <connections>
                                             <action selector="buttonGoMap:" destination="iHu-2U-X6s" eventType="touchUpInside" id="oVH-1D-g3I"/>
                                         </connections>
@@ -70,7 +67,6 @@
                                     <constraint firstItem="FH5-K0-v8a" firstAttribute="width" secondItem="VxX-aS-ayp" secondAttribute="width" constant="74" id="hhd-Yv-VC4"/>
                                     <constraint firstItem="fZJ-6Z-fI0" firstAttribute="width" secondItem="NDb-IX-e0A" secondAttribute="width" constant="74" id="oP7-mw-ucS"/>
                                     <constraint firstItem="fZJ-6Z-fI0" firstAttribute="centerY" secondItem="NDb-IX-e0A" secondAttribute="centerY" id="y5E-Y5-Qpp"/>
-                                    <constraint firstAttribute="height" constant="70" id="zV7-hl-H4A"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -78,12 +74,11 @@
                         <constraints>
                             <constraint firstItem="HTn-cU-Mlt" firstAttribute="width" secondItem="PFm-OF-slU" secondAttribute="width" id="0tq-0p-Boc"/>
                             <constraint firstItem="PFm-OF-slU" firstAttribute="top" secondItem="hsE-MH-VbG" secondAttribute="top" id="J8J-p9-Um4"/>
-                            <constraint firstItem="HTn-cU-Mlt" firstAttribute="top" secondItem="hsE-MH-VbG" secondAttribute="top" constant="577" id="Jxp-yp-VJ5"/>
                             <constraint firstItem="PFm-OF-slU" firstAttribute="trailing" secondItem="hsE-MH-VbG" secondAttribute="trailing" id="M4c-us-67I"/>
                             <constraint firstItem="PFm-OF-slU" firstAttribute="bottom" secondItem="hsE-MH-VbG" secondAttribute="bottom" id="R0I-7h-vKU"/>
+                            <constraint firstItem="HTn-cU-Mlt" firstAttribute="bottom" secondItem="PFm-OF-slU" secondAttribute="bottom" id="VsM-aD-lK5"/>
                             <constraint firstItem="HTn-cU-Mlt" firstAttribute="leading" secondItem="PFm-OF-slU" secondAttribute="leading" id="bNm-VH-wZE"/>
                             <constraint firstItem="PFm-OF-slU" firstAttribute="leading" secondItem="hsE-MH-VbG" secondAttribute="leading" id="hgM-jO-0qB"/>
-                            <constraint firstItem="HTn-cU-Mlt" firstAttribute="bottom" secondItem="hsE-MH-VbG" secondAttribute="bottom" id="srg-gA-lGx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hsE-MH-VbG"/>
                     </view>
@@ -99,7 +94,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="geo_fence_Active" width="26" height="26"/>
-        <image name="message" width="28" height="20"/>
+        <image name="geo_fence_Active" width="31" height="31"/>
+        <image name="message" width="35" height="34"/>
     </resources>
 </document>
