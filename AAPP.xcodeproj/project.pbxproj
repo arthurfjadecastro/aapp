@@ -698,8 +698,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RD6V8JKJ5P;
+				DEVELOPMENT_TEAM = 4EQ948BHF9;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = AAPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -719,8 +720,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RD6V8JKJ5P;
+				DEVELOPMENT_TEAM = 4EQ948BHF9;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = AAPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -857,6 +859,7 @@
 			baseConfigurationReference = E3E9F14584D87E134FC5019C /* Pods-AAPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4EQ948BHF9;
@@ -867,6 +870,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.almeidaws.aapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -877,6 +881,7 @@
 			baseConfigurationReference = 1E9CD72C4CF2D9288FA456B2 /* Pods-AAPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4EQ948BHF9;
@@ -887,6 +892,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.almeidaws.aapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
