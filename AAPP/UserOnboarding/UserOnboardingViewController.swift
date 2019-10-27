@@ -24,9 +24,22 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
     
     @IBOutlet weak var pageControl: UIPageControl!
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+//         if(UserDefaults.standard.bool(forKey: "userOnboardingHasPresented")) {
+//                   self.coordinator?.present(.map, beforePresenting: nil)
+//
+//               }else {
+//                   UserDefaults.standard.set(true, forKey: "userOnboardingHasPresented")
+//               }
+    }
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        
+        
         self.scrollViewOnboarding.delegate = self
         self.slides = createSlides()
         self.setupSlideScrollView(slides: slides)
@@ -36,7 +49,6 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
         self.scrollViewOnboarding.showsVerticalScrollIndicator = false
         self.scrollViewOnboarding.showsHorizontalScrollIndicator = false
         self.scrollViewOnboarding.bounces = false
-        
         self.scrollViewOnboarding.contentInsetAdjustmentBehavior = .automatic
 
 
@@ -157,7 +169,7 @@ class UserOnboardingViewController: UIViewController, Coordinable ,UIScrollViewD
                     self.scrollViewOnboarding.contentOffset.x = (self.scrollViewOnboarding.contentOffset.x + self.view.frame.width)
                 }.startAnimation()
             }else {
-                self.coordinator?.present(.map, beforePresenting: nil)
+               // self.coordinator?.present(.map, beforePresenting: nil)
                 self.coordinator?.present(.map, beforePresenting: { (brotherHoodViewController) in
                     
                 })

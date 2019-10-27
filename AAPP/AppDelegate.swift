@@ -17,12 +17,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ///Install and configure coordinator and input initial view controller
-        AppCoordinator.installCoordinatorOnInitialController()
-        ///API key to utilize Google Maps services
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let storyboard: UIStoryboard
         GMSServices.provideAPIKey("AIzaSyAuwpMwhSjEzpUAuvgEC66z8aNWKNCycHI")
         ///API key to utilize Google Places services
         GMSPlacesClient.provideAPIKey("AIzaSyAuwpMwhSjEzpUAuvgEC66z8aNWKNCycHI")
+        
+        ///Install and configure coordinator and input initial view controller
+        if(UserDefaults.standard.bool(forKey: "userOnboardingHasPresented")) {
+            storyboard = UIStoryboard(name: "Map" , bundle: nil)
+        }else {
+            UserDefaults.standard.set(true, forKey: "userOnboardingHasPresented")
+            storyboard = UIStoryboard(name: "UserOnboarding" , bundle: nil)
+
+        }
+        guard let initialViewController = storyboard.instantiateInitialViewController() else {return true}
+
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        AppCoordinator.installCoordinatorOnInitialController(initialViewController:initialViewController)
+        ///API key to utilize Google Maps services
+
         
         
         

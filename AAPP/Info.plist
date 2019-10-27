@@ -24,8 +24,6 @@
 	<string>Necessitamos da permissão de localização para encontrar os grupos perto de você.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>UserOnboarding</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

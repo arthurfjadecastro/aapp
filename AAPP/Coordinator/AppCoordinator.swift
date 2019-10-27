@@ -47,13 +47,20 @@ class AppCoordinator: Coordinator {
         self.presentController(screen, beforePresenting: beforePresenting)
     }
     
+    
+    
+    
     ///method responsible for the initial installation of the coordinator and the viewcontroller
-    static func installCoordinatorOnInitialController(){
+    static func installCoordinatorOnInitialController(initialViewController: UIViewController){
         ///Capture initial view controller
-        guard var initialController = UIApplication.shared.windows.first?.rootViewController as? (Coordinable & UIViewController)  else {
-            assertionFailure("Fail when try find view controller")
-            return
-        }
+//        guard var initialViewController = UIApplication.shared.windows.first?.rootViewController as? (Coordinable & UIViewController)  else {
+//            assertionFailure("Fail when try find view controller")
+//            return
+//        }
+        guard var initialController = initialViewController as? (Coordinable & UIViewController)  else {
+                    assertionFailure("Fail when try find view controller")
+                    return
+                }
         initialController.coordinator = AppCoordinator(current: initialController)
     }
     
