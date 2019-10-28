@@ -139,20 +139,27 @@ class BrotherHoodDetailsViewController: UIViewController, Coordinable, UITableVi
         
         var text = dayWeeks[indexPath.row] //2.
         
-        if(text.hour.last?.description == "0"){
-            text.hour.append(contentsOf: "h")
-        }
+        let filterHours = text.hour.replacingOccurrences(of: " ", with: "\n")
+//        let _hours = filterHours.components(separatedBy: "-")
         
+       // let cellText = _hours.joined(separator: "\n")
+        
+//
+//        if(text.hour.last?.description == "0"){
+//            text.hour.append(contentsOf: "h")
+//        }
+//
             
             
         
-        cell.dailyMeeting = text
+        cell.daysLabel.text = text.day
+        cell.textName?.text = filterHours
         
         if (self.tableViewDetails.contentSize.height > self.tableViewDetails.frame.size.height) {
             self.tableViewDetails.isScrollEnabled = true
         }
         else {
-            self.tableViewDetails.isScrollEnabled = false
+            self.tableViewDetails.isScrollEnabled = true
         }
         
         return cell //4.

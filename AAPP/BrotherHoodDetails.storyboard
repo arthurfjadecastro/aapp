@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,14 +66,14 @@
                                                     <constraint firstAttribute="width" secondItem="RQa-dT-P8w" secondAttribute="height" multiplier="18:24" id="RWd-fa-baB"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="GRUPO ALVORADA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-3J-X7N">
-                                                <rect key="frame" x="39.5" y="44.5" width="239" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="GRUPO ALVORADA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-3J-X7N">
+                                                <rect key="frame" x="39.5" y="42.5" width="239" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6jd-Fe-2mM">
-                                                <rect key="frame" x="12.5" y="67.5" width="247" height="13"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jd-Fe-2mM">
+                                                <rect key="frame" x="12.5" y="66" width="247" height="15"/>
                                                 <color key="backgroundColor" red="0.4549019608" green="0.98431372549999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancelDetails" translatesAutoresizingMaskIntoConstraints="NO" id="cEQ-fk-fMk">
@@ -82,8 +82,8 @@
                                                     <constraint firstAttribute="width" secondItem="cEQ-fk-fMk" secondAttribute="height" multiplier="1:1" id="Nmf-9x-t4T"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei2-KE-Q9p">
-                                                <rect key="frame" x="14.5" y="81.5" width="241" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei2-KE-Q9p">
+                                                <rect key="frame" x="14.5" y="90" width="241" height="39.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="241" id="G92-6S-Ul3"/>
                                                 </constraints>
@@ -94,10 +94,9 @@ Segundo Andar</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="10" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="022-YK-baj">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="10" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="022-YK-baj">
                                                 <rect key="frame" x="8" y="187" width="347" height="427"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="sectionIndexColor" red="0.77028301889999995" green="0.71303586029999999" blue="0.96651306140000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="sectionIndexTrackingBackgroundColor" red="0.85098039219999999" green="0.64313725489999995" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,8 +115,11 @@ Segundo Andar</string>
                                                                         <constraint firstAttribute="width" constant="30" id="k6m-UC-RO4"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="12:30" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKW-8L-m1Z" userLabel="textName">
-                                                                    <rect key="frame" x="70" y="43" width="36" height="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKW-8L-m1Z" userLabel="textName">
+                                                                    <rect key="frame" x="70" y="26.5" width="46.5" height="50.5"/>
+                                                                    <string key="text">12:30h
+14:50h
+20:30h</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -224,12 +226,11 @@ Segundo Andar</string>
                                             <constraint firstItem="022-YK-baj" firstAttribute="bottom" secondItem="vDx-bj-IkW" secondAttribute="bottomMargin" constant="8" id="Gpc-va-qHd"/>
                                             <constraint firstItem="022-YK-baj" firstAttribute="leading" secondItem="vDx-bj-IkW" secondAttribute="leadingMargin" id="GsL-5c-XPw"/>
                                             <constraint firstItem="TsO-0x-e2V" firstAttribute="height" secondItem="vDx-bj-IkW" secondAttribute="height" multiplier="11 / 546" constant="-1.0641025641025657" id="It5-E6-X4m"/>
-                                            <constraint firstItem="6jd-Fe-2mM" firstAttribute="top" secondItem="b8B-3J-X7N" secondAttribute="bottom" constant="2.5" id="J6Y-3n-QIv"/>
                                             <constraint firstItem="TsO-0x-e2V" firstAttribute="top" secondItem="vDx-bj-IkW" secondAttribute="top" constant="-15" id="LCn-fm-Okw"/>
                                             <constraint firstItem="3O1-BK-Non" firstAttribute="top" secondItem="vDx-bj-IkW" secondAttribute="top" constant="135" id="MGE-LP-mHC"/>
                                             <constraint firstItem="pwZ-dD-4Eu" firstAttribute="centerY" secondItem="APk-4C-ULD" secondAttribute="centerY" id="MJp-IM-yuC"/>
                                             <constraint firstItem="TsO-0x-e2V" firstAttribute="width" secondItem="vDx-bj-IkW" secondAttribute="width" multiplier="337 / 361" constant="33.398891966759038" id="NfB-ko-O6k"/>
-                                            <constraint firstItem="APk-4C-ULD" firstAttribute="top" secondItem="Ei2-KE-Q9p" secondAttribute="bottom" constant="17" id="Nsd-gD-Ios"/>
+                                            <constraint firstItem="APk-4C-ULD" firstAttribute="top" secondItem="Ei2-KE-Q9p" secondAttribute="bottom" constant="9" id="Nsd-gD-Ios"/>
                                             <constraint firstItem="9M5-42-qtS" firstAttribute="centerY" secondItem="pwZ-dD-4Eu" secondAttribute="centerY" id="Qxa-q9-n15"/>
                                             <constraint firstItem="3O1-BK-Non" firstAttribute="firstBaseline" secondItem="9M5-42-qtS" secondAttribute="firstBaseline" id="RbG-Pq-GQl"/>
                                             <constraint firstItem="IGd-xB-Oag" firstAttribute="centerY" secondItem="APk-4C-ULD" secondAttribute="centerY" id="VFe-CS-oTL"/>
@@ -239,7 +240,7 @@ Segundo Andar</string>
                                             <constraint firstItem="b8B-3J-X7N" firstAttribute="leading" secondItem="RQa-dT-P8w" secondAttribute="trailing" constant="9" id="cp2-a9-WLH"/>
                                             <constraint firstItem="3O1-BK-Non" firstAttribute="centerY" secondItem="HMI-nb-ERr" secondAttribute="centerY" id="do0-fc-CE1"/>
                                             <constraint firstItem="APk-4C-ULD" firstAttribute="leading" secondItem="vDx-bj-IkW" secondAttribute="leading" constant="10" id="exR-sG-NWj"/>
-                                            <constraint firstItem="Am6-hT-4Ce" firstAttribute="top" secondItem="Ei2-KE-Q9p" secondAttribute="bottom" constant="12" id="fPY-jo-iMQ"/>
+                                            <constraint firstItem="Am6-hT-4Ce" firstAttribute="top" secondItem="Ei2-KE-Q9p" secondAttribute="bottom" constant="4" id="fPY-jo-iMQ"/>
                                             <constraint firstItem="gnO-pB-aaM" firstAttribute="height" secondItem="vDx-bj-IkW" secondAttribute="height" multiplier="17 / 270" constant="-3.1407407407407391" id="fve-lN-QOg"/>
                                             <constraint firstItem="Am6-hT-4Ce" firstAttribute="leading" secondItem="vDx-bj-IkW" secondAttribute="leading" constant="114" id="gFg-IZ-2TF"/>
                                             <constraint firstItem="Ei2-KE-Q9p" firstAttribute="trailing" secondItem="6jd-Fe-2mM" secondAttribute="trailing" constant="-4" id="gkC-tv-qcj"/>
@@ -253,7 +254,7 @@ Segundo Andar</string>
                                             <constraint firstAttribute="trailing" secondItem="Am6-hT-4Ce" secondAttribute="trailing" constant="109.5" id="ncd-6k-MyK"/>
                                             <constraint firstItem="6jd-Fe-2mM" firstAttribute="height" secondItem="vDx-bj-IkW" secondAttribute="height" multiplier="15 / 270" constant="-18.888888888888886" id="oyM-B0-VFf"/>
                                             <constraint firstItem="HMI-nb-ERr" firstAttribute="leading" secondItem="9M5-42-qtS" secondAttribute="trailing" constant="15" id="pcb-ob-Km8"/>
-                                            <constraint firstItem="b8B-3J-X7N" firstAttribute="top" secondItem="gnO-pB-aaM" secondAttribute="bottom" id="pm8-BR-fwH"/>
+                                            <constraint firstItem="b8B-3J-X7N" firstAttribute="top" secondItem="gnO-pB-aaM" secondAttribute="top" constant="10" id="pm8-BR-fwH"/>
                                             <constraint firstItem="3O1-BK-Non" firstAttribute="baseline" secondItem="IGd-xB-Oag" secondAttribute="baseline" id="pr7-bQ-bVD"/>
                                             <constraint firstItem="6jd-Fe-2mM" firstAttribute="leading" secondItem="gnO-pB-aaM" secondAttribute="leading" id="q30-eY-HaM"/>
                                             <constraint firstItem="TII-iZ-rdU" firstAttribute="leading" secondItem="6jd-Fe-2mM" secondAttribute="trailing" constant="-3" id="q3a-8L-ImZ"/>
@@ -261,7 +262,7 @@ Segundo Andar</string>
                                             <constraint firstItem="Ei2-KE-Q9p" firstAttribute="leading" secondItem="6jd-Fe-2mM" secondAttribute="leading" constant="2" id="s1r-9q-T6V"/>
                                             <constraint firstItem="3O1-BK-Non" firstAttribute="centerX" secondItem="HMI-nb-ERr" secondAttribute="centerX" id="uQH-t4-8hl"/>
                                             <constraint firstItem="IGd-xB-Oag" firstAttribute="centerX" secondItem="APk-4C-ULD" secondAttribute="centerX" id="v9S-C4-Y5i"/>
-                                            <constraint firstItem="Ei2-KE-Q9p" firstAttribute="top" secondItem="6jd-Fe-2mM" secondAttribute="bottom" constant="1" id="vsp-TE-vW6"/>
+                                            <constraint firstItem="Ei2-KE-Q9p" firstAttribute="top" secondItem="6jd-Fe-2mM" secondAttribute="bottom" constant="9" id="vsp-TE-vW6"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="022-YK-baj" secondAttribute="trailing" constant="4" id="y0h-3R-Owx"/>
                                             <constraint firstItem="TII-iZ-rdU" firstAttribute="top" secondItem="gnO-pB-aaM" secondAttribute="bottom" id="yu3-Hh-COZ"/>
                                             <constraint firstItem="022-YK-baj" firstAttribute="top" secondItem="3O1-BK-Non" secondAttribute="bottom" constant="27" id="yyX-s8-f0y"/>

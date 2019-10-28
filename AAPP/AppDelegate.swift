@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ///Install and configure coordinator and input initial view controller
         if(UserDefaults.standard.bool(forKey: "userOnboardingHasPresented")) {
-            storyboard = UIStoryboard(name: "UserOnboarding" , bundle: nil)
+            storyboard = UIStoryboard(name: "Map" , bundle: nil)
         }else {
             UserDefaults.standard.set(true, forKey: "userOnboardingHasPresented")
             storyboard = UIStoryboard(name: "UserOnboarding" , bundle: nil)
