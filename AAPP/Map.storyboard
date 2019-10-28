@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,7 +11,7 @@
         <scene sceneID="SnX-BO-sjb">
             <objects>
                 <viewController storyboardIdentifier="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iHu-2U-X6s" customClass="MapViewController" customModule="AAPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RXk-Fi-qET">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RXk-Fi-qET">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -28,25 +27,33 @@
                                 <rect key="frame" x="0.0" y="596" width="375" height="71"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geo_fence_Active" translatesAutoresizingMaskIntoConstraints="NO" id="VxX-aS-ayp">
-                                        <rect key="frame" x="44" y="20" width="30" height="31"/>
+                                        <rect key="frame" x="45" y="20.5" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="3ys-Hr-Hn0"/>
+                                            <constraint firstAttribute="height" constant="30" id="VXT-VN-dDC"/>
+                                            <constraint firstAttribute="width" constant="30" id="nEG-pN-IL4"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="NDb-IX-e0A">
-                                        <rect key="frame" x="301" y="18.5" width="30" height="34"/>
+                                        <rect key="frame" x="300" y="20.5" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="Gmh-CB-LFc"/>
+                                            <constraint firstAttribute="height" constant="30" id="lTi-Fc-viY"/>
+                                            <constraint firstAttribute="width" constant="30" id="v3E-Ve-kNo"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZJ-6Z-fI0" userLabel="buttonMessages">
-                                        <rect key="frame" x="263" y="1.5" width="104" height="68"/>
+                                        <rect key="frame" x="263" y="0.0" width="104" height="71"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="104" id="QyO-wR-bvR"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="buttonGoMessages:" destination="iHu-2U-X6s" eventType="touchUpInside" id="9Y0-vF-PJm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH5-K0-v8a" userLabel="buttonGoMap">
-                                        <rect key="frame" x="8" y="8" width="104" height="55"/>
+                                        <rect key="frame" x="8" y="0.0" width="104" height="71"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="104" id="63d-FC-mno"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="buttonGoMap:" destination="iHu-2U-X6s" eventType="touchUpInside" id="oVH-1D-g3I"/>
                                         </connections>
@@ -54,33 +61,30 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="NDb-IX-e0A" secondAttribute="trailing" constant="44" id="1Uh-SI-ckA"/>
-                                    <constraint firstItem="VxX-aS-ayp" firstAttribute="leading" secondItem="HTn-cU-Mlt" secondAttribute="leading" constant="44" id="KhH-ba-a0t"/>
-                                    <constraint firstAttribute="bottom" secondItem="VxX-aS-ayp" secondAttribute="bottom" constant="20" id="Mfd-up-LhI"/>
-                                    <constraint firstItem="fZJ-6Z-fI0" firstAttribute="centerX" secondItem="NDb-IX-e0A" secondAttribute="centerX" constant="-1" id="Pbh-e7-44Y"/>
-                                    <constraint firstItem="fZJ-6Z-fI0" firstAttribute="height" secondItem="NDb-IX-e0A" secondAttribute="height" constant="34" id="Q9F-VT-Khr"/>
-                                    <constraint firstItem="FH5-K0-v8a" firstAttribute="height" secondItem="VxX-aS-ayp" secondAttribute="height" constant="24" id="QJx-7S-ACZ"/>
-                                    <constraint firstItem="VxX-aS-ayp" firstAttribute="centerY" secondItem="HTn-cU-Mlt" secondAttribute="centerY" id="Vun-au-akb"/>
-                                    <constraint firstItem="NDb-IX-e0A" firstAttribute="centerY" secondItem="HTn-cU-Mlt" secondAttribute="centerY" id="Wn5-sm-NGK"/>
-                                    <constraint firstItem="FH5-K0-v8a" firstAttribute="centerX" secondItem="VxX-aS-ayp" secondAttribute="centerX" constant="1" id="gbu-HV-OKn"/>
-                                    <constraint firstItem="FH5-K0-v8a" firstAttribute="centerY" secondItem="VxX-aS-ayp" secondAttribute="centerY" id="gqa-cz-s2x"/>
-                                    <constraint firstItem="FH5-K0-v8a" firstAttribute="width" secondItem="VxX-aS-ayp" secondAttribute="width" constant="74" id="hhd-Yv-VC4"/>
-                                    <constraint firstItem="fZJ-6Z-fI0" firstAttribute="width" secondItem="NDb-IX-e0A" secondAttribute="width" constant="74" id="oP7-mw-ucS"/>
-                                    <constraint firstItem="fZJ-6Z-fI0" firstAttribute="centerY" secondItem="NDb-IX-e0A" secondAttribute="centerY" id="y5E-Y5-Qpp"/>
+                                    <constraint firstAttribute="trailing" secondItem="NDb-IX-e0A" secondAttribute="trailing" constant="45" id="70y-5k-uHn"/>
+                                    <constraint firstItem="FH5-K0-v8a" firstAttribute="centerX" secondItem="VxX-aS-ayp" secondAttribute="centerX" id="8cb-vD-JHV"/>
+                                    <constraint firstAttribute="height" constant="71" id="BGh-Fy-r1c"/>
+                                    <constraint firstItem="VxX-aS-ayp" firstAttribute="centerY" secondItem="HTn-cU-Mlt" secondAttribute="centerY" id="BhS-eq-qcd"/>
+                                    <constraint firstItem="NDb-IX-e0A" firstAttribute="centerY" secondItem="HTn-cU-Mlt" secondAttribute="centerY" id="GtR-EN-s0K"/>
+                                    <constraint firstItem="FH5-K0-v8a" firstAttribute="height" secondItem="HTn-cU-Mlt" secondAttribute="height" id="J52-k3-Tw8"/>
+                                    <constraint firstItem="VxX-aS-ayp" firstAttribute="leading" secondItem="HTn-cU-Mlt" secondAttribute="leading" constant="45" id="LFr-K9-gOH"/>
+                                    <constraint firstItem="fZJ-6Z-fI0" firstAttribute="centerX" secondItem="NDb-IX-e0A" secondAttribute="centerX" id="T5u-Sq-BlK"/>
+                                    <constraint firstItem="fZJ-6Z-fI0" firstAttribute="centerY" secondItem="NDb-IX-e0A" secondAttribute="centerY" id="kYA-6O-kmJ"/>
+                                    <constraint firstItem="FH5-K0-v8a" firstAttribute="centerY" secondItem="VxX-aS-ayp" secondAttribute="centerY" id="rzK-89-qt9"/>
+                                    <constraint firstItem="fZJ-6Z-fI0" firstAttribute="height" secondItem="HTn-cU-Mlt" secondAttribute="height" id="wbp-yD-LkT"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HTn-cU-Mlt" firstAttribute="width" secondItem="PFm-OF-slU" secondAttribute="width" id="0tq-0p-Boc"/>
-                            <constraint firstItem="PFm-OF-slU" firstAttribute="top" secondItem="hsE-MH-VbG" secondAttribute="top" id="J8J-p9-Um4"/>
-                            <constraint firstItem="PFm-OF-slU" firstAttribute="trailing" secondItem="hsE-MH-VbG" secondAttribute="trailing" id="M4c-us-67I"/>
-                            <constraint firstItem="PFm-OF-slU" firstAttribute="bottom" secondItem="hsE-MH-VbG" secondAttribute="bottom" id="R0I-7h-vKU"/>
+                            <constraint firstItem="HTn-cU-Mlt" firstAttribute="trailing" secondItem="RXk-Fi-qET" secondAttribute="trailing" id="C0K-Jw-wXj"/>
+                            <constraint firstItem="PFm-OF-slU" firstAttribute="top" secondItem="RXk-Fi-qET" secondAttribute="top" id="J8J-p9-Um4"/>
+                            <constraint firstItem="PFm-OF-slU" firstAttribute="trailing" secondItem="RXk-Fi-qET" secondAttribute="trailing" id="M4c-us-67I"/>
+                            <constraint firstItem="PFm-OF-slU" firstAttribute="bottom" secondItem="RXk-Fi-qET" secondAttribute="bottom" id="R0I-7h-vKU"/>
                             <constraint firstItem="HTn-cU-Mlt" firstAttribute="bottom" secondItem="PFm-OF-slU" secondAttribute="bottom" id="VsM-aD-lK5"/>
                             <constraint firstItem="HTn-cU-Mlt" firstAttribute="leading" secondItem="PFm-OF-slU" secondAttribute="leading" id="bNm-VH-wZE"/>
-                            <constraint firstItem="PFm-OF-slU" firstAttribute="leading" secondItem="hsE-MH-VbG" secondAttribute="leading" id="hgM-jO-0qB"/>
+                            <constraint firstItem="PFm-OF-slU" firstAttribute="leading" secondItem="RXk-Fi-qET" secondAttribute="leading" id="hgM-jO-0qB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hsE-MH-VbG"/>
                     </view>
                     <connections>
                         <outlet property="imageGeofence" destination="VxX-aS-ayp" id="xfq-av-4nd"/>
